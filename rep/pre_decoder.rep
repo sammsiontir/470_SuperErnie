@@ -1,0 +1,285 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : design
+Design : pre_decoder
+Version: G-2012.06
+Date   : Mon Apr 22 23:48:48 2013
+****************************************
+
+Design allows ideal nets on clock nets.
+
+Library(s) Used:
+
+    lec25dscc25_TT (File: /usr/caen/generic/mentor_lib-D.1/public/eecs470/synopsys/lec25dscc25_TT.db)
+
+Local Link Library:
+
+    {lec25dscc25_TT.db}
+
+Flip-Flop Types:
+
+    No flip-flop types specified.
+
+Latch Types:
+
+    No latch types specified.
+
+Operating Conditions:
+
+
+    Operating Condition Name : nom_pvt
+    Library : lec25dscc25_TT
+    Process :   1.00
+    Temperature :  25.00
+    Voltage :   2.50
+    Interconnect Model : balanced_tree
+
+Wire Loading Model:
+
+    Selected manually by the user.
+
+Name           :   tsmcwire
+Location       :   lec25dscc25_TT
+Resistance     :   0.2642
+Capacitance    :   0.000132782
+Area           :   0.27
+Slope          :   0.74
+Fanout   Length   Points Average Cap Std Deviation
+--------------------------------------------------------------
+     1     0.89
+     2     1.48
+     3     2.44
+     4     3.18
+     5     3.92
+
+
+
+Wire Loading Model Mode: top.
+
+Timing Ranges:
+
+    No timing ranges specified.
+
+Pin Input Delays:
+
+    None specified.
+
+Pin Output Delays:
+
+    None specified.
+
+Disabled Timing Arcs:
+
+    No arcs disabled.
+
+Required Licenses:
+
+    None Required
+
+Design Parameters:
+
+    None specified.
+1
+ 
+****************************************
+Report : area
+Design : pre_decoder
+Version: G-2012.06
+Date   : Mon Apr 22 23:48:48 2013
+****************************************
+
+Library(s) Used:
+
+    lec25dscc25_TT (File: /usr/caen/generic/mentor_lib-D.1/public/eecs470/synopsys/lec25dscc25_TT.db)
+
+Number of ports:                           74
+Number of nets:                            45
+Number of cells:                           29
+Number of combinational cells:             29
+Number of sequential cells:                 0
+Number of macros:                           0
+Number of buf/inv:                         10
+Number of references:                      15
+
+Combinational area:       1592.524803
+Noncombinational area:       0.000000
+Net Interconnect area:      16.794541  
+
+Total cell area:          1592.524803
+Total area:               1609.319344
+1
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -input_pins
+        -nets
+        -max_paths 2
+        -transition_time
+Design : pre_decoder
+Version: G-2012.06
+Date   : Mon Apr 22 23:48:48 2013
+****************************************
+
+Operating Conditions: nom_pvt   Library: lec25dscc25_TT
+Wire Load Model Mode: top
+
+  Startpoint: inst_2[27] (input port)
+  Endpoint: ret_branch_2
+            (output port)
+  Path Group: input_grp
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  pre_decoder        tsmcwire              lec25dscc25_TT
+
+  Point                        Fanout     Trans      Incr       Path
+  ---------------------------------------------------------------------
+  input external delay                               0.00       0.00 f
+  inst_2[27] (in)                          0.26      0.07       0.07 f
+  inst_2[27] (net)               2                   0.00       0.07 f
+  U50/DIN2 (xnr2s1)                        0.26      0.01       0.07 f
+  U50/Q (xnr2s1)                           0.19      0.27       0.34 f
+  n19 (net)                      1                   0.00       0.34 f
+  U16/DIN3 (nnd3s2)                        0.19      0.00       0.34 f
+  U16/Q (nnd3s2)                           0.31      0.15       0.49 r
+  n13 (net)                      3                   0.00       0.49 r
+  U39/DIN3 (nor4s1)                        0.31      0.00       0.50 r
+  U39/Q (nor4s1)                           0.94      0.42       0.92 f
+  ret_branch_2 (net)             1                   0.00       0.92 f
+  ret_branch_2 (out)                       0.94      0.02       0.94 f
+  data arrival time                                             0.94
+
+  max_delay                                         13.00      13.00
+  output external delay                              0.00      13.00
+  data required time                                           13.00
+  ---------------------------------------------------------------------
+  data required time                                           13.00
+  data arrival time                                            -0.94
+  ---------------------------------------------------------------------
+  slack (MET)                                                  12.06
+
+
+  Startpoint: inst_1[30] (input port)
+  Endpoint: bsr_branch_1
+            (output port)
+  Path Group: input_grp
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  pre_decoder        tsmcwire              lec25dscc25_TT
+
+  Point                        Fanout     Trans      Incr       Path
+  ---------------------------------------------------------------------
+  input external delay                               0.00       0.00 f
+  inst_1[30] (in)                          0.23      0.04       0.04 f
+  inst_1[30] (net)               3                   0.00       0.04 f
+  U20/DIN2 (nnd2s2)                        0.23      0.00       0.05 f
+  U20/Q (nnd2s2)                           0.21      0.11       0.15 r
+  n18 (net)                      2                   0.00       0.15 r
+  U38/DIN1 (or4s1)                         0.21      0.00       0.15 r
+  U38/Q (or4s1)                            0.23      0.30       0.45 r
+  n15 (net)                      2                   0.00       0.45 r
+  U32/DIN1 (nor2s1)                        0.23      0.00       0.45 r
+  U32/Q (nor2s1)                           0.86      0.42       0.88 f
+  bsr_branch_1 (net)             1                   0.00       0.88 f
+  bsr_branch_1 (out)                       0.86      0.02       0.90 f
+  data arrival time                                             0.90
+
+  max_delay                                         13.00      13.00
+  output external delay                              0.00      13.00
+  data required time                                           13.00
+  ---------------------------------------------------------------------
+  data required time                                           13.00
+  data arrival time                                            -0.90
+  ---------------------------------------------------------------------
+  slack (MET)                                                  12.10
+
+
+1
+ 
+****************************************
+Report : constraint
+        -verbose
+        -max_delay
+Design : pre_decoder
+Version: G-2012.06
+Date   : Mon Apr 22 23:48:48 2013
+****************************************
+
+
+  Startpoint: inst_2[27] (input port)
+  Endpoint: ret_branch_2
+            (output port)
+  Path Group: input_grp
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  pre_decoder        tsmcwire              lec25dscc25_TT
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                     0.00       0.00 f
+  inst_2[27] (in)                          0.07       0.07 f
+  U50/Q (xnr2s1)                           0.27       0.34 f
+  U16/Q (nnd3s2)                           0.15       0.49 r
+  U39/Q (nor4s1)                           0.42       0.92 f
+  ret_branch_2 (out)                       0.02       0.94 f
+  data arrival time                                   0.94
+
+  max_delay                               13.00      13.00
+  output external delay                    0.00      13.00
+  data required time                                 13.00
+  -----------------------------------------------------------
+  data required time                                 13.00
+  data arrival time                                  -0.94
+  -----------------------------------------------------------
+  slack (MET)                                        12.06
+
+
+1
+Information: Updating graph... (UID-83)
+ 
+****************************************
+Report : reference
+Design : pre_decoder
+Version: G-2012.06
+Date   : Mon Apr 22 23:48:48 2013
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+and2s2             lec25dscc25_TT    58.060799       1    58.060799
+and3s1             lec25dscc25_TT    66.355202       1    66.355202
+and3s2             lec25dscc25_TT    99.532799       1    99.532799
+and4s3             lec25dscc25_TT   124.416000       1   124.416000
+aoi21s2            lec25dscc25_TT    49.766399       1    49.766399
+ib1s1              lec25dscc25_TT    33.177601      10   331.776009
+nnd2s2             lec25dscc25_TT    41.472000       3   124.416000
+nnd3s2             lec25dscc25_TT    49.766399       1    49.766399
+nnd4s1             lec25dscc25_TT    58.060799       1    58.060799
+nor2s1             lec25dscc25_TT    41.472000       3   124.416000
+nor4s1             lec25dscc25_TT    82.944000       1    82.944000
+nor5s1             lec25dscc25_TT    99.532799       2   199.065598
+or3s1              lec25dscc25_TT    58.060799       1    58.060799
+or4s1              lec25dscc25_TT    82.944000       1    82.944000
+xnr2s1             lec25dscc25_TT    82.944000       1    82.944000
+-----------------------------------------------------------------------------
+Total 15 references                                  1592.524803
+1

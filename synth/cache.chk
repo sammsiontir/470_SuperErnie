@@ -1,0 +1,24 @@
+ 
+****************************************
+check_design summary:
+Version:     G-2012.06
+Date:        Tue Apr 23 00:06:32 2013
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                      6
+    Unconnected ports (LINT-28)                                     6
+
+Nets                                                                1
+    Unloaded nets (LINT-2)                                          1
+--------------------------------------------------------------------------------
+
+Warning: In design 'cache', net '*Logic0*' driven by pin 'Logic0/**logic_0**' has no loads. (LINT-2)
+Warning: In design 'cache', port 'wr_pc_reg[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'cache', port 'wr_pc_reg[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'cache', port 'wr_pc_reg[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'cache', port 'rd_pc_reg[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'cache', port 'rd_pc_reg[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'cache', port 'rd_pc_reg[0]' is not connected to any nets. (LINT-28)
+1

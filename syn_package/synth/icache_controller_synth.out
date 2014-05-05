@@ -1,0 +1,432 @@
+
+                      Design Compiler Graphical
+                            DC Ultra (TM)
+                             DFTMAX (TM)
+                         Power Compiler (TM)
+                           DesignWare (R)
+                           DC Expert (TM)
+                         Design Vision (TM)
+                          HDL Compiler (TM)
+                         VHDL Compiler (TM)
+                            DFT Compiler
+                        Library Compiler (TM)
+                         Design Compiler(R)
+
+            Version G-2012.06 for RHEL64 -- May 30, 2012
+               Copyright (c) 1988-2012 Synopsys, Inc.
+
+This software and the associated documentation are confidential and 
+proprietary to Synopsys, Inc. Your use or disclosure of this software 
+is subject to the terms and conditions of a written license agreement 
+between you, or your company, and Synopsys, Inc.
+
+Initializing...
+################################################################################
+## DO NOT EDIT THESE FILES BY HAND
+##
+## CONFIGURATION HAS BEEN MOVED TO THE MAKEFILE
+################################################################################
+set search_path [ list "./" "/usr/caen/generic/mentor_lib-D.1/public/eecs470/synopsys/" ]
+./ /usr/caen/generic/mentor_lib-D.1/public/eecs470/synopsys/
+set target_library "lec25dscc25_TT.db"
+lec25dscc25_TT.db
+set link_library [concat  "*" $target_library]
+* lec25dscc25_TT.db
+#/***********************************************************/
+#/* Set some flags to suppress warnings we don't care about */
+set suppress_errors [concat $suppress_errors "UID-401"]
+UID-401
+suppress_message {"VER-130"}
+#/***********************************************************/
+#/* The following lines are set from environment variables
+#/* automatically by the Makefile
+#/***********************************************************/
+lappend search_path ../
+./ /usr/caen/generic/mentor_lib-D.1/public/eecs470/synopsys/ ../
+set cache_module [getenv CACHE_NAME]
+Error: can't read "::env(CACHE_NAME)": no such variable
+	Use error_info for more info. (CMD-013)
+read_file -f ddc [list ${cache_module}.ddc]
+Error: can't read "cache_module": no such variable
+	Use error_info for more info. (CMD-013)
+set_dont_touch ${cache_module}
+Error: can't read "cache_module": no such variable
+	Use error_info for more info. (CMD-013)
+set headers [getenv HEADERS]
+sys_defs.vh
+set sources [getenv PIPEFILES]
+verilog/t/icache_controller.v
+read_file -f verilog [list ${headers} ${sources}]
+Loading db file '/usr/caen/generic/mentor_lib-D.1/public/eecs470/synopsys/lec25dscc25_TT.db'
+Loading db file '/usr/caen/synopsys-synth-2012.06/libraries/syn/gtech.db'
+Loading db file '/usr/caen/synopsys-synth-2012.06/libraries/syn/standard.sldb'
+  Loading link library 'lec25dscc25_TT'
+  Loading link library 'gtech'
+Loading verilog files: '/afs/umich.edu/user/c/h/chengfu/Desktop/syn2/sys_defs.vh' '/afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/icache_controller.v' 
+Detecting input file type automatically (-rtl or -netlist).
+Running DC verilog reader
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /afs/umich.edu/user/c/h/chengfu/Desktop/syn2/sys_defs.vh
+Compiling source file /afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/icache_controller.v
+
+Inferred memory devices in process
+	in routine icache_controller line 84 in file
+		'/afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/icache_controller.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   lm_counter_reg    | Flip-flop |   3   |  Y  | N  | N  | N  | N  | N  | N  |
+| last_miss_addr_reg  | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine icache_controller line 106 in file
+		'/afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/icache_controller.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| requesting_addr_reg | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine icache_controller line 120 in file
+		'/afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/icache_controller.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   MSHR_valid_reg    | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine icache_controller line 127 in file
+		'/afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/icache_controller.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    MSHR_addr_reg    | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+|    MSHR_addr_reg    | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+|    MSHR_addr_reg    | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+|    MSHR_addr_reg    | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+|    MSHR_addr_reg    | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+|    MSHR_addr_reg    | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+|    MSHR_addr_reg    | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+|    MSHR_addr_reg    | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+|    MSHR_addr_reg    | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+|    MSHR_addr_reg    | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+|    MSHR_addr_reg    | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+|    MSHR_addr_reg    | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+|    MSHR_addr_reg    | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+|    MSHR_addr_reg    | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+|    MSHR_addr_reg    | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+|    MSHR_addr_reg    | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+===============================================================
+|   block name/line    | Inputs | Outputs | # sel inputs | MB |
+===============================================================
+| icache_controller/64 |   16   |   64    |      4       | N  |
+| icache_controller/66 |   16   |    1    |      4       | N  |
+===============================================================
+Presto compilation completed successfully.
+Current design is now '/afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/icache_controller.db:icache_controller'
+Loaded 1 design.
+Current design is 'icache_controller'.
+icache_controller
+set design_name [getenv PIPELINE_NAME]
+icache_controller
+set clock_name [getenv CLOCK_NET_NAME]
+clock
+set reset_name [getenv RESET_NET_NAME]
+reset
+set CLK_PERIOD [getenv CLOCK_PERIOD]
+13	
+#/***********************************************************/
+#/* The rest of this file may be left alone for most small  */
+#/* to moderate sized designs.  You may need to alter it    */
+#/* when synthesizing your final project.                   */
+#/***********************************************************/
+set SYN_DIR ./
+./
+#/***********************************************************/
+#/* Set some flags for optimisation */
+set compile_top_all_paths "true"
+true
+set auto_wire_load_selection "false"
+false
+set compile_seqmap_synchronous_extraction "true"
+true
+# uncomment this and change number appropriately if on multi-core machine
+#set_host_options -max_cores 2
+#/***********************************************************/
+#/*  Clk Periods/uncertainty/transition                     */
+set CLK_TRANSITION 0.1
+0.1
+set CLK_UNCERTAINTY 0.1
+0.1
+set CLK_LATENCY 0.1
+0.1
+#/* Input/output Delay values */
+set AVG_INPUT_DELAY 0.1
+0.1
+set AVG_OUTPUT_DELAY 0.1
+0.1
+#/* Critical Range (ns) */
+set CRIT_RANGE 1.0
+1.0
+#/***********************************************************/
+#/* Design Constrains: Not all used                         */
+set MAX_TRANSITION 1.0
+1.0
+set FAST_TRANSITION 0.1
+0.1
+set MAX_FANOUT 32
+32
+set MID_FANOUT 8
+8
+set LOW_FANOUT 1
+1
+set HIGH_DRIVE 0
+0
+set HIGH_LOAD 1.0
+1.0
+set AVG_LOAD 0.1
+0.1
+set AVG_FANOUT_LOAD 10
+10
+#/***********************************************************/
+#/*BASIC_INPUT = cb18os120_tsmc_max/nd02d1/A1
+#BASIC_OUTPUT = cb18os120_tsmc_max/nd02d1/ZN*/
+set DRIVING_CELL dffacs1
+dffacs1
+#/* DONT_USE_LIST = {   } */
+#/*************operation cons**************/
+#/*OP_WCASE = WCCOM;
+#OP_BCASE = BCCOM;*/
+set WIRE_LOAD "tsmcwire"
+tsmcwire
+set LOGICLIB lec25dscc25_TT
+lec25dscc25_TT
+#/*****************************/
+#/* Sourcing the file that sets the Search path and the libraries(target,link) */
+set sys_clk $clock_name
+clock
+set netlist_file [format "%s%s"  [format "%s%s"  $SYN_DIR $design_name] ".vg"]
+./icache_controller.vg
+set ddc_file [format "%s%s"  [format "%s%s"  $SYN_DIR $design_name] ".ddc"]
+./icache_controller.ddc
+set rep_file [format "%s%s"  [format "%s%s"  $SYN_DIR $design_name] ".rep"]
+./icache_controller.rep
+set dc_shell_status [ set chk_file [format "%s%s"  [format "%s%s"  $SYN_DIR $design_name] ".chk"] ]
+./icache_controller.chk
+#/* if we didnt find errors at this point, run */
+if {  $dc_shell_status != [list] } {
+   current_design $design_name
+  link
+  set_wire_load_model -name $WIRE_LOAD -lib $LOGICLIB $design_name
+  set_wire_load_mode top
+  set_fix_multiple_port_nets -outputs -buffer_constants
+  create_clock -period $CLK_PERIOD -name $sys_clk [find port $sys_clk]
+  set_clock_uncertainty $CLK_UNCERTAINTY $sys_clk
+  set_fix_hold $sys_clk
+  group_path -from [all_inputs] -name input_grp
+  group_path -to [all_outputs] -name output_grp
+  set_driving_cell  -lib_cell $DRIVING_CELL [all_inputs]
+  remove_driving_cell [find port $sys_clk]
+  set_fanout_load $AVG_FANOUT_LOAD [all_outputs]
+  set_load $AVG_LOAD [all_outputs]
+  set_input_delay $AVG_INPUT_DELAY -clock $sys_clk [all_inputs]
+  remove_input_delay -clock $sys_clk [find port $sys_clk]
+  set_output_delay $AVG_OUTPUT_DELAY -clock $sys_clk [all_outputs]
+  set_dont_touch $reset_name
+  set_resistance 0 $reset_name
+  set_drive 0 $reset_name
+  set_critical_range $CRIT_RANGE [current_design]
+  set_max_delay $CLK_PERIOD [all_outputs]
+  set MAX_FANOUT $MAX_FANOUT
+  set MAX_TRANSITION $MAX_TRANSITION
+  uniquify
+  ungroup -all -flatten
+  redirect $chk_file { check_design }
+  compile -map_effort medium
+  write -hier -format verilog -output $netlist_file $design_name
+  write -hier -format ddc -output $ddc_file $design_name
+  redirect $rep_file { report_design -nosplit }
+  redirect -append $rep_file { report_area }
+  redirect -append $rep_file { report_timing -max_paths 2 -input_pins -nets -transition_time -nosplit }
+  redirect -append $rep_file { report_constraint -max_delay -verbose -nosplit }
+  remove_design -all
+  read_file -format verilog $netlist_file
+  current_design $design_name
+  redirect -append $rep_file { report_reference -nosplit }
+  quit
+} else {
+   quit
+}
+Current design is 'icache_controller'.
+
+  Linking design 'icache_controller'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  icache_controller           /afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/icache_controller.db
+  lec25dscc25_TT (library)    /usr/caen/generic/mentor_lib-D.1/public/eecs470/synopsys/lec25dscc25_TT.db
+
+Current design is 'icache_controller'.
+Warning: Design has no hierarchy.  No cells can be ungrouped. (UID-228)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | G-2012.06-DWBB_201206.0 |     *     |
+| Licensed DW Building Blocks        |                         |           |
+============================================================================
+
+
+Information: There are 196 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'icache_controller'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'icache_controller_DW01_add_0'
+  Processing 'icache_controller_DW01_sub_0'
+  Processing 'icache_controller_DW01_cmp6_0'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Mapping Optimization (Phase 1)
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                             MIN DELAY
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT            COST   
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:10  519022.2      0.00       0.0      14.2                                0.00
+    0:00:10  519022.2      0.00       0.0      14.2                                0.00
+    0:00:10  519022.2      0.00       0.0      14.2                                0.00
+    0:00:10  519022.2      0.00       0.0      14.2                                0.00
+    0:00:10  519022.2      0.00       0.0      14.2                                0.00
+    0:00:10  519022.2      0.00       0.0      14.2                                0.00
+    0:00:12  384215.8      0.00       0.0      10.7                                0.00
+    0:00:12  383013.1      0.00       0.0      10.7                                0.00
+    0:00:12  383013.1      0.00       0.0      10.7                                0.00
+    0:00:12  383013.1      0.00       0.0      10.7                                0.00
+    0:00:12  383013.1      0.00       0.0      10.7                                0.00
+    0:00:12  383013.1      0.00       0.0      10.7                                0.00
+    0:00:12  383013.1      0.00       0.0      10.7                                0.00
+    0:00:12  383013.1      0.00       0.0      10.7                                0.00
+    0:00:12  383013.1      0.00       0.0      10.7                                0.00
+    0:00:12  383013.1      0.00       0.0      10.7                                0.00
+    0:00:12  383013.1      0.00       0.0      10.7                                0.00
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                             MIN DELAY
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT            COST   
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:12  383013.1      0.00       0.0      10.7                                0.00
+    0:00:12  383013.1      0.00       0.0      10.7                                0.00
+    0:00:13  380860.8      0.00       0.0      10.7                                0.00
+
+
+  Beginning Design Rule Fixing  (min_path)  (max_transition)
+  ----------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                             MIN DELAY
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT            COST   
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:13  380860.8      0.00       0.0      10.7                              -11.34
+    0:00:14  385170.3      0.00       0.0       6.4 ctr2cache_rd_addr[40]        -11.34
+    0:00:14  389446.5      0.00       0.0       2.6 ctr2cache_rd_addr[4]         -11.34
+    0:00:14  394993.8      0.00       0.0       0.9 ctr2cache_wr_data[46]        -11.34
+    0:00:14  399177.8      0.00       0.0       0.0 MSHR_valid_reg[9]/DIN         -9.77
+    0:00:14  399428.0      0.00       0.0       0.0                               -9.40
+
+
+  Beginning Critical Range Optimization
+  -------------------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                             MIN DELAY
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT            COST   
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:14  399428.0      0.00       0.0       0.0                               -9.40
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                             MIN DELAY
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT            COST   
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:14  399428.0      0.00       0.0       0.0                               -9.40
+    0:00:14  399428.0      0.00       0.0       0.0                               -9.40
+    0:00:14  399428.0      0.00       0.0       0.0                               -9.40
+    0:00:14  393745.6      0.00       0.0       0.3                               -9.40
+    0:00:15  389826.7      0.00       0.0       0.4                               -9.40
+    0:00:15  387946.4      0.00       0.0       0.4                               -9.40
+    0:00:15  387177.5      0.00       0.0       0.4                               -9.40
+    0:00:15  386709.4      0.00       0.0       0.4                               -9.40
+    0:00:15  386709.4      0.00       0.0       0.4                               -9.40
+    0:00:15  387275.7      0.00       0.0       0.0                               -9.40
+    0:00:15  387275.7      0.00       0.0       0.0                               -9.40
+    0:00:15  387275.7      0.00       0.0       0.0                               -9.40
+    0:00:15  387167.9      0.00       0.0       0.0                               -9.40
+    0:00:15  387167.9      0.00       0.0       0.0                               -9.40
+    0:00:15  387167.9      0.00       0.0       0.0                               -9.40
+    0:00:15  387167.9      0.00       0.0       0.0                               -9.40
+    0:00:15  387167.9      0.00       0.0       0.0                               -9.40
+    0:00:15  387167.9      0.00       0.0       0.0                               -9.40
+    0:00:15  387167.9      0.00       0.0       0.0                               -9.40
+
+
+  Beginning Critical Range Optimization
+  -------------------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                             MIN DELAY
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT            COST   
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:15  387167.9      0.00       0.0       0.0                               -9.40
+    0:00:15  387234.7      0.00       0.0       0.0                               -9.40
+Loading db file '/usr/caen/generic/mentor_lib-D.1/public/eecs470/synopsys/lec25dscc25_TT.db'
+
+  Optimization Complete
+  ---------------------
+Warning: Design 'icache_controller' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+     Net 'clock': 1171 load(s), 1 driver(s)
+Writing verilog file '/afs/umich.edu/user/c/h/chengfu/Desktop/syn2/synth/icache_controller.vg'.
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+Writing ddc file './icache_controller.ddc'.
+Removing design 'icache_controller'
+Removing design 'icache_controller_DW01_cmp6_0'
+Removing design 'icache_controller_DW01_add_1'
+Removing design 'icache_controller_DW01_sub_1'
+Removing library 'lec25dscc25_TT'
+Removing library 'gtech'
+Removing library 'standard.sldb'
+Loading db file '/usr/caen/generic/mentor_lib-D.1/public/eecs470/synopsys/lec25dscc25_TT.db'
+Loading db file '/usr/caen/synopsys-synth-2012.06/libraries/syn/gtech.db'
+Loading db file '/usr/caen/synopsys-synth-2012.06/libraries/syn/standard.sldb'
+  Loading link library 'lec25dscc25_TT'
+  Loading link library 'gtech'
+Loading verilog file '/afs/umich.edu/user/c/h/chengfu/Desktop/syn2/synth/icache_controller.vg'
+Detecting input file type automatically (-rtl or -netlist).
+Running DC verilog reader
+Performing 'read' command.
+Compiling source file /afs/umich.edu/user/c/h/chengfu/Desktop/syn2/synth/icache_controller.vg
+Reading with netlist reader (equivalent to -netlist option).
+Verilog netlist reader completed successfully.
+Current design is now '/afs/umich.edu/user/c/h/chengfu/Desktop/syn2/synth/icache_controller_DW01_cmp6_0.db:icache_controller_DW01_cmp6_0'
+Loaded 4 designs.
+Current design is 'icache_controller_DW01_cmp6_0'.
+Current design is 'icache_controller'.
+
+Thank you...

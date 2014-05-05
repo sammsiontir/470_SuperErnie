@@ -1,0 +1,54 @@
+`timescale 1ns/100ps
+
+module pre_decoder ( inst_1, inst_2, cond_branch_1, cond_branch_2, 
+        uncond_branch_1, uncond_branch_2, bsr_branch_1, bsr_branch_2, 
+        ret_branch_1, ret_branch_2, is_ldq_1, is_ldq_2 );
+  input [31:0] inst_1;
+  input [31:0] inst_2;
+  output cond_branch_1, cond_branch_2, uncond_branch_1, uncond_branch_2,
+         bsr_branch_1, bsr_branch_2, ret_branch_1, ret_branch_2, is_ldq_1,
+         is_ldq_2;
+  wire   inst_1_15, inst_1_14, inst_2_15, inst_2_14, n1, n2, n3, n4, n5, n6,
+         n7, n8, n9, n10, n11, n12, n13, n14, n15, n16, n17, n18, n19;
+  assign inst_1_15 = inst_1[15];
+  assign inst_1_14 = inst_1[14];
+  assign inst_2_15 = inst_2[15];
+  assign inst_2_14 = inst_2[14];
+
+  nnd2s2 U3 ( .DIN1(inst_2[31]), .DIN2(n8), .Q(n12) );
+  nnd2s2 U4 ( .DIN1(n14), .DIN2(n15), .Q(uncond_branch_1) );
+  and2s2 U7 ( .DIN1(n16), .DIN2(inst_1_15), .Q(ret_branch_1) );
+  and3s2 U13 ( .DIN1(inst_2[30]), .DIN2(inst_2[29]), .DIN3(inst_2[31]), .Q(
+        cond_branch_2) );
+  and4s3 U15 ( .DIN1(inst_2[28]), .DIN2(n6), .DIN3(inst_2[31]), .DIN4(n8), .Q(
+        bsr_branch_2) );
+  nnd3s2 U16 ( .DIN1(inst_2[30]), .DIN2(n9), .DIN3(n19), .Q(n13) );
+  nnd2s2 U20 ( .DIN1(inst_1[31]), .DIN2(inst_1[30]), .Q(n18) );
+  nor2s1 U31 ( .DIN1(n2), .DIN2(n18), .Q(cond_branch_1) );
+  nor2s1 U32 ( .DIN1(n15), .DIN2(n3), .Q(bsr_branch_1) );
+  aoi21s2 U33 ( .DIN1(n11), .DIN2(n12), .DIN3(n13), .Q(uncond_branch_2) );
+  nnd4s1 U34 ( .DIN1(n3), .DIN2(n1), .DIN3(n4), .DIN4(n17), .Q(n14) );
+  and3s1 U35 ( .DIN1(inst_1[30]), .DIN2(inst_1[29]), .DIN3(inst_1[27]), .Q(n17) );
+  nor2s1 U36 ( .DIN1(inst_1_14), .DIN2(n14), .Q(n16) );
+  ib1s1 U37 ( .DIN(n13), .Q(n6) );
+  or4s1 U38 ( .DIN1(n18), .DIN2(inst_1[26]), .DIN3(inst_1[27]), .DIN4(
+        inst_1[29]), .Q(n15) );
+  nor4s1 U39 ( .DIN1(n10), .DIN2(n11), .DIN3(n13), .DIN4(inst_2_14), .Q(
+        ret_branch_2) );
+  ib1s1 U40 ( .DIN(inst_2_15), .Q(n10) );
+  nor5s1 U41 ( .DIN1(n5), .DIN2(n9), .DIN3(n7), .DIN4(inst_2[30]), .DIN5(
+        inst_2[28]), .Q(is_ldq_2) );
+  ib1s1 U42 ( .DIN(inst_2[29]), .Q(n7) );
+  ib1s1 U43 ( .DIN(inst_2[31]), .Q(n5) );
+  ib1s1 U44 ( .DIN(inst_1[29]), .Q(n2) );
+  nor5s1 U45 ( .DIN1(n1), .DIN2(n4), .DIN3(n2), .DIN4(inst_1[30]), .DIN5(
+        inst_1[28]), .Q(is_ldq_1) );
+  ib1s1 U46 ( .DIN(inst_2[27]), .Q(n8) );
+  ib1s1 U47 ( .DIN(inst_1[28]), .Q(n3) );
+  ib1s1 U48 ( .DIN(inst_1[31]), .Q(n1) );
+  ib1s1 U49 ( .DIN(inst_1[26]), .Q(n4) );
+  xnr2s1 U50 ( .DIN1(inst_2[29]), .DIN2(inst_2[27]), .Q(n19) );
+  ib1s1 U51 ( .DIN(inst_2[26]), .Q(n9) );
+  or3s1 U52 ( .DIN1(inst_2[28]), .DIN2(inst_2[31]), .DIN3(n8), .Q(n11) );
+endmodule
+

@@ -1,0 +1,1196 @@
+
+                      Design Compiler Graphical
+                            DC Ultra (TM)
+                             DFTMAX (TM)
+                         Power Compiler (TM)
+                           DesignWare (R)
+                           DC Expert (TM)
+                         Design Vision (TM)
+                          HDL Compiler (TM)
+                         VHDL Compiler (TM)
+                            DFT Compiler
+                        Library Compiler (TM)
+                         Design Compiler(R)
+
+            Version G-2012.06 for RHEL64 -- May 30, 2012
+               Copyright (c) 1988-2012 Synopsys, Inc.
+
+This software and the associated documentation are confidential and 
+proprietary to Synopsys, Inc. Your use or disclosure of this software 
+is subject to the terms and conditions of a written license agreement 
+between you, or your company, and Synopsys, Inc.
+
+Initializing...
+################################################################################
+## DO NOT EDIT THESE FILES BY HAND
+##
+## CONFIGURATION HAS BEEN MOVED TO THE MAKEFILE
+################################################################################
+set search_path [ list "./" "/usr/caen/generic/mentor_lib-D.1/public/eecs470/synopsys/" ]
+./ /usr/caen/generic/mentor_lib-D.1/public/eecs470/synopsys/
+set target_library "lec25dscc25_TT.db"
+lec25dscc25_TT.db
+set link_library [concat  "*" $target_library]
+* lec25dscc25_TT.db
+#/***********************************************************/
+#/* Set some flags to suppress warnings we don't care about */
+set suppress_errors [concat $suppress_errors "UID-401"]
+UID-401
+suppress_message {"VER-130"}
+#/***********************************************************/
+#/* The following lines are set from environment variables
+#/* automatically by the Makefile
+#/***********************************************************/
+lappend search_path ../
+./ /usr/caen/generic/mentor_lib-D.1/public/eecs470/synopsys/ ../
+set icache_module [getenv ICACHE_NAME]
+icachemem
+set dcache_module [getenv DCACHE_NAME]
+cache
+read_file -f ddc [list ${icache_module}.ddc]
+Loading db file '/usr/caen/generic/mentor_lib-D.1/public/eecs470/synopsys/lec25dscc25_TT.db'
+Loading db file '/usr/caen/synopsys-synth-2012.06/libraries/syn/gtech.db'
+Loading db file '/usr/caen/synopsys-synth-2012.06/libraries/syn/standard.sldb'
+  Loading link library 'lec25dscc25_TT'
+  Loading link library 'gtech'
+Reading ddc file '/afs/umich.edu/user/c/h/chengfu/Desktop/SuperErnie_Pipeline_v10/synth/icachemem.ddc'.
+Loaded 1 design.
+Current design is 'icachemem'.
+icachemem
+set_dont_touch ${icache_module}
+1
+read_file -f ddc [list ${dcache_module}.ddc]
+Reading ddc file '/afs/umich.edu/user/c/h/chengfu/Desktop/SuperErnie_Pipeline_v10/synth/cache.ddc'.
+Loaded 1 design.
+Current design is 'cache'.
+cache
+set_dont_touch ${dcache_module}
+1
+set headers [getenv HEADERS]
+sys_defs.vh
+set sources [getenv PIPEFILES]
+verilog/Pipeline.v verilog/branch_recovery_controller.vg verilog/dcache_controller.vg verilog/D_stage.vg verilog/icache_controller.vg verilog/if_FB.vg verilog/I_stage.vg verilog/pre_decoder.vg verilog/simLSQ.vg verilog/X_C_Buffer.vg verilog/X_stage.vg
+read_file -f verilog [list ${headers} ${sources}]
+Loading verilog files: '/afs/umich.edu/user/c/h/chengfu/Desktop/SuperErnie_Pipeline_v10/sys_defs.vh' '/afs/umich.edu/user/c/h/chengfu/Desktop/SuperErnie_Pipeline_v10/verilog/Pipeline.v' '/afs/umich.edu/user/c/h/chengfu/Desktop/SuperErnie_Pipeline_v10/verilog/branch_recovery_controller.vg' '/afs/umich.edu/user/c/h/chengfu/Desktop/SuperErnie_Pipeline_v10/verilog/dcache_controller.vg' '/afs/umich.edu/user/c/h/chengfu/Desktop/SuperErnie_Pipeline_v10/verilog/D_stage.vg' '/afs/umich.edu/user/c/h/chengfu/Desktop/SuperErnie_Pipeline_v10/verilog/icache_controller.vg' '/afs/umich.edu/user/c/h/chengfu/Desktop/SuperErnie_Pipeline_v10/verilog/if_FB.vg' '/afs/umich.edu/user/c/h/chengfu/Desktop/SuperErnie_Pipeline_v10/verilog/I_stage.vg' '/afs/umich.edu/user/c/h/chengfu/Desktop/SuperErnie_Pipeline_v10/verilog/pre_decoder.vg' '/afs/umich.edu/user/c/h/chengfu/Desktop/SuperErnie_Pipeline_v10/verilog/simLSQ.vg' '/afs/umich.edu/user/c/h/chengfu/Desktop/SuperErnie_Pipeline_v10/verilog/X_C_Buffer.vg' '/afs/umich.edu/user/c/h/chengfu/Desktop/SuperErnie_Pipeline_v10/verilog/X_stage.vg' 
+Detecting input file type automatically (-rtl or -netlist).
+Running DC verilog reader
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /afs/umich.edu/user/c/h/chengfu/Desktop/SuperErnie_Pipeline_v10/sys_defs.vh
+Compiling source file /afs/umich.edu/user/c/h/chengfu/Desktop/SuperErnie_Pipeline_v10/verilog/Pipeline.v
+Compiling source file /afs/umich.edu/user/c/h/chengfu/Desktop/SuperErnie_Pipeline_v10/verilog/branch_recovery_controller.vg
+Compiling source file /afs/umich.edu/user/c/h/chengfu/Desktop/SuperErnie_Pipeline_v10/verilog/dcache_controller.vg
+Compiling source file /afs/umich.edu/user/c/h/chengfu/Desktop/SuperErnie_Pipeline_v10/verilog/D_stage.vg
+Compiling source file /afs/umich.edu/user/c/h/chengfu/Desktop/SuperErnie_Pipeline_v10/verilog/icache_controller.vg
+Compiling source file /afs/umich.edu/user/c/h/chengfu/Desktop/SuperErnie_Pipeline_v10/verilog/if_FB.vg
+Compiling source file /afs/umich.edu/user/c/h/chengfu/Desktop/SuperErnie_Pipeline_v10/verilog/I_stage.vg
+Compiling source file /afs/umich.edu/user/c/h/chengfu/Desktop/SuperErnie_Pipeline_v10/verilog/pre_decoder.vg
+Compiling source file /afs/umich.edu/user/c/h/chengfu/Desktop/SuperErnie_Pipeline_v10/verilog/simLSQ.vg
+Compiling source file /afs/umich.edu/user/c/h/chengfu/Desktop/SuperErnie_Pipeline_v10/verilog/X_C_Buffer.vg
+Compiling source file /afs/umich.edu/user/c/h/chengfu/Desktop/SuperErnie_Pipeline_v10/verilog/X_stage.vg
+
+Inferred memory devices in process
+	in routine pipeline line 768 in file
+		'/afs/umich.edu/user/c/h/chengfu/Desktop/SuperErnie_Pipeline_v10/verilog/Pipeline.v'.
+=============================================================================================
+|           Register Name           |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=============================================================================================
+| LSQ_X_rs_rd_lsq_tail_out_alu1_reg | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+|  LSQ_X_wr_men_value_out_alu0_reg  | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+|  LSQ_X_wr_men_value_out_alu1_reg  | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+|     LSQ_X_wr_mem_out_alu0_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     LSQ_X_wr_mem_out_alu1_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     LSQ_X_rd_mem_out_alu0_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     LSQ_X_rd_mem_out_alu1_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|   LSQ_X_alu_result_out_alu0_reg   | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+|   LSQ_X_alu_result_out_alu1_reg   | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+| LSQ_X_rs_rd_lsq_tail_out_alu0_reg | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+=============================================================================================
+
+Inferred memory devices in process
+	in routine pipeline line 1009 in file
+		'/afs/umich.edu/user/c/h/chengfu/Desktop/SuperErnie_Pipeline_v10/verilog/Pipeline.v'.
+=========================================================================================
+|         Register Name         |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=========================================================================================
+| F_rs_wr_data_brp_TAR_PC_2_reg | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+|        if_D_NPC_1_reg         | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+|        if_D_NPC_2_reg         | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+|         if_D_IR_1_reg         | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|         if_D_IR_2_reg         | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|     if_D_valid_inst_1_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     if_D_valid_inst_2_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     if_D_br_marker_1_reg      | Flip-flop |   3   |  Y  | N  | N  | N  | N  | N  | N  |
+|     if_D_br_marker_2_reg      | Flip-flop |   3   |  Y  | N  | N  | N  | N  | N  | N  |
+|        if_D_bmask1_reg        | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+|        if_D_bmask2_reg        | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+|   F_rs_wr_data_brpTN_1_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|   F_rs_wr_data_brpTN_2_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+| F_rs_wr_data_brp_TAR_PC_1_reg | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+=========================================================================================
+
+Inferred memory devices in process
+	in routine pipeline line 1193 in file
+		'/afs/umich.edu/user/c/h/chengfu/Desktop/SuperErnie_Pipeline_v10/verilog/Pipeline.v'.
+==================================================================================
+|     Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+==================================================================================
+|      D_I_halt_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+| D_I_rs_inst_status_reg | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+==================================================================================
+
+Inferred memory devices in process
+	in routine pipeline line 1345 in file
+		'/afs/umich.edu/user/c/h/chengfu/Desktop/SuperErnie_Pipeline_v10/verilog/Pipeline.v'.
+=============================================================================================
+|           Register Name           |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=============================================================================================
+|    I_X_valid_inst_out_alu3_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|          I_X_IR_alu0_reg          | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|         I_X_NPC_alu0_reg          | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+|  I_X_opa_reg_value_out_alu0_reg   | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+|  I_X_opb_reg_value_out_alu0_reg   | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+|   I_X_dest_reg_idx_out_alu0_reg   | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|    I_X_opa_select_out_alu0_reg    | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+|    I_X_opb_select_out_alu0_reg    | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+|     I_X_alu_func_out_alu0_reg     | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+|      I_X_rd_mem_out_alu0_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|      I_X_wr_mem_out_alu0_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|   I_X_cond_branch_out_alu0_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|  I_X_uncond_branch_out_alu0_reg   | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|    I_X_br_marker_out_alu0_reg     | Flip-flop |   3   |  Y  | N  | N  | N  | N  | N  | N  |
+|    I_X_valid_inst_out_alu0_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|   I_X_rs_rd_brpTN_out_alu0_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+| I_X_rs_rd_brp_TAR_PC_out_alu0_reg | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+|  I_X_rs_rd_lsq_tail_out_alu0_reg  | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+|          I_X_IR_alu1_reg          | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|         I_X_NPC_alu1_reg          | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+|  I_X_opa_reg_value_out_alu1_reg   | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+|  I_X_opb_reg_value_out_alu1_reg   | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+|   I_X_dest_reg_idx_out_alu1_reg   | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|    I_X_opa_select_out_alu1_reg    | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+|    I_X_opb_select_out_alu1_reg    | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+|     I_X_alu_func_out_alu1_reg     | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+|      I_X_rd_mem_out_alu1_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|      I_X_wr_mem_out_alu1_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|   I_X_cond_branch_out_alu1_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|  I_X_uncond_branch_out_alu1_reg   | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|    I_X_br_marker_out_alu1_reg     | Flip-flop |   3   |  Y  | N  | N  | N  | N  | N  | N  |
+|    I_X_valid_inst_out_alu1_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|   I_X_rs_rd_brpTN_out_alu1_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+| I_X_rs_rd_brp_TAR_PC_out_alu1_reg | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+|  I_X_rs_rd_lsq_tail_out_alu1_reg  | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+|          I_X_IR_alu2_reg          | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|         I_X_NPC_alu2_reg          | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+|  I_X_opa_reg_value_out_alu2_reg   | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+|  I_X_opb_reg_value_out_alu2_reg   | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+|   I_X_dest_reg_idx_out_alu2_reg   | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|    I_X_opa_select_out_alu2_reg    | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+|    I_X_opb_select_out_alu2_reg    | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+|    I_X_valid_inst_out_alu2_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|          I_X_IR_alu3_reg          | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|         I_X_NPC_alu3_reg          | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+|  I_X_opa_reg_value_out_alu3_reg   | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+|  I_X_opb_reg_value_out_alu3_reg   | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+|   I_X_dest_reg_idx_out_alu3_reg   | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|    I_X_opa_select_out_alu3_reg    | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+|    I_X_opb_select_out_alu3_reg    | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+=============================================================================================
+Presto compilation completed successfully.
+Current design is now '/afs/umich.edu/user/c/h/chengfu/Desktop/SuperErnie_Pipeline_v10/verilog/pipeline.db:pipeline'
+Loaded 83 designs.
+Current design is 'pipeline'.
+pipeline branch_recovery_controller dcache_controller D_stage_DW01_inc_18 D_stage_DW01_inc_20 D_stage icache_controller_DW01_cmp6_0 icache_controller_DW01_sub_1 icache_controller_DW01_add_1 icache_controller if_FB_DW01_inc_1 if_FB_DW01_add_5 if_FB_DW01_add_3 if_FB_DW01_add_4 if_FB pre_decoder simLSQ_DW01_cmp6_4 simLSQ_DW01_cmp6_5 simLSQ_DW01_cmp6_6 simLSQ_DW01_cmp6_7 simLSQ_DW01_cmp6_8 simLSQ_DW01_cmp6_9 simLSQ_DW01_cmp6_10 simLSQ_DW01_cmp6_11 simLSQ_DW01_cmp6_12 simLSQ_DW01_cmp6_13 simLSQ_DW01_cmp6_14 simLSQ_DW01_cmp6_15 simLSQ_DW01_cmp6_16 simLSQ_DW01_cmp6_17 simLSQ_DW01_cmp6_18 simLSQ_DW01_cmp6_19 simLSQ_DW01_cmp6_20 simLSQ_DW01_cmp6_21 simLSQ_DW01_cmp6_22 simLSQ_DW01_cmp6_23 simLSQ_DW01_cmp6_24 simLSQ_DW01_cmp6_25 simLSQ_DW01_cmp6_26 simLSQ_DW01_cmp6_27 simLSQ_DW01_cmp6_28 simLSQ_DW01_cmp6_29 simLSQ_DW01_cmp6_30 simLSQ_DW01_cmp6_31 simLSQ_DW01_cmp6_32 simLSQ_DW01_cmp6_33 simLSQ_DW01_cmp6_34 simLSQ_DW01_cmp6_35 simLSQ X_C_Buffer X_stage_DW01_cmp6_0 X_stage_DW01_ash_1 X_stage_DW01_cmp6_1 X_stage_DW01_ash_3 X_stage_DW01_cmp6_2 X_stage_DW_rash_0 X_stage_DW01_cmp6_3 X_stage_DW_rash_1 X_stage_DW01_add_17 X_stage_DW02_mult_7 X_stage_DW01_add_16 X_stage_DW02_mult_6 X_stage_DW01_add_15 X_stage_DW02_mult_5 X_stage_DW01_add_14 X_stage_DW02_mult_4 X_stage_DW02_mult_3 X_stage_DW01_add_12 X_stage_DW02_mult_2 X_stage_DW01_add_11 X_stage_DW02_mult_1 X_stage_DW02_mult_0 X_stage_DW01_add_24 X_stage_DW01_add_25 X_stage_DW01_sub_4 X_stage_DW01_sub_5 X_stage_DW01_add_18 X_stage_DW01_add_21 X_stage_DW01_add_19 X_stage_DW01_add_20 X_stage_DW01_add_22 X_stage_DW01_add_23 X_stage
+set design_name [getenv PIPELINE_NAME]
+pipeline
+set clock_name [getenv CLOCK_NET_NAME]
+clock
+set reset_name [getenv RESET_NET_NAME]
+reset
+set CLK_PERIOD [getenv CLOCK_PERIOD]
+20 
+#/***********************************************************/
+#/* The rest of this file may be left alone for most small  */
+#/* to moderate sized designs.  You may need to alter it    */
+#/* when synthesizing your final project.                   */
+#/***********************************************************/
+set SYN_DIR ./
+./
+#/***********************************************************/
+#/* Set some flags for optimisation */
+set compile_top_all_paths "true"
+true
+set auto_wire_load_selection "false"
+false
+set compile_seqmap_synchronous_extraction "true"
+true
+# uncomment this and change number appropriately if on multi-core machine
+#set_host_options -max_cores 2
+#/***********************************************************/
+#/*  Clk Periods/uncertainty/transition                     */
+set CLK_TRANSITION 0.1
+0.1
+set CLK_UNCERTAINTY 0.1
+0.1
+set CLK_LATENCY 0.1
+0.1
+#/* Input/output Delay values */
+set AVG_INPUT_DELAY 0.1
+0.1
+set AVG_OUTPUT_DELAY 0.1
+0.1
+#/* Critical Range (ns) */
+set CRIT_RANGE 1.0
+1.0
+#/***********************************************************/
+#/* Design Constrains: Not all used                         */
+set MAX_TRANSITION 1.0
+1.0
+set FAST_TRANSITION 0.1
+0.1
+set MAX_FANOUT 32
+32
+set MID_FANOUT 8
+8
+set LOW_FANOUT 1
+1
+set HIGH_DRIVE 0
+0
+set HIGH_LOAD 1.0
+1.0
+set AVG_LOAD 0.1
+0.1
+set AVG_FANOUT_LOAD 10
+10
+#/***********************************************************/
+#/*BASIC_INPUT = cb18os120_tsmc_max/nd02d1/A1
+#BASIC_OUTPUT = cb18os120_tsmc_max/nd02d1/ZN*/
+set DRIVING_CELL dffacs1
+dffacs1
+#/* DONT_USE_LIST = {   } */
+#/*************operation cons**************/
+#/*OP_WCASE = WCCOM;
+#OP_BCASE = BCCOM;*/
+set WIRE_LOAD "tsmcwire"
+tsmcwire
+set LOGICLIB lec25dscc25_TT
+lec25dscc25_TT
+#/*****************************/
+#/* Sourcing the file that sets the Search path and the libraries(target,link) */
+set sys_clk $clock_name
+clock
+set netlist_file [format "%s%s"  [format "%s%s"  $SYN_DIR $design_name] ".vg"]
+./pipeline.vg
+set ddc_file [format "%s%s"  [format "%s%s"  $SYN_DIR $design_name] ".ddc"]
+./pipeline.ddc
+set rep_file [format "%s%s"  [format "%s%s"  $SYN_DIR $design_name] ".rep"]
+./pipeline.rep
+set dc_shell_status [ set chk_file [format "%s%s"  [format "%s%s"  $SYN_DIR $design_name] ".chk"] ]
+./pipeline.chk
+#/* if we didnt find errors at this point, run */
+if {  $dc_shell_status != [list] } {
+   current_design $design_name
+  link
+  set_wire_load_model -name $WIRE_LOAD -lib $LOGICLIB $design_name
+  set_wire_load_mode top
+  set_fix_multiple_port_nets -outputs -buffer_constants
+  create_clock -period $CLK_PERIOD -name $sys_clk [find port $sys_clk]
+  set_clock_uncertainty $CLK_UNCERTAINTY $sys_clk
+  set_fix_hold $sys_clk
+  group_path -from [all_inputs] -name input_grp
+  group_path -to [all_outputs] -name output_grp
+  set_driving_cell  -lib_cell $DRIVING_CELL [all_inputs]
+  remove_driving_cell [find port $sys_clk]
+  set_fanout_load $AVG_FANOUT_LOAD [all_outputs]
+  set_load $AVG_LOAD [all_outputs]
+  set_input_delay $AVG_INPUT_DELAY -clock $sys_clk [all_inputs]
+  remove_input_delay -clock $sys_clk [find port $sys_clk]
+  set_output_delay $AVG_OUTPUT_DELAY -clock $sys_clk [all_outputs]
+  set_dont_touch $reset_name
+  set_resistance 0 $reset_name
+  set_drive 0 $reset_name
+  set_critical_range $CRIT_RANGE [current_design]
+  set_max_delay $CLK_PERIOD [all_outputs]
+  set MAX_FANOUT $MAX_FANOUT
+  set MAX_TRANSITION $MAX_TRANSITION
+  uniquify
+  ungroup -all -flatten
+  redirect $chk_file { check_design }
+  compile -map_effort medium
+  write -hier -format verilog -output $netlist_file $design_name
+  write -hier -format ddc -output $ddc_file $design_name
+  redirect $rep_file { report_design -nosplit }
+  redirect -append $rep_file { report_area }
+  redirect -append $rep_file { report_timing -max_paths 2 -input_pins -nets -transition_time -nosplit }
+  redirect -append $rep_file { report_constraint -max_delay -verbose -nosplit }
+  remove_design -all
+  read_file -format verilog $netlist_file
+  current_design $design_name
+  redirect -append $rep_file { report_reference -nosplit }
+  quit
+} else {
+   quit
+}
+Current design is 'pipeline'.
+
+  Linking design 'pipeline'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (85 designs)              /afs/umich.edu/user/c/h/chengfu/Desktop/SuperErnie_Pipeline_v10/verilog/pipeline.db, etc
+  lec25dscc25_TT (library)    /usr/caen/generic/mentor_lib-D.1/public/eecs470/synopsys/lec25dscc25_TT.db
+
+Information: Building the design 'I_stage'. (HDL-193)
+Warning: Cannot find the design 'I_stage' in the library 'WORK'. (LBR-1)
+Warning: Unable to resolve reference 'I_stage' in 'pipeline'. (LINK-5)
+Information: Building the design 'I_stage'. (HDL-193)
+Warning: Cannot find the design 'I_stage' in the library 'WORK'. (LBR-1)
+Warning: Unable to resolve reference 'I_stage' in 'pipeline'. (LINK-5)
+Warning: Design 'pipeline' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Warning: Design 'pipeline' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Warning: Design 'pipeline' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Warning: Design 'pipeline' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Warning: Design 'pipeline' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Warning: Design 'pipeline' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Warning: Design 'pipeline' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Warning: Design 'pipeline' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Warning: Design 'pipeline' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Warning: Design 'pipeline' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Warning: Design 'pipeline' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Warning: Design 'pipeline' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Warning: Design 'pipeline' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Current design is 'pipeline'.
+Warning: Design 'pipeline' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Warning: Design 'pipeline' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Warning: Design 'pipeline' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Warning: Design 'pipeline' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Information: Updating graph... (UID-83)
+Warning: Design 'pipeline' contains 3 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+Warning: Design 'pipeline' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | G-2012.06-DWBB_201206.0 |     *     |
+| Licensed DW Building Blocks        |                         |           |
+============================================================================
+
+
+Information: There are 3097 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'pipeline'
+Information: The register 'Execute/mult1/mstage[3]/NPC_out_reg[4]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[3]/NPC_out_reg[3]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[3]/NPC_out_reg[2]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[3]/NPC_out_reg[1]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[3]/NPC_out_reg[0]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[3]/NPC_out_reg[63]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[3]/NPC_out_reg[62]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[3]/NPC_out_reg[61]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[3]/NPC_out_reg[60]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[3]/NPC_out_reg[59]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[3]/NPC_out_reg[58]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[3]/NPC_out_reg[57]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[3]/NPC_out_reg[56]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[3]/NPC_out_reg[55]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[3]/NPC_out_reg[54]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[3]/NPC_out_reg[53]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[3]/NPC_out_reg[52]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[3]/NPC_out_reg[51]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[3]/NPC_out_reg[50]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[3]/NPC_out_reg[49]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[3]/NPC_out_reg[48]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[3]/NPC_out_reg[47]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[3]/NPC_out_reg[46]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[3]/NPC_out_reg[45]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[3]/NPC_out_reg[44]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[3]/NPC_out_reg[43]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[3]/NPC_out_reg[42]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[3]/NPC_out_reg[41]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[3]/NPC_out_reg[40]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[3]/NPC_out_reg[39]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[3]/NPC_out_reg[38]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[3]/NPC_out_reg[37]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[3]/NPC_out_reg[36]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[3]/NPC_out_reg[35]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[3]/NPC_out_reg[34]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[3]/NPC_out_reg[33]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[3]/NPC_out_reg[32]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[3]/NPC_out_reg[31]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[3]/NPC_out_reg[30]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[3]/NPC_out_reg[29]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[3]/NPC_out_reg[28]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[3]/NPC_out_reg[27]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[3]/NPC_out_reg[26]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[3]/NPC_out_reg[25]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[3]/NPC_out_reg[24]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[3]/NPC_out_reg[23]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[3]/NPC_out_reg[22]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[3]/NPC_out_reg[21]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[3]/NPC_out_reg[20]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[3]/NPC_out_reg[19]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[3]/NPC_out_reg[18]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[3]/NPC_out_reg[17]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[3]/NPC_out_reg[16]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[3]/NPC_out_reg[15]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[3]/NPC_out_reg[14]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[3]/NPC_out_reg[13]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[3]/NPC_out_reg[12]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[3]/NPC_out_reg[11]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[3]/NPC_out_reg[10]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[3]/NPC_out_reg[9]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[3]/NPC_out_reg[8]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[3]/NPC_out_reg[7]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[3]/NPC_out_reg[6]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[3]/NPC_out_reg[5]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[3]/NPC_out_reg[4]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[3]/NPC_out_reg[3]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[3]/NPC_out_reg[2]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[3]/NPC_out_reg[1]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[3]/NPC_out_reg[0]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[3]/NPC_out_reg[63]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[3]/NPC_out_reg[62]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[3]/NPC_out_reg[61]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[3]/NPC_out_reg[60]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[3]/NPC_out_reg[59]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[3]/NPC_out_reg[58]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[3]/NPC_out_reg[57]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[3]/NPC_out_reg[56]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[3]/NPC_out_reg[55]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[3]/NPC_out_reg[54]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[3]/NPC_out_reg[53]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[3]/NPC_out_reg[52]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[3]/NPC_out_reg[51]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[3]/NPC_out_reg[50]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[3]/NPC_out_reg[49]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[3]/NPC_out_reg[48]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[3]/NPC_out_reg[47]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[3]/NPC_out_reg[46]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[3]/NPC_out_reg[45]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[3]/NPC_out_reg[44]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[3]/NPC_out_reg[43]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[3]/NPC_out_reg[42]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[3]/NPC_out_reg[41]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[3]/NPC_out_reg[40]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[3]/NPC_out_reg[39]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[3]/NPC_out_reg[38]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[3]/NPC_out_reg[37]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[3]/NPC_out_reg[36]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[3]/NPC_out_reg[35]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[3]/NPC_out_reg[34]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[3]/NPC_out_reg[33]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[3]/NPC_out_reg[32]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[3]/NPC_out_reg[31]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[3]/NPC_out_reg[30]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[3]/NPC_out_reg[29]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[3]/NPC_out_reg[28]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[3]/NPC_out_reg[27]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[3]/NPC_out_reg[26]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[3]/NPC_out_reg[25]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[3]/NPC_out_reg[24]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[3]/NPC_out_reg[23]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[3]/NPC_out_reg[22]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[3]/NPC_out_reg[21]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[3]/NPC_out_reg[20]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[3]/NPC_out_reg[19]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[3]/NPC_out_reg[18]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[3]/NPC_out_reg[17]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[3]/NPC_out_reg[16]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[3]/NPC_out_reg[15]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[3]/NPC_out_reg[14]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[3]/NPC_out_reg[13]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[3]/NPC_out_reg[12]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[3]/NPC_out_reg[11]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[3]/NPC_out_reg[10]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[3]/NPC_out_reg[9]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[3]/NPC_out_reg[8]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[3]/NPC_out_reg[7]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[3]/NPC_out_reg[6]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[3]/NPC_out_reg[5]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[2]/NPC_out_reg[0]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[2]/NPC_out_reg[21]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[2]/NPC_out_reg[20]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[2]/NPC_out_reg[12]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[2]/NPC_out_reg[11]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[2]/NPC_out_reg[13]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[2]/NPC_out_reg[63]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[2]/NPC_out_reg[62]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[2]/NPC_out_reg[61]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[2]/NPC_out_reg[60]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[2]/NPC_out_reg[59]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[2]/NPC_out_reg[58]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[2]/NPC_out_reg[57]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[2]/NPC_out_reg[56]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[2]/NPC_out_reg[55]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[2]/NPC_out_reg[54]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[2]/NPC_out_reg[53]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[2]/NPC_out_reg[52]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[2]/NPC_out_reg[51]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[2]/NPC_out_reg[50]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[1]/NPC_out_reg[20]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[0]/NPC_out_reg[20]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[2]/NPC_out_reg[49]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[2]/NPC_out_reg[28]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[1]/NPC_out_reg[0]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[0]/NPC_out_reg[0]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[2]/NPC_out_reg[24]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[2]/NPC_out_reg[23]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[2]/NPC_out_reg[15]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[2]/NPC_out_reg[14]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[2]/NPC_out_reg[34]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[2]/NPC_out_reg[33]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[2]/NPC_out_reg[63]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[1]/NPC_out_reg[63]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[0]/NPC_out_reg[63]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[2]/NPC_out_reg[47]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[2]/NPC_out_reg[48]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[2]/NPC_out_reg[35]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[2]/NPC_out_reg[49]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[2]/NPC_out_reg[50]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[2]/NPC_out_reg[51]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[2]/NPC_out_reg[48]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[2]/NPC_out_reg[47]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[2]/NPC_out_reg[46]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[2]/NPC_out_reg[45]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[2]/NPC_out_reg[44]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[2]/NPC_out_reg[43]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[2]/NPC_out_reg[42]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[2]/NPC_out_reg[41]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[2]/NPC_out_reg[40]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[2]/NPC_out_reg[39]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[2]/NPC_out_reg[38]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[2]/NPC_out_reg[37]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[2]/NPC_out_reg[36]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[2]/NPC_out_reg[35]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[2]/NPC_out_reg[34]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[2]/NPC_out_reg[33]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[2]/NPC_out_reg[32]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[2]/NPC_out_reg[31]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[2]/NPC_out_reg[30]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[2]/NPC_out_reg[29]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[2]/NPC_out_reg[28]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[2]/NPC_out_reg[27]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[2]/NPC_out_reg[26]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[2]/NPC_out_reg[25]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[2]/NPC_out_reg[24]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[2]/NPC_out_reg[23]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[2]/NPC_out_reg[22]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[2]/NPC_out_reg[21]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[2]/NPC_out_reg[20]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[2]/NPC_out_reg[19]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[2]/NPC_out_reg[18]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[2]/NPC_out_reg[17]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[2]/NPC_out_reg[16]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[2]/NPC_out_reg[15]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[2]/NPC_out_reg[14]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[2]/NPC_out_reg[13]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[2]/NPC_out_reg[12]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[2]/NPC_out_reg[11]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[2]/NPC_out_reg[10]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[2]/NPC_out_reg[9]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[2]/NPC_out_reg[8]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[2]/NPC_out_reg[7]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[2]/NPC_out_reg[6]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[1]/NPC_out_reg[21]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[0]/NPC_out_reg[21]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[1]/NPC_out_reg[23]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[0]/NPC_out_reg[23]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[1]/NPC_out_reg[24]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[0]/NPC_out_reg[24]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[2]/NPC_out_reg[30]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[2]/NPC_out_reg[32]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[2]/NPC_out_reg[61]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[2]/NPC_out_reg[44]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[2]/NPC_out_reg[45]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[2]/NPC_out_reg[40]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[2]/NPC_out_reg[37]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[2]/NPC_out_reg[36]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[2]/NPC_out_reg[38]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[2]/NPC_out_reg[52]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[2]/NPC_out_reg[53]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[2]/NPC_out_reg[42]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[1]/NPC_out_reg[36]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[0]/NPC_out_reg[36]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[1]/NPC_out_reg[37]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[0]/NPC_out_reg[37]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[1]/NPC_out_reg[38]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[0]/NPC_out_reg[38]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[1]/NPC_out_reg[40]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[0]/NPC_out_reg[40]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[1]/NPC_out_reg[42]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[0]/NPC_out_reg[42]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[1]/NPC_out_reg[44]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[0]/NPC_out_reg[44]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[1]/NPC_out_reg[45]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[0]/NPC_out_reg[45]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[1]/NPC_out_reg[47]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[0]/NPC_out_reg[47]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[1]/NPC_out_reg[48]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[0]/NPC_out_reg[48]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[2]/NPC_out_reg[1]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[1]/NPC_out_reg[1]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[0]/NPC_out_reg[1]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[2]/NPC_out_reg[2]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[1]/NPC_out_reg[2]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[0]/NPC_out_reg[2]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[2]/NPC_out_reg[3]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[1]/NPC_out_reg[3]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[0]/NPC_out_reg[3]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[2]/NPC_out_reg[4]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[1]/NPC_out_reg[4]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[0]/NPC_out_reg[4]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[2]/NPC_out_reg[16]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[1]/NPC_out_reg[16]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[0]/NPC_out_reg[16]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[2]/NPC_out_reg[6]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[1]/NPC_out_reg[6]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[0]/NPC_out_reg[6]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[2]/NPC_out_reg[5]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[1]/NPC_out_reg[5]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[0]/NPC_out_reg[5]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[2]/NPC_out_reg[7]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[1]/NPC_out_reg[7]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[0]/NPC_out_reg[7]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[2]/NPC_out_reg[9]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[2]/NPC_out_reg[22]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[1]/NPC_out_reg[22]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[0]/NPC_out_reg[22]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[2]/NPC_out_reg[18]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[1]/NPC_out_reg[18]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[0]/NPC_out_reg[18]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[2]/NPC_out_reg[17]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[1]/NPC_out_reg[17]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[0]/NPC_out_reg[17]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[2]/NPC_out_reg[19]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[1]/NPC_out_reg[19]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[0]/NPC_out_reg[19]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[2]/NPC_out_reg[3]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[2]/NPC_out_reg[2]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[2]/NPC_out_reg[1]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[2]/NPC_out_reg[0]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[1]/NPC_out_reg[63]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[1]/NPC_out_reg[62]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[1]/NPC_out_reg[61]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[1]/NPC_out_reg[60]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[1]/NPC_out_reg[59]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[1]/NPC_out_reg[58]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[1]/NPC_out_reg[57]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[1]/NPC_out_reg[56]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[1]/NPC_out_reg[55]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[1]/NPC_out_reg[54]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[1]/NPC_out_reg[53]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[1]/NPC_out_reg[52]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[1]/NPC_out_reg[51]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[1]/NPC_out_reg[50]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[1]/NPC_out_reg[49]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[1]/NPC_out_reg[48]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[1]/NPC_out_reg[47]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[1]/NPC_out_reg[46]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[1]/NPC_out_reg[45]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[1]/NPC_out_reg[44]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[1]/NPC_out_reg[43]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[1]/NPC_out_reg[42]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[1]/NPC_out_reg[41]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[1]/NPC_out_reg[40]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[1]/NPC_out_reg[39]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[1]/NPC_out_reg[38]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[1]/NPC_out_reg[37]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[1]/NPC_out_reg[36]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[1]/NPC_out_reg[35]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[1]/NPC_out_reg[34]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[1]/NPC_out_reg[33]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[1]/NPC_out_reg[32]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[1]/NPC_out_reg[31]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[1]/NPC_out_reg[30]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[1]/NPC_out_reg[29]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[1]/NPC_out_reg[28]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[1]/NPC_out_reg[27]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[1]/NPC_out_reg[26]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[1]/NPC_out_reg[25]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[1]/NPC_out_reg[24]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[1]/NPC_out_reg[23]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[1]/NPC_out_reg[22]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[1]/NPC_out_reg[21]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[1]/NPC_out_reg[20]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[1]/NPC_out_reg[19]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[1]/NPC_out_reg[18]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[0]/NPC_out_reg[18]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[1]/NPC_out_reg[17]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[0]/NPC_out_reg[17]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[1]/NPC_out_reg[16]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[0]/NPC_out_reg[16]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[1]/NPC_out_reg[15]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[0]/NPC_out_reg[15]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[1]/NPC_out_reg[14]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[0]/NPC_out_reg[14]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[1]/NPC_out_reg[13]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[0]/NPC_out_reg[13]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[1]/NPC_out_reg[12]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[0]/NPC_out_reg[12]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[1]/NPC_out_reg[28]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[0]/NPC_out_reg[28]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[1]/NPC_out_reg[30]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[0]/NPC_out_reg[30]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[1]/NPC_out_reg[11]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[0]/NPC_out_reg[11]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[1]/NPC_out_reg[9]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[0]/NPC_out_reg[9]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[1]/NPC_out_reg[11]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[0]/NPC_out_reg[11]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[1]/NPC_out_reg[12]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[0]/NPC_out_reg[12]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[1]/NPC_out_reg[13]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[0]/NPC_out_reg[13]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[1]/NPC_out_reg[14]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[0]/NPC_out_reg[14]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[1]/NPC_out_reg[15]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[0]/NPC_out_reg[15]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[2]/NPC_out_reg[25]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[1]/NPC_out_reg[25]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[0]/NPC_out_reg[25]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[2]/NPC_out_reg[39]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[1]/NPC_out_reg[39]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[0]/NPC_out_reg[39]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[2]/NPC_out_reg[54]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[2]/NPC_out_reg[55]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[2]/NPC_out_reg[26]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[1]/NPC_out_reg[26]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[0]/NPC_out_reg[26]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[2]/NPC_out_reg[27]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[1]/NPC_out_reg[27]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[0]/NPC_out_reg[27]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[2]/NPC_out_reg[56]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[2]/NPC_out_reg[57]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[2]/NPC_out_reg[58]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[1]/NPC_out_reg[10]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[0]/NPC_out_reg[10]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[1]/NPC_out_reg[9]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[0]/NPC_out_reg[9]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[1]/NPC_out_reg[8]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[0]/NPC_out_reg[8]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[1]/NPC_out_reg[7]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[0]/NPC_out_reg[7]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[1]/NPC_out_reg[6]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[0]/NPC_out_reg[6]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[2]/NPC_out_reg[4]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[2]/NPC_out_reg[5]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[1]/NPC_out_reg[3]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[0]/NPC_out_reg[3]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[1]/NPC_out_reg[2]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[0]/NPC_out_reg[2]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[1]/NPC_out_reg[1]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[0]/NPC_out_reg[1]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[1]/NPC_out_reg[0]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[0]/NPC_out_reg[0]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[0]/NPC_out_reg[63]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[0]/NPC_out_reg[62]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[0]/NPC_out_reg[61]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[0]/NPC_out_reg[60]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[0]/NPC_out_reg[59]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[0]/NPC_out_reg[58]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[0]/NPC_out_reg[57]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[0]/NPC_out_reg[56]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[0]/NPC_out_reg[55]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[0]/NPC_out_reg[54]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[0]/NPC_out_reg[53]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[0]/NPC_out_reg[52]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[0]/NPC_out_reg[51]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[0]/NPC_out_reg[50]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[0]/NPC_out_reg[49]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[0]/NPC_out_reg[48]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[0]/NPC_out_reg[47]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[0]/NPC_out_reg[46]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[0]/NPC_out_reg[45]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[0]/NPC_out_reg[44]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[0]/NPC_out_reg[43]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[0]/NPC_out_reg[42]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[0]/NPC_out_reg[41]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[0]/NPC_out_reg[40]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[0]/NPC_out_reg[39]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[0]/NPC_out_reg[38]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[0]/NPC_out_reg[37]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[0]/NPC_out_reg[36]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[0]/NPC_out_reg[35]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[0]/NPC_out_reg[34]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[0]/NPC_out_reg[33]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[0]/NPC_out_reg[32]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[0]/NPC_out_reg[31]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[0]/NPC_out_reg[30]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[0]/NPC_out_reg[29]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[0]/NPC_out_reg[28]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[0]/NPC_out_reg[27]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[0]/NPC_out_reg[26]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[0]/NPC_out_reg[25]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[0]/NPC_out_reg[24]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[0]/NPC_out_reg[23]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[0]/NPC_out_reg[22]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[0]/NPC_out_reg[21]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[1]/NPC_out_reg[32]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[0]/NPC_out_reg[32]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[1]/NPC_out_reg[33]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[0]/NPC_out_reg[33]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[1]/NPC_out_reg[34]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[0]/NPC_out_reg[34]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[1]/NPC_out_reg[35]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[0]/NPC_out_reg[35]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[2]/NPC_out_reg[8]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[1]/NPC_out_reg[8]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[0]/NPC_out_reg[8]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[2]/NPC_out_reg[10]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[1]/NPC_out_reg[10]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[0]/NPC_out_reg[10]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[2]/NPC_out_reg[31]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[1]/NPC_out_reg[31]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[0]/NPC_out_reg[31]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[2]/NPC_out_reg[62]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[1]/NPC_out_reg[62]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[0]/NPC_out_reg[62]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[2]/NPC_out_reg[46]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[1]/NPC_out_reg[46]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[0]/NPC_out_reg[46]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[2]/NPC_out_reg[41]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[1]/NPC_out_reg[41]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[0]/NPC_out_reg[41]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[2]/NPC_out_reg[29]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[1]/NPC_out_reg[29]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[0]/NPC_out_reg[29]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[2]/NPC_out_reg[59]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[2]/NPC_out_reg[60]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[2]/NPC_out_reg[43]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[1]/NPC_out_reg[43]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[0]/NPC_out_reg[43]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[0]/NPC_out_reg[20]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[0]/NPC_out_reg[19]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[1]/NPC_out_reg[4]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[0]/NPC_out_reg[4]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[1]/NPC_out_reg[5]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult0/mstage[0]/NPC_out_reg[5]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[1]/NPC_out_reg[49]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[0]/NPC_out_reg[49]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[1]/NPC_out_reg[50]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[0]/NPC_out_reg[50]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[1]/NPC_out_reg[51]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[0]/NPC_out_reg[51]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[1]/NPC_out_reg[52]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[0]/NPC_out_reg[52]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[1]/NPC_out_reg[53]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[0]/NPC_out_reg[53]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[1]/NPC_out_reg[54]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[0]/NPC_out_reg[54]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[1]/NPC_out_reg[55]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[0]/NPC_out_reg[55]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[1]/NPC_out_reg[56]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[0]/NPC_out_reg[56]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[1]/NPC_out_reg[57]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[0]/NPC_out_reg[57]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[1]/NPC_out_reg[58]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[0]/NPC_out_reg[58]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[1]/NPC_out_reg[59]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[0]/NPC_out_reg[59]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[1]/NPC_out_reg[60]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[0]/NPC_out_reg[60]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[1]/NPC_out_reg[61]' will be removed. (OPT-1207)
+Information: The register 'Execute/mult1/mstage[0]/NPC_out_reg[61]' will be removed. (OPT-1207)
+Information: The register 'I_X_IR_alu3_reg[21]' will be removed. (OPT-1207)
+Information: The register 'I_X_IR_alu3_reg[22]' will be removed. (OPT-1207)
+Information: The register 'I_X_IR_alu3_reg[23]' will be removed. (OPT-1207)
+Information: The register 'I_X_IR_alu3_reg[24]' will be removed. (OPT-1207)
+Information: The register 'I_X_IR_alu3_reg[25]' will be removed. (OPT-1207)
+Information: The register 'I_X_IR_alu3_reg[26]' will be removed. (OPT-1207)
+Information: The register 'I_X_IR_alu3_reg[27]' will be removed. (OPT-1207)
+Information: The register 'I_X_IR_alu3_reg[28]' will be removed. (OPT-1207)
+Information: The register 'I_X_IR_alu3_reg[29]' will be removed. (OPT-1207)
+Information: The register 'I_X_IR_alu3_reg[30]' will be removed. (OPT-1207)
+Information: The register 'I_X_IR_alu3_reg[31]' will be removed. (OPT-1207)
+Information: The register 'I_X_IR_alu2_reg[21]' will be removed. (OPT-1207)
+Information: The register 'I_X_IR_alu2_reg[22]' will be removed. (OPT-1207)
+Information: The register 'I_X_IR_alu2_reg[23]' will be removed. (OPT-1207)
+Information: The register 'I_X_IR_alu2_reg[24]' will be removed. (OPT-1207)
+Information: The register 'I_X_IR_alu2_reg[25]' will be removed. (OPT-1207)
+Information: The register 'I_X_IR_alu2_reg[26]' will be removed. (OPT-1207)
+Information: The register 'I_X_IR_alu2_reg[27]' will be removed. (OPT-1207)
+Information: The register 'I_X_IR_alu2_reg[28]' will be removed. (OPT-1207)
+Information: The register 'I_X_IR_alu2_reg[29]' will be removed. (OPT-1207)
+Information: The register 'I_X_IR_alu2_reg[30]' will be removed. (OPT-1207)
+Information: The register 'I_X_IR_alu2_reg[31]' will be removed. (OPT-1207)
+Information: The register 'I_X_IR_alu1_reg[21]' will be removed. (OPT-1207)
+Information: The register 'I_X_IR_alu1_reg[22]' will be removed. (OPT-1207)
+Information: The register 'I_X_IR_alu1_reg[23]' will be removed. (OPT-1207)
+Information: The register 'I_X_IR_alu1_reg[24]' will be removed. (OPT-1207)
+Information: The register 'I_X_IR_alu1_reg[25]' will be removed. (OPT-1207)
+Information: The register 'I_X_IR_alu1_reg[29]' will be removed. (OPT-1207)
+Information: The register 'I_X_IR_alu1_reg[30]' will be removed. (OPT-1207)
+Information: The register 'I_X_IR_alu1_reg[31]' will be removed. (OPT-1207)
+Information: The register 'I_X_IR_alu0_reg[21]' will be removed. (OPT-1207)
+Information: The register 'I_X_IR_alu0_reg[22]' will be removed. (OPT-1207)
+Information: The register 'I_X_IR_alu0_reg[23]' will be removed. (OPT-1207)
+Information: The register 'I_X_IR_alu0_reg[24]' will be removed. (OPT-1207)
+Information: The register 'I_X_IR_alu0_reg[25]' will be removed. (OPT-1207)
+Information: The register 'I_X_IR_alu0_reg[29]' will be removed. (OPT-1207)
+Information: The register 'I_X_IR_alu0_reg[30]' will be removed. (OPT-1207)
+Information: The register 'I_X_IR_alu0_reg[31]' will be removed. (OPT-1207)
+Warning: Cell 'U12/U1' (*GEN*153) cannot be exactly translated 1 for 1 into target library.  Ignoring set_compile_directives. (TRANS-9)
+Warning: Cell 'U13/U1' (*GEN*152) cannot be exactly translated 1 for 1 into target library.  Ignoring set_compile_directives. (TRANS-9)
+Information: The register 'if_D_NPC_2_reg[2]' is a constant and will be removed. (OPT-1206)
+Information: Building the design 'I_stage'. (HDL-193)
+Warning: Cannot find the design 'I_stage' in the library 'WORK'. (LBR-1)
+Warning: Unable to resolve reference 'I_stage' in 'pipeline'. (LINK-5)
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'pipeline_DW01_cmp6_0'
+  Processing 'pipeline_DW01_cmp6_1'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                             MIN DELAY
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT            COST   
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:06:02 24826154.8  11055.89 44583656.0 1066605.1                                0.00
+    0:06:02 24826154.8  11055.89 44583656.0 1066605.1                                0.00
+    0:06:05 25470802.2  11055.89 44584328.0 1061064.8                                0.00
+    0:06:17 27006735.9   5918.82 38503088.0  818149.0                                0.00
+    0:06:21 27789162.2   5918.82 38132140.0  730686.1                                0.00
+    0:06:26 28560841.0   5918.82 37165812.0  665569.3                                0.00
+    0:06:34 30138512.3   5914.55 36845380.0  633893.2                                0.00
+    0:06:36 30696283.9   5914.55 36845520.0  630759.6                                0.00
+    0:06:39 32066496.2   5914.55 36845048.0  618542.0                                0.00
+    0:06:42 32950499.2   5914.55 36831648.0  611883.6                                0.00
+    0:06:47 33792555.9      2.69   39126.9   18814.2                                0.00
+    0:06:54 34430424.6      0.00       0.0   10599.6                                0.00
+    0:07:34 32209259.7      6.07   96693.0   10333.4                                0.00
+    0:07:42 32208827.7      6.07   96773.0   10333.7                                0.00
+    0:07:42 32208827.7      6.07   96773.0   10333.7                                0.00
+    0:11:19 32208681.2      5.93   94325.0   10333.5                                0.00
+    0:11:22 32208476.0      5.87   93172.6   10331.4                                0.00
+    0:11:22 32208476.0      5.87   93172.6   10331.4                                0.00
+    0:11:25 32208476.0      5.87   93172.6   10331.4                                0.00
+    0:12:33 22089218.7      0.00       0.0    2706.4                                0.00
+    0:12:44 21985190.7      0.00       0.0    2705.5                                0.00
+    0:13:04 21985182.4      0.00       0.0    2698.2                                0.00
+    0:13:10 21985182.4      0.00       0.0    2698.2                                0.00
+    0:13:12 21985182.4      0.00       0.0    2698.2                                0.00
+    0:13:14 21985182.4      0.00       0.0    2698.2                                0.00
+    0:13:15 21983589.9      0.00       0.0    2698.2                                0.00
+    0:13:16 21983589.9      0.00       0.0    2698.2                                0.00
+    0:13:21 21982600.4      0.00       0.0    2569.7                                0.00
+    0:13:24 21982509.2      0.00       0.0    2564.3                                0.00
+    0:13:26 21982509.6      0.00       0.0    2559.7                                0.00
+    0:13:27 21982510.1      0.00       0.0    2555.2                                0.00
+    0:13:28 21982361.1      0.00       0.0    2552.5                                0.00
+    0:13:29 21982079.1      0.00       0.0    2551.8                                0.00
+    0:13:30 21981938.0      0.00       0.0    2551.5                                0.00
+    0:13:31 21981938.0      0.00       0.0    2551.5                                0.00
+    0:13:31 21981938.0      0.00       0.0    2551.5                                0.00
+    0:13:31 21981938.0      0.00       0.0    2551.5                                0.00
+    0:13:31 21981938.0      0.00       0.0    2551.5                                0.00
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                             MIN DELAY
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT            COST   
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:13:31 21981938.0      0.00       0.0    2551.5                                0.00
+    0:13:31 21981938.0      0.00       0.0    2551.5                                0.00
+    0:13:41 21977598.6      0.00       0.0    2551.8                                0.00
+    0:13:53 21893379.8      0.00       0.0    2748.8                                0.00
+    0:14:02 21732517.7      0.00       0.0    2761.6                                0.00
+
+
+  Beginning Design Rule Fixing  (min_path)  (max_transition)  (max_fanout)
+  ----------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                             MIN DELAY
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT            COST   
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:14:12 21732517.7      0.00       0.0    2761.6                              -92.86
+    0:14:17 21739538.5      0.00       0.0     474.7 X_br_mispredict_1            -92.86
+    0:14:17 21740440.0      0.00       0.0     465.4 net407312                    -92.87
+    0:14:17 21741509.4      0.00       0.0     458.8 net407328                    -92.87
+    0:14:17 21742578.7      0.00       0.0     452.3 net407344                    -92.87
+    0:14:18 21743104.6      0.00       0.0     447.4 if_D_IR_1[21]                -92.87
+    0:14:18 21747782.5      0.00       0.0     430.6 if_D_IR_1[4]                 -92.87
+    0:14:19 21752460.4      0.00       0.0     413.7 if_D_IR_1[4]                 -92.87
+    0:14:19 21752910.9      0.00       0.0     410.6 if_D_IR_2[21]                -92.88
+    0:14:20 21753252.9      0.00       0.0     408.5 Dispatch/rob/t[1]            -92.88
+    0:14:20 21753519.4      0.00       0.0     406.5 Dispatch/rob/t[1]            -92.88
+    0:14:21 21753785.8      0.00       0.0     404.5 Dispatch/rob/t[1]            -92.88
+    0:14:21 21754052.3      0.00       0.0     402.5 Dispatch/rob/t[1]            -92.88
+    0:14:21 21754318.8      0.00       0.0     400.5 Dispatch/rob/t[1]            -92.88
+    0:14:22 21754685.7      0.00       0.0     398.5 Dispatch/rob/t[1]            -92.88
+    0:14:23 21755253.3      0.00       0.0     395.5 net419490                    -92.88
+    0:14:24 21755784.6      0.00       0.0     390.9 net420529                    -92.88
+    0:14:24 21756000.8      0.00       0.0     389.9 net420531                    -92.88
+    0:14:25 21756126.1      0.00       0.0     388.6 net429383                    -92.87
+    0:14:26 21756466.9      0.00       0.0     388.2 n84527                       -92.87
+    0:14:27 21757760.5      0.00       0.0     313.4 if_D_IR_1[25]                -92.87
+    0:14:29 21758544.5      0.00       0.0     307.9 if_D_IR_2[2]                 -92.87
+    0:14:30 21758950.9      0.00       0.0     301.6 net419489                    -92.87
+    0:14:30 21759083.6      0.00       0.0     301.0 net420522                    -92.87
+    0:14:30 21759249.5      0.00       0.0     300.2 net416195                    -92.87
+    0:14:31 21759357.3      0.00       0.0     299.9 net420212                    -92.87
+    0:14:33 21759375.0      0.00       0.0     120.3 net604780                    -92.87
+    0:14:34 21761095.4      0.00       0.0      83.3 LSQ_X_wr_men_value_out_alu0_reg[40]/DIN    -89.47
+    0:14:35 21764161.1      0.00       0.0      83.3 Dispatch/archMap/reg_tag_reg[14][2]/DIN    -85.28
+    0:14:35 21766071.2      0.00       0.0      83.3 Execute/mult1/mstage[1]/prod_in_reg_reg[7]/DIN    -81.83
+    0:14:36 21768253.9      0.00       0.0      83.3 Execute/mult0/mstage[1]/prod_in_reg_reg[23]/DIN    -77.33
+    0:14:36 21770261.3      0.00       0.0      83.3 Execute/mult1/mstage[1]/mplier_out_reg[7]/DIN    -72.72
+    0:14:36 21772201.8      0.00       0.0      83.3 dcontrol/MSHR_addr_reg[0][40]/DIN    -68.63
+    0:14:36 21774867.0      0.00       0.0      83.3 Execute/mult1/mstage[1]/prod_in_reg_reg[47]/DIN    -62.97
+    0:14:36 21777133.2      0.00       0.0      83.3 Execute/mult1/mstage[1]/mplier_out_reg[4]/DIN    -58.31
+    0:14:37 21779115.4      0.00       0.0      83.3 Execute/mult0/mstage[2]/prod_in_reg_reg[7]/DIN    -53.70
+    0:14:37 21781089.1      0.00       0.0      83.3 Execute/mult1/mstage[3]/prod_in_reg_reg[14]/DIN    -49.26
+    0:14:37 21783554.3      0.00       0.0      83.3 Execute/mult0/mstage[1]/prod_in_reg_reg[59]/DIN    -43.68
+    0:14:38 21785011.8      0.00       0.0      83.3 Execute/mult1/mstage[1]/prod_in_reg_reg[44]/DIN    -40.17
+    0:14:38 21785828.0      0.00       0.0      83.3 Dispatch/rob/NPC_reg[20][2]/DIN    -38.26
+    0:14:38 21787210.6      0.00       0.0      83.3 Execute/mult0/mstage[3]/prod_in_reg_reg[13]/DIN    -35.08
+    0:14:39 21791899.8      0.00       0.0      83.3 Execute/mult1/mstage[2]/mplier_out_reg[3]/DIN    -21.08
+    0:14:39 21795164.6      0.00       0.0      83.3 Execute/mult1/mstage[2]/mplier_out_reg[11]/DIN    -11.80
+    0:14:40 21796629.4      0.00       0.0      80.9 Dcache_ctr2lsq_rd_data[22]     -9.40
+    0:14:40 21796896.6      0.00       0.0      74.5 Dcache_ctr2lsq_rd_data[37]     -9.40
+    0:14:41 21797163.8      0.00       0.0      68.2 Dcache_ctr2lsq_rd_data[24]     -9.40
+    0:14:41 21797431.0      0.00       0.0      61.8 Dcache_ctr2lsq_rd_data[49]     -9.40
+    0:14:41 21797698.2      0.00       0.0      55.4 Dcache_ctr2lsq_rd_data[53]     -9.40
+    0:14:41 21797965.4      0.00       0.0      49.1 Dcache_ctr2lsq_rd_data[62]     -9.40
+    0:14:42 21798140.6      0.00       0.0      46.2 Dcache_ctr2lsq_rd_data[1]     -9.40
+    0:14:42 21798374.3      0.00       0.0      45.0 Dcache_ctr2lsq_rd_data[13]     -9.40
+    0:14:42 21798624.6      0.00       0.0      43.8 Dcache_ctr2lsq_rd_data[5]     -9.40
+    0:14:44 21799521.3      0.00       0.0      40.0 Icache_data_out[63]           -9.40
+    0:14:45 21799654.0      0.00       0.0      39.0 net419448                     -9.40
+    0:14:45 21799786.7      0.00       0.0      38.0 net419456                     -9.40
+    0:14:46 21799919.4      0.00       0.0      37.0 net419465                     -9.40
+    0:14:46 21800052.1      0.00       0.0      35.9 net419473                     -9.40
+    0:14:47 21800184.8      0.00       0.0      34.9 net419481                     -9.40
+    0:14:47 21800317.5      0.00       0.0      33.9 net419440                     -9.40
+    0:14:48 21800467.0      0.00       0.0      33.0 Icache_data_out[30]           -9.40
+    0:14:49 21800616.3      0.00       0.0      32.1 net420482                     -9.40
+    0:14:49 21800765.6      0.00       0.0      31.3 net420491                     -9.40
+    0:14:50 21800914.9      0.00       0.0      30.4 net420500                     -9.40
+    0:14:50 21801064.2      0.00       0.0      29.5 net420509                     -9.40
+    0:14:51 21801213.4      0.00       0.0      28.7 net420518                     -9.40
+    0:14:52 21801362.7      0.00       0.0      27.9 net416234                     -9.40
+    0:14:52 21801512.0      0.00       0.0      27.1 net416293                     -9.40
+    0:14:53 21801661.3      0.00       0.0      26.3 net416302                     -9.40
+    0:14:54 21801810.6      0.00       0.0      25.5 net416311                     -9.40
+    0:14:54 21801959.9      0.00       0.0      24.7 net416320                     -9.40
+    0:14:55 21801942.3      0.00       0.0      24.0 net428843                     -9.40
+    0:14:55 21801774.4      0.00       0.0      23.2 net428943                     -9.40
+    0:14:56 21801606.5      0.00       0.0      22.5 net429043                     -9.40
+    0:14:57 21801438.7      0.00       0.0      21.8 net429143                     -9.40
+    0:14:57 21801270.8      0.00       0.0      21.0 net429243                     -9.40
+    0:14:58 21801102.9      0.00       0.0      20.3 net429343                     -9.40
+    0:14:59 21801285.9      0.00       0.0      19.9 net420168                     -9.40
+    0:14:59 21801435.2      0.00       0.0      19.6 net420177                     -9.40
+    0:15:00 21801584.4      0.00       0.0      19.2 net420186                     -9.40
+    0:15:00 21801733.7      0.00       0.0      18.9 net420196                     -9.40
+    0:15:01 21801883.0      0.00       0.0      18.5 net420205                     -9.40
+    0:15:02 21801982.4      0.00       0.0      18.3 Icache_data_out[27]           -9.40
+    0:15:03 21802015.6      0.00       0.0      16.7                               -9.40
+
+
+  Beginning Critical Range Optimization
+  -------------------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                             MIN DELAY
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT            COST   
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:15:03 21802015.6      0.00       0.0      16.7                               -9.40
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                             MIN DELAY
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT            COST   
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:15:04 21802015.6      0.00       0.0      16.7                               -9.40
+    0:15:04 21802015.6      0.00       0.0      16.7                               -9.40
+    0:15:05 21802015.6      0.00       0.0      16.7                               -9.40
+    0:15:21 21652728.4      0.00       0.0      16.6                               -9.40
+    0:15:35 21566216.4      0.00       0.0      17.3                               -9.40
+    0:15:47 21519662.0      0.00       0.0      11.2                               -9.40
+    0:15:57 21493187.6      0.00       0.0      11.4                               -9.40
+    0:16:07 21475430.9      0.00       0.0      11.8                               -9.40
+    0:16:14 21463839.9      0.00       0.0      11.7                               -9.40
+    0:16:19 21455891.4      0.00       0.0      11.7                               -9.40
+    0:16:23 21448486.2      0.00       0.0      12.0                               -9.40
+    0:16:28 21441915.5      0.00       0.0      12.0                               -9.40
+    0:16:32 21436165.1      0.00       0.0      12.1                               -9.40
+    0:16:35 21431100.0      0.00       0.0      12.1                               -9.40
+    0:16:39 21426126.6      0.00       0.0      12.1                               -9.40
+    0:16:42 21421362.8      0.00       0.0      12.2                               -9.40
+    0:16:45 21417149.4      0.00       0.0      12.2                               -9.40
+    0:16:48 21413337.9      0.00       0.0      12.2                               -9.40
+    0:16:51 21409819.7      0.00       0.0      12.2                               -9.40
+    0:16:51 21409819.7      0.00       0.0      12.2                               -9.40
+    0:16:52 21409819.7      0.00       0.0      12.2                               -9.40
+    0:16:52 21409819.7      0.00       0.0      12.2                               -9.40
+    0:16:54 21409819.7      0.00       0.0      12.2                               -9.40
+    0:17:02 21363675.5      0.00       0.0      13.5                              -10.27
+    0:17:02 21363675.5      0.00       0.0      13.5                              -10.27
+    0:17:03 21363675.5      0.00       0.0      13.5                              -10.27
+    0:17:03 21363675.5      0.00       0.0      13.5                              -10.27
+    0:17:03 21363675.5      0.00       0.0      13.5                              -10.27
+    0:17:03 21363675.5      0.00       0.0      13.5                              -10.27
+    0:17:09 21364278.2      0.00       0.0      13.3                              -10.27
+    0:17:09 21364692.9      0.00       0.0      13.3                               -9.40
+
+
+  Beginning Critical Range Optimization
+  -------------------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                             MIN DELAY
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT            COST   
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:17:09 21364692.9      0.00       0.0      13.3                               -9.40
+    0:17:13 21365224.9      0.00       0.0      13.3                               -9.40
+Loading db file '/usr/caen/generic/mentor_lib-D.1/public/eecs470/synopsys/lec25dscc25_TT.db'
+
+  Optimization Complete
+  ---------------------
+Warning: Design 'pipeline' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+     Net 'dcache_0/clock': 61743 load(s), 1 driver(s), 1 inout(s)
+Information: Building the design 'I_stage'. (HDL-193)
+Warning: Cannot find the design 'I_stage' in the library 'WORK'. (LBR-1)
+Warning: Unable to resolve reference 'I_stage' in 'pipeline'. (LINK-5)
+Writing verilog file '/afs/umich.edu/user/c/h/chengfu/Desktop/SuperErnie_Pipeline_v10/synth/pipeline.vg'.
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+Warning: Design 'pipeline' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Writing ddc file './pipeline.ddc'.
+Removing design 'icachemem'
+Removing design 'cache'
+Removing design 'pipeline'
+Removing design 'pipeline_DW01_cmp6_0'
+Removing design 'pipeline_DW01_cmp6_1'
+Removing library 'lec25dscc25_TT'
+Removing library 'gtech'
+Removing library 'standard.sldb'
+Loading db file '/usr/caen/generic/mentor_lib-D.1/public/eecs470/synopsys/lec25dscc25_TT.db'
+Loading db file '/usr/caen/synopsys-synth-2012.06/libraries/syn/gtech.db'
+Loading db file '/usr/caen/synopsys-synth-2012.06/libraries/syn/standard.sldb'
+  Loading link library 'lec25dscc25_TT'
+  Loading link library 'gtech'
+Loading verilog file '/afs/umich.edu/user/c/h/chengfu/Desktop/SuperErnie_Pipeline_v10/synth/pipeline.vg'
+Detecting input file type automatically (-rtl or -netlist).
+Running DC verilog reader
+Performing 'read' command.
+Compiling source file /afs/umich.edu/user/c/h/chengfu/Desktop/SuperErnie_Pipeline_v10/synth/pipeline.vg
+Reading with netlist reader (equivalent to -netlist option).
+Verilog netlist reader completed successfully.
+Current design is now '/afs/umich.edu/user/c/h/chengfu/Desktop/SuperErnie_Pipeline_v10/synth/icachemem.db:icachemem'
+Loaded 5 designs.
+Current design is 'icachemem'.
+Current design is 'pipeline'.
+
+Thank you...

@@ -1,0 +1,950 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'icache_controller' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : design
+Design : icache_controller
+Version: G-2012.06
+Date   : Mon Apr 22 23:50:30 2013
+****************************************
+
+Design allows ideal nets on clock nets.
+
+Library(s) Used:
+
+    lec25dscc25_TT (File: /usr/caen/generic/mentor_lib-D.1/public/eecs470/synopsys/lec25dscc25_TT.db)
+
+Local Link Library:
+
+    {lec25dscc25_TT.db}
+
+Flip-Flop Types:
+
+    No flip-flop types specified.
+
+Latch Types:
+
+    No latch types specified.
+
+Operating Conditions:
+
+
+    Operating Condition Name : nom_pvt
+    Library : lec25dscc25_TT
+    Process :   1.00
+    Temperature :  25.00
+    Voltage :   2.50
+    Interconnect Model : balanced_tree
+
+Wire Loading Model:
+
+    Selected manually by the user.
+
+Name           :   tsmcwire
+Location       :   lec25dscc25_TT
+Resistance     :   0.2642
+Capacitance    :   0.000132782
+Area           :   0.27
+Slope          :   0.74
+Fanout   Length   Points Average Cap Std Deviation
+--------------------------------------------------------------
+     1     0.89
+     2     1.48
+     3     2.44
+     4     3.18
+     5     3.92
+
+
+
+Wire Loading Model Mode: top.
+
+Timing Ranges:
+
+    No timing ranges specified.
+
+Pin Input Delays:
+
+    None specified.
+
+Pin Output Delays:
+
+    None specified.
+
+Disabled Timing Arcs:
+
+    No arcs disabled.
+
+Required Licenses:
+
+    None Required
+
+Design Parameters:
+
+    None specified.
+1
+ 
+****************************************
+Report : area
+Design : icache_controller
+Version: G-2012.06
+Date   : Mon Apr 22 23:50:30 2013
+****************************************
+
+Library(s) Used:
+
+    lec25dscc25_TT (File: /usr/caen/generic/mentor_lib-D.1/public/eecs470/synopsys/lec25dscc25_TT.db)
+
+Number of ports:                          527
+Number of nets:                          4795
+Number of cells:                         4329
+Number of combinational cells:           3155
+Number of sequential cells:              1171
+Number of macros:                           0
+Number of buf/inv:                        684
+Number of references:                      23
+
+Combinational area:       192090.140217
+Noncombinational area:    192588.135162
+Net Interconnect area:    2556.456300  
+
+Total cell area:          384678.275379
+Total area:               387234.731679
+1
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -input_pins
+        -nets
+        -max_paths 2
+        -transition_time
+Design : icache_controller
+Version: G-2012.06
+Date   : Mon Apr 22 23:50:30 2013
+****************************************
+
+ * Some/all delay information is back-annotated.
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: nom_pvt   Library: lec25dscc25_TT
+Wire Load Model Mode: top
+
+  Startpoint: requesting_addr_reg[5]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: requesting_addr_reg[62]
+            (rising edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  icache_controller  tsmcwire              lec25dscc25_TT
+
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock clock (rise edge)                                           0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  requesting_addr_reg[5]/CLK (dffss1)                     0.00      0.00 #     0.00 r
+  requesting_addr_reg[5]/QN (dffss1)                      0.20      0.17       0.17 r
+  n3227 (net)                                   1                   0.00       0.17 r
+  requesting_addr_reg[5]/Q (dffss1)                       0.12      0.07       0.23 f
+  requesting_addr[5] (net)                      2                   0.00       0.23 f
+  add_102/A[5] (icache_controller_DW01_add_1)                       0.00       0.23 f
+  add_102/A[5] (net)                                                0.00       0.23 f
+  add_102/U81/DIN (ib1s1)                                 0.12      0.00       0.24 f
+  add_102/U81/Q (ib1s1)                                   0.18      0.08       0.31 r
+  add_102/n171 (net)                            2                   0.00       0.31 r
+  add_102/U79/DIN1 (or4s1)                                0.18      0.00       0.32 r
+  add_102/U79/Q (or4s1)                                   0.21      0.28       0.60 r
+  add_102/n157 (net)                            2                   0.00       0.60 r
+  add_102/U32/DIN2 (nor2s1)                               0.21      0.00       0.60 r
+  add_102/U32/Q (nor2s1)                                  0.25      0.10       0.71 f
+  add_102/n156 (net)                            1                   0.00       0.71 f
+  add_102/U225/DIN2 (nnd2s2)                              0.25      0.00       0.71 f
+  add_102/U225/Q (nnd2s2)                                 0.16      0.09       0.80 r
+  add_102/n153 (net)                            1                   0.00       0.80 r
+  add_102/U76/DIN1 (nor2s1)                               0.16      0.00       0.80 r
+  add_102/U76/Q (nor2s1)                                  0.48      0.25       1.05 f
+  add_102/n142 (net)                            3                   0.00       1.05 f
+  add_102/U233/DIN1 (nnd2s2)                              0.48      0.00       1.05 f
+  add_102/U233/Q (nnd2s2)                                 0.29      0.16       1.21 r
+  add_102/n113 (net)                            4                   0.00       1.21 r
+  add_102/U30/DIN2 (nor2s1)                               0.29      0.00       1.21 r
+  add_102/U30/Q (nor2s1)                                  0.31      0.16       1.38 f
+  add_102/n2 (net)                              3                   0.00       1.38 f
+  add_102/U231/DIN1 (nnd2s2)                              0.31      0.00       1.38 f
+  add_102/U231/Q (nnd2s2)                                 0.27      0.12       1.50 r
+  add_102/n77 (net)                             3                   0.00       1.50 r
+  add_102/U26/DIN1 (nor2s1)                               0.27      0.00       1.50 r
+  add_102/U26/Q (nor2s1)                                  0.30      0.18       1.68 f
+  add_102/n74 (net)                             2                   0.00       1.68 f
+  add_102/U230/DIN1 (nnd2s2)                              0.30      0.00       1.68 f
+  add_102/U230/Q (nnd2s2)                                 0.20      0.10       1.78 r
+  add_102/n68 (net)                             2                   0.00       1.78 r
+  add_102/U3/DIN (ib1s1)                                  0.20      0.00       1.78 r
+  add_102/U3/Q (ib1s1)                                    0.12      0.06       1.84 f
+  add_102/n67 (net)                             2                   0.00       1.84 f
+  add_102/U100/DIN4 (and4s1)                              0.12      0.00       1.84 f
+  add_102/U100/Q (and4s1)                                 0.18      0.26       2.10 f
+  add_102/n9 (net)                              2                   0.00       2.10 f
+  add_102/U229/DIN1 (nnd2s2)                              0.18      0.00       2.10 f
+  add_102/U229/Q (nnd2s2)                                 0.19      0.08       2.19 r
+  add_102/n59 (net)                             2                   0.00       2.19 r
+  add_102/U4/DIN (ib1s1)                                  0.19      0.00       2.19 r
+  add_102/U4/Q (ib1s1)                                    0.12      0.06       2.25 f
+  add_102/n58 (net)                             2                   0.00       2.25 f
+  add_102/U101/DIN4 (and4s1)                              0.12      0.00       2.25 f
+  add_102/U101/Q (and4s1)                                 0.18      0.26       2.51 f
+  add_102/n10 (net)                             2                   0.00       2.51 f
+  add_102/U228/DIN1 (nnd2s2)                              0.18      0.00       2.51 f
+  add_102/U228/Q (nnd2s2)                                 0.19      0.08       2.59 r
+  add_102/n48 (net)                             2                   0.00       2.59 r
+  add_102/U25/DIN (ib1s1)                                 0.19      0.00       2.60 r
+  add_102/U25/Q (ib1s1)                                   0.11      0.05       2.65 f
+  add_102/n47 (net)                             2                   0.00       2.65 f
+  add_102/U5/DIN3 (and3s1)                                0.11      0.00       2.65 f
+  add_102/U5/Q (and3s1)                                   0.16      0.23       2.88 f
+  add_102/n1 (net)                              2                   0.00       2.88 f
+  add_102/U33/DIN1 (and2s1)                               0.16      0.00       2.89 f
+  add_102/U33/Q (and2s1)                                  0.16      0.20       3.08 f
+  add_102/n4 (net)                              2                   0.00       3.08 f
+  add_102/U34/DIN1 (and2s1)                               0.16      0.00       3.08 f
+  add_102/U34/Q (and2s1)                                  0.21      0.22       3.30 f
+  add_102/n5 (net)                              2                   0.00       3.30 f
+  add_102/U12/DIN (ib1s1)                                 0.21      0.00       3.31 f
+  add_102/U12/Q (ib1s1)                                   0.14      0.07       3.37 r
+  add_102/n40 (net)                             1                   0.00       3.37 r
+  add_102/U72/DIN1 (xor2s1)                               0.14      0.00       3.37 r
+  add_102/U72/Q (xor2s1)                                  0.17      0.22       3.60 r
+  add_102/SUM[62] (net)                         1                   0.00       3.60 r
+  add_102/SUM[62] (icache_controller_DW01_add_1)                    0.00       3.60 r
+  N197 (net)                                                        0.00       3.60 r
+  U3385/DIN1 (aoi22s2)                                    0.17      0.00       3.60 r
+  U3385/Q (aoi22s2)                                       0.86      0.07       3.68 f
+  n3112 (net)                                   1                   0.00       3.68 f
+  U3386/DIN3 (oai21s2)                                    0.86      0.00       3.68 f
+  U3386/Q (oai21s2)                                       1.52      0.70       4.38 r
+  ctr2mem_req_addr[62] (net)                    2                   0.00       4.38 r
+  U2922/DIN (ib1s1)                                       1.52      0.00       4.38 r
+  U2922/Q (ib1s1)                                         0.91      0.47       4.85 f
+  n2115 (net)                                  16                   0.00       4.85 f
+  requesting_addr_reg[62]/SETB (dffss1)                   0.91      0.00       4.85 f
+  data arrival time                                                            4.85
+
+  clock clock (rise edge)                                          13.00      13.00
+  clock network delay (ideal)                                       0.00      13.00
+  clock uncertainty                                                -0.10      12.90
+  requesting_addr_reg[62]/CLK (dffss1)                              0.00      12.90 r
+  library setup time                                               -0.41      12.49
+  data required time                                                          12.49
+  ------------------------------------------------------------------------------------
+  data required time                                                          12.49
+  data arrival time                                                           -4.85
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  7.63
+
+
+  Startpoint: requesting_addr_reg[5]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: MSHR_addr_reg[1][62]
+            (rising edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  icache_controller  tsmcwire              lec25dscc25_TT
+
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock clock (rise edge)                                           0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  requesting_addr_reg[5]/CLK (dffss1)                     0.00      0.00 #     0.00 r
+  requesting_addr_reg[5]/QN (dffss1)                      0.20      0.17       0.17 r
+  n3227 (net)                                   1                   0.00       0.17 r
+  requesting_addr_reg[5]/Q (dffss1)                       0.12      0.07       0.23 f
+  requesting_addr[5] (net)                      2                   0.00       0.23 f
+  add_102/A[5] (icache_controller_DW01_add_1)                       0.00       0.23 f
+  add_102/A[5] (net)                                                0.00       0.23 f
+  add_102/U81/DIN (ib1s1)                                 0.12      0.00       0.24 f
+  add_102/U81/Q (ib1s1)                                   0.18      0.08       0.31 r
+  add_102/n171 (net)                            2                   0.00       0.31 r
+  add_102/U79/DIN1 (or4s1)                                0.18      0.00       0.32 r
+  add_102/U79/Q (or4s1)                                   0.21      0.28       0.60 r
+  add_102/n157 (net)                            2                   0.00       0.60 r
+  add_102/U32/DIN2 (nor2s1)                               0.21      0.00       0.60 r
+  add_102/U32/Q (nor2s1)                                  0.25      0.10       0.71 f
+  add_102/n156 (net)                            1                   0.00       0.71 f
+  add_102/U225/DIN2 (nnd2s2)                              0.25      0.00       0.71 f
+  add_102/U225/Q (nnd2s2)                                 0.16      0.09       0.80 r
+  add_102/n153 (net)                            1                   0.00       0.80 r
+  add_102/U76/DIN1 (nor2s1)                               0.16      0.00       0.80 r
+  add_102/U76/Q (nor2s1)                                  0.48      0.25       1.05 f
+  add_102/n142 (net)                            3                   0.00       1.05 f
+  add_102/U233/DIN1 (nnd2s2)                              0.48      0.00       1.05 f
+  add_102/U233/Q (nnd2s2)                                 0.29      0.16       1.21 r
+  add_102/n113 (net)                            4                   0.00       1.21 r
+  add_102/U30/DIN2 (nor2s1)                               0.29      0.00       1.21 r
+  add_102/U30/Q (nor2s1)                                  0.31      0.16       1.38 f
+  add_102/n2 (net)                              3                   0.00       1.38 f
+  add_102/U231/DIN1 (nnd2s2)                              0.31      0.00       1.38 f
+  add_102/U231/Q (nnd2s2)                                 0.27      0.12       1.50 r
+  add_102/n77 (net)                             3                   0.00       1.50 r
+  add_102/U26/DIN1 (nor2s1)                               0.27      0.00       1.50 r
+  add_102/U26/Q (nor2s1)                                  0.30      0.18       1.68 f
+  add_102/n74 (net)                             2                   0.00       1.68 f
+  add_102/U230/DIN1 (nnd2s2)                              0.30      0.00       1.68 f
+  add_102/U230/Q (nnd2s2)                                 0.20      0.10       1.78 r
+  add_102/n68 (net)                             2                   0.00       1.78 r
+  add_102/U3/DIN (ib1s1)                                  0.20      0.00       1.78 r
+  add_102/U3/Q (ib1s1)                                    0.12      0.06       1.84 f
+  add_102/n67 (net)                             2                   0.00       1.84 f
+  add_102/U100/DIN4 (and4s1)                              0.12      0.00       1.84 f
+  add_102/U100/Q (and4s1)                                 0.18      0.26       2.10 f
+  add_102/n9 (net)                              2                   0.00       2.10 f
+  add_102/U229/DIN1 (nnd2s2)                              0.18      0.00       2.10 f
+  add_102/U229/Q (nnd2s2)                                 0.19      0.08       2.19 r
+  add_102/n59 (net)                             2                   0.00       2.19 r
+  add_102/U4/DIN (ib1s1)                                  0.19      0.00       2.19 r
+  add_102/U4/Q (ib1s1)                                    0.12      0.06       2.25 f
+  add_102/n58 (net)                             2                   0.00       2.25 f
+  add_102/U101/DIN4 (and4s1)                              0.12      0.00       2.25 f
+  add_102/U101/Q (and4s1)                                 0.18      0.26       2.51 f
+  add_102/n10 (net)                             2                   0.00       2.51 f
+  add_102/U228/DIN1 (nnd2s2)                              0.18      0.00       2.51 f
+  add_102/U228/Q (nnd2s2)                                 0.19      0.08       2.59 r
+  add_102/n48 (net)                             2                   0.00       2.59 r
+  add_102/U25/DIN (ib1s1)                                 0.19      0.00       2.60 r
+  add_102/U25/Q (ib1s1)                                   0.11      0.05       2.65 f
+  add_102/n47 (net)                             2                   0.00       2.65 f
+  add_102/U5/DIN3 (and3s1)                                0.11      0.00       2.65 f
+  add_102/U5/Q (and3s1)                                   0.16      0.23       2.88 f
+  add_102/n1 (net)                              2                   0.00       2.88 f
+  add_102/U33/DIN1 (and2s1)                               0.16      0.00       2.89 f
+  add_102/U33/Q (and2s1)                                  0.16      0.20       3.08 f
+  add_102/n4 (net)                              2                   0.00       3.08 f
+  add_102/U34/DIN1 (and2s1)                               0.16      0.00       3.08 f
+  add_102/U34/Q (and2s1)                                  0.21      0.22       3.30 f
+  add_102/n5 (net)                              2                   0.00       3.30 f
+  add_102/U12/DIN (ib1s1)                                 0.21      0.00       3.31 f
+  add_102/U12/Q (ib1s1)                                   0.14      0.07       3.37 r
+  add_102/n40 (net)                             1                   0.00       3.37 r
+  add_102/U72/DIN1 (xor2s1)                               0.14      0.00       3.37 r
+  add_102/U72/Q (xor2s1)                                  0.17      0.22       3.60 r
+  add_102/SUM[62] (net)                         1                   0.00       3.60 r
+  add_102/SUM[62] (icache_controller_DW01_add_1)                    0.00       3.60 r
+  N197 (net)                                                        0.00       3.60 r
+  U3385/DIN1 (aoi22s2)                                    0.17      0.00       3.60 r
+  U3385/Q (aoi22s2)                                       0.86      0.07       3.68 f
+  n3112 (net)                                   1                   0.00       3.68 f
+  U3386/DIN3 (oai21s2)                                    0.86      0.00       3.68 f
+  U3386/Q (oai21s2)                                       1.52      0.70       4.38 r
+  ctr2mem_req_addr[62] (net)                    2                   0.00       4.38 r
+  U2922/DIN (ib1s1)                                       1.52      0.00       4.38 r
+  U2922/Q (ib1s1)                                         0.91      0.47       4.85 f
+  n2115 (net)                                  16                   0.00       4.85 f
+  U3512/DIN1 (oai21s2)                                    0.91      0.00       4.86 f
+  U3512/Q (oai21s2)                                       0.53      0.24       5.10 r
+  n4236 (net)                                   1                   0.00       5.10 r
+  MSHR_addr_reg[1][62]/DIN (dffs1)                        0.53      0.01       5.10 r
+  data arrival time                                                            5.10
+
+  clock clock (rise edge)                                          13.00      13.00
+  clock network delay (ideal)                                       0.00      13.00
+  clock uncertainty                                                -0.10      12.90
+  MSHR_addr_reg[1][62]/CLK (dffs1)                                  0.00      12.90 r
+  library setup time                                               -0.15      12.75
+  data required time                                                          12.75
+  ------------------------------------------------------------------------------------
+  data required time                                                          12.75
+  data arrival time                                                           -5.10
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  7.65
+
+
+  Startpoint: proc2ctr_rd_addr[47]
+              (input port clocked by clock)
+  Endpoint: requesting_addr_reg[1]
+            (rising edge-triggered flip-flop clocked by clock)
+  Path Group: input_grp
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  icache_controller  tsmcwire              lec25dscc25_TT
+
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock clock (rise edge)                                           0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              0.10       0.10 r
+  proc2ctr_rd_addr[47] (in)                               0.39      0.10       0.20 r
+  proc2ctr_rd_addr[47] (net)                    4                   0.00       0.20 r
+  U2696/DIN (hi1s1)                                       0.39      0.00       0.20 r
+  U2696/Q (hi1s1)                                         0.25      0.13       0.33 f
+  n2612 (net)                                   1                   0.00       0.33 f
+  U2697/DIN (hi1s1)                                       0.25      0.00       0.33 f
+  U2697/Q (hi1s1)                                         2.03      0.79       1.12 r
+  ctr2cache_rd_addr[47] (net)                   2                   0.00       1.12 r
+  r96/B[47] (icache_controller_DW01_cmp6_0)                         0.00       1.12 r
+  r96/B[47] (net)                                                   0.00       1.12 r
+  r96/U23/DIN1 (xnr2s1)                                   2.03      0.00       1.12 r
+  r96/U23/Q (xnr2s1)                                      0.18      0.37       1.49 f
+  r96/n28 (net)                                 1                   0.00       1.49 f
+  r96/U19/DIN1 (nnd4s1)                                   0.18      0.00       1.50 f
+  r96/U19/Q (nnd4s1)                                      0.38      0.11       1.61 r
+  r96/n17 (net)                                 1                   0.00       1.61 r
+  r96/U8/DIN2 (or4s1)                                     0.38      0.00       1.61 r
+  r96/U8/Q (or4s1)                                        0.15      0.26       1.88 r
+  r96/n15 (net)                                 1                   0.00       1.88 r
+  r96/U7/DIN5 (or5s1)                                     0.15      0.00       1.88 r
+  r96/U7/Q (or5s1)                                        0.17      0.15       2.02 r
+  r96/n10 (net)                                 1                   0.00       2.02 r
+  r96/U6/DIN5 (or5s1)                                     0.17      0.00       2.03 r
+  r96/U6/Q (or5s1)                                        0.21      0.17       2.19 r
+  r96/NE (net)                                  1                   0.00       2.19 r
+  r96/NE (icache_controller_DW01_cmp6_0)                            0.00       2.19 r
+  N58 (net)                                                         0.00       2.19 r
+  U3378/DIN1 (nnd2s2)                                     0.21      0.00       2.20 r
+  U3378/Q (nnd2s2)                                        0.34      0.15       2.35 f
+  n3110 (net)                                   7                   0.00       2.35 f
+  U2319/DIN2 (and2s1)                                     0.34      0.00       2.35 f
+  U2319/Q (and2s1)                                        0.24      0.30       2.65 f
+  n2230 (net)                                   3                   0.00       2.65 f
+  U2910/DIN (ib1s1)                                       0.24      0.00       2.65 f
+  U2910/Q (ib1s1)                                         0.99      0.40       3.05 r
+  n2989 (net)                                  22                   0.00       3.05 r
+  U3504/DIN1 (oai21s2)                                    0.99      0.00       3.05 r
+  U3504/Q (oai21s2)                                       1.13      0.54       3.59 f
+  ctr2mem_req_addr[1] (net)                     2                   0.00       3.59 f
+  U2987/DIN (ib1s1)                                       1.13      0.00       3.59 f
+  U2987/Q (ib1s1)                                         0.89      0.47       4.06 r
+  n2162 (net)                                  16                   0.00       4.06 r
+  requesting_addr_reg[1]/SETB (dffss1)                    0.89      0.00       4.06 r
+  data arrival time                                                            4.06
+
+  clock clock (rise edge)                                          13.00      13.00
+  clock network delay (ideal)                                       0.00      13.00
+  clock uncertainty                                                -0.10      12.90
+  requesting_addr_reg[1]/CLK (dffss1)                               0.00      12.90 r
+  library setup time                                               -0.51      12.39
+  data required time                                                          12.39
+  ------------------------------------------------------------------------------------
+  data required time                                                          12.39
+  data arrival time                                                           -4.06
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  8.33
+
+
+  Startpoint: proc2ctr_rd_addr[47]
+              (input port clocked by clock)
+  Endpoint: requesting_addr_reg[2]
+            (rising edge-triggered flip-flop clocked by clock)
+  Path Group: input_grp
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  icache_controller  tsmcwire              lec25dscc25_TT
+
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock clock (rise edge)                                           0.00       0.00
+  clock network delay (ideal)                                       0.00       0.00
+  input external delay                                              0.10       0.10 r
+  proc2ctr_rd_addr[47] (in)                               0.39      0.10       0.20 r
+  proc2ctr_rd_addr[47] (net)                    4                   0.00       0.20 r
+  U2696/DIN (hi1s1)                                       0.39      0.00       0.20 r
+  U2696/Q (hi1s1)                                         0.25      0.13       0.33 f
+  n2612 (net)                                   1                   0.00       0.33 f
+  U2697/DIN (hi1s1)                                       0.25      0.00       0.33 f
+  U2697/Q (hi1s1)                                         2.03      0.79       1.12 r
+  ctr2cache_rd_addr[47] (net)                   2                   0.00       1.12 r
+  r96/B[47] (icache_controller_DW01_cmp6_0)                         0.00       1.12 r
+  r96/B[47] (net)                                                   0.00       1.12 r
+  r96/U23/DIN1 (xnr2s1)                                   2.03      0.00       1.12 r
+  r96/U23/Q (xnr2s1)                                      0.18      0.37       1.49 f
+  r96/n28 (net)                                 1                   0.00       1.49 f
+  r96/U19/DIN1 (nnd4s1)                                   0.18      0.00       1.50 f
+  r96/U19/Q (nnd4s1)                                      0.38      0.11       1.61 r
+  r96/n17 (net)                                 1                   0.00       1.61 r
+  r96/U8/DIN2 (or4s1)                                     0.38      0.00       1.61 r
+  r96/U8/Q (or4s1)                                        0.15      0.26       1.88 r
+  r96/n15 (net)                                 1                   0.00       1.88 r
+  r96/U7/DIN5 (or5s1)                                     0.15      0.00       1.88 r
+  r96/U7/Q (or5s1)                                        0.17      0.15       2.02 r
+  r96/n10 (net)                                 1                   0.00       2.02 r
+  r96/U6/DIN5 (or5s1)                                     0.17      0.00       2.03 r
+  r96/U6/Q (or5s1)                                        0.21      0.17       2.19 r
+  r96/NE (net)                                  1                   0.00       2.19 r
+  r96/NE (icache_controller_DW01_cmp6_0)                            0.00       2.19 r
+  N58 (net)                                                         0.00       2.19 r
+  U3378/DIN1 (nnd2s2)                                     0.21      0.00       2.20 r
+  U3378/Q (nnd2s2)                                        0.34      0.15       2.35 f
+  n3110 (net)                                   7                   0.00       2.35 f
+  U2319/DIN2 (and2s1)                                     0.34      0.00       2.35 f
+  U2319/Q (and2s1)                                        0.24      0.30       2.65 f
+  n2230 (net)                                   3                   0.00       2.65 f
+  U2910/DIN (ib1s1)                                       0.24      0.00       2.65 f
+  U2910/Q (ib1s1)                                         0.99      0.40       3.05 r
+  n2989 (net)                                  22                   0.00       3.05 r
+  U3503/DIN1 (oai21s2)                                    0.99      0.00       3.05 r
+  U3503/Q (oai21s2)                                       1.13      0.54       3.59 f
+  ctr2mem_req_addr[2] (net)                     2                   0.00       3.59 f
+  U2986/DIN (ib1s1)                                       1.13      0.00       3.59 f
+  U2986/Q (ib1s1)                                         0.89      0.47       4.06 r
+  n2151 (net)                                  16                   0.00       4.06 r
+  requesting_addr_reg[2]/SETB (dffss1)                    0.89      0.00       4.06 r
+  data arrival time                                                            4.06
+
+  clock clock (rise edge)                                          13.00      13.00
+  clock network delay (ideal)                                       0.00      13.00
+  clock uncertainty                                                -0.10      12.90
+  requesting_addr_reg[2]/CLK (dffss1)                               0.00      12.90 r
+  library setup time                                               -0.51      12.39
+  data required time                                                          12.39
+  ------------------------------------------------------------------------------------
+  data required time                                                          12.39
+  data arrival time                                                           -4.06
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  8.33
+
+
+  Startpoint: requesting_addr_reg[5]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: ctr2mem_req_addr[62]
+            (output port clocked by clock)
+  Path Group: output_grp
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  icache_controller  tsmcwire              lec25dscc25_TT
+
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  requesting_addr_reg[5]/CLK (dffss1)                     0.00      0.00 #     0.00 r
+  requesting_addr_reg[5]/QN (dffss1)                      0.20      0.17       0.17 r
+  n3227 (net)                                   1                   0.00       0.17 r
+  requesting_addr_reg[5]/Q (dffss1)                       0.12      0.07       0.23 f
+  requesting_addr[5] (net)                      2                   0.00       0.23 f
+  add_102/A[5] (icache_controller_DW01_add_1)                       0.00       0.23 f
+  add_102/A[5] (net)                                                0.00       0.23 f
+  add_102/U81/DIN (ib1s1)                                 0.12      0.00       0.24 f
+  add_102/U81/Q (ib1s1)                                   0.18      0.08       0.31 r
+  add_102/n171 (net)                            2                   0.00       0.31 r
+  add_102/U79/DIN1 (or4s1)                                0.18      0.00       0.32 r
+  add_102/U79/Q (or4s1)                                   0.21      0.28       0.60 r
+  add_102/n157 (net)                            2                   0.00       0.60 r
+  add_102/U32/DIN2 (nor2s1)                               0.21      0.00       0.60 r
+  add_102/U32/Q (nor2s1)                                  0.25      0.10       0.71 f
+  add_102/n156 (net)                            1                   0.00       0.71 f
+  add_102/U225/DIN2 (nnd2s2)                              0.25      0.00       0.71 f
+  add_102/U225/Q (nnd2s2)                                 0.16      0.09       0.80 r
+  add_102/n153 (net)                            1                   0.00       0.80 r
+  add_102/U76/DIN1 (nor2s1)                               0.16      0.00       0.80 r
+  add_102/U76/Q (nor2s1)                                  0.48      0.25       1.05 f
+  add_102/n142 (net)                            3                   0.00       1.05 f
+  add_102/U233/DIN1 (nnd2s2)                              0.48      0.00       1.05 f
+  add_102/U233/Q (nnd2s2)                                 0.29      0.16       1.21 r
+  add_102/n113 (net)                            4                   0.00       1.21 r
+  add_102/U30/DIN2 (nor2s1)                               0.29      0.00       1.21 r
+  add_102/U30/Q (nor2s1)                                  0.31      0.16       1.38 f
+  add_102/n2 (net)                              3                   0.00       1.38 f
+  add_102/U231/DIN1 (nnd2s2)                              0.31      0.00       1.38 f
+  add_102/U231/Q (nnd2s2)                                 0.27      0.12       1.50 r
+  add_102/n77 (net)                             3                   0.00       1.50 r
+  add_102/U26/DIN1 (nor2s1)                               0.27      0.00       1.50 r
+  add_102/U26/Q (nor2s1)                                  0.30      0.18       1.68 f
+  add_102/n74 (net)                             2                   0.00       1.68 f
+  add_102/U230/DIN1 (nnd2s2)                              0.30      0.00       1.68 f
+  add_102/U230/Q (nnd2s2)                                 0.20      0.10       1.78 r
+  add_102/n68 (net)                             2                   0.00       1.78 r
+  add_102/U3/DIN (ib1s1)                                  0.20      0.00       1.78 r
+  add_102/U3/Q (ib1s1)                                    0.12      0.06       1.84 f
+  add_102/n67 (net)                             2                   0.00       1.84 f
+  add_102/U100/DIN4 (and4s1)                              0.12      0.00       1.84 f
+  add_102/U100/Q (and4s1)                                 0.18      0.26       2.10 f
+  add_102/n9 (net)                              2                   0.00       2.10 f
+  add_102/U229/DIN1 (nnd2s2)                              0.18      0.00       2.10 f
+  add_102/U229/Q (nnd2s2)                                 0.19      0.08       2.19 r
+  add_102/n59 (net)                             2                   0.00       2.19 r
+  add_102/U4/DIN (ib1s1)                                  0.19      0.00       2.19 r
+  add_102/U4/Q (ib1s1)                                    0.12      0.06       2.25 f
+  add_102/n58 (net)                             2                   0.00       2.25 f
+  add_102/U101/DIN4 (and4s1)                              0.12      0.00       2.25 f
+  add_102/U101/Q (and4s1)                                 0.18      0.26       2.51 f
+  add_102/n10 (net)                             2                   0.00       2.51 f
+  add_102/U228/DIN1 (nnd2s2)                              0.18      0.00       2.51 f
+  add_102/U228/Q (nnd2s2)                                 0.19      0.08       2.59 r
+  add_102/n48 (net)                             2                   0.00       2.59 r
+  add_102/U25/DIN (ib1s1)                                 0.19      0.00       2.60 r
+  add_102/U25/Q (ib1s1)                                   0.11      0.05       2.65 f
+  add_102/n47 (net)                             2                   0.00       2.65 f
+  add_102/U5/DIN3 (and3s1)                                0.11      0.00       2.65 f
+  add_102/U5/Q (and3s1)                                   0.16      0.23       2.88 f
+  add_102/n1 (net)                              2                   0.00       2.88 f
+  add_102/U33/DIN1 (and2s1)                               0.16      0.00       2.89 f
+  add_102/U33/Q (and2s1)                                  0.16      0.20       3.08 f
+  add_102/n4 (net)                              2                   0.00       3.08 f
+  add_102/U34/DIN1 (and2s1)                               0.16      0.00       3.08 f
+  add_102/U34/Q (and2s1)                                  0.21      0.22       3.30 f
+  add_102/n5 (net)                              2                   0.00       3.30 f
+  add_102/U12/DIN (ib1s1)                                 0.21      0.00       3.31 f
+  add_102/U12/Q (ib1s1)                                   0.14      0.07       3.37 r
+  add_102/n40 (net)                             1                   0.00       3.37 r
+  add_102/U72/DIN1 (xor2s1)                               0.14      0.00       3.37 r
+  add_102/U72/Q (xor2s1)                                  0.17      0.22       3.60 r
+  add_102/SUM[62] (net)                         1                   0.00       3.60 r
+  add_102/SUM[62] (icache_controller_DW01_add_1)                    0.00       3.60 r
+  N197 (net)                                                        0.00       3.60 r
+  U3385/DIN1 (aoi22s2)                                    0.17      0.00       3.60 r
+  U3385/Q (aoi22s2)                                       0.86      0.07       3.68 f
+  n3112 (net)                                   1                   0.00       3.68 f
+  U3386/DIN3 (oai21s2)                                    0.86      0.00       3.68 f
+  U3386/Q (oai21s2)                                       1.52      0.70       4.38 r
+  ctr2mem_req_addr[62] (net)                    2                   0.00       4.38 r
+  ctr2mem_req_addr[62] (out)                              1.52      0.02       4.40 r
+  data arrival time                                                            4.40
+
+  max_delay                                                        13.00      13.00
+  clock uncertainty                                                -0.10      12.90
+  output external delay                                            -0.10      12.80
+  data required time                                                          12.80
+  ------------------------------------------------------------------------------------
+  data required time                                                          12.80
+  data arrival time                                                           -4.40
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  8.40
+
+
+  Startpoint: requesting_addr_reg[5]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: ctr2mem_req_addr[63]
+            (output port clocked by clock)
+  Path Group: output_grp
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  icache_controller  tsmcwire              lec25dscc25_TT
+
+  Point                                       Fanout     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  requesting_addr_reg[5]/CLK (dffss1)                     0.00      0.00 #     0.00 r
+  requesting_addr_reg[5]/QN (dffss1)                      0.20      0.17       0.17 r
+  n3227 (net)                                   1                   0.00       0.17 r
+  requesting_addr_reg[5]/Q (dffss1)                       0.12      0.07       0.23 f
+  requesting_addr[5] (net)                      2                   0.00       0.23 f
+  add_102/A[5] (icache_controller_DW01_add_1)                       0.00       0.23 f
+  add_102/A[5] (net)                                                0.00       0.23 f
+  add_102/U81/DIN (ib1s1)                                 0.12      0.00       0.24 f
+  add_102/U81/Q (ib1s1)                                   0.18      0.08       0.31 r
+  add_102/n171 (net)                            2                   0.00       0.31 r
+  add_102/U79/DIN1 (or4s1)                                0.18      0.00       0.32 r
+  add_102/U79/Q (or4s1)                                   0.21      0.28       0.60 r
+  add_102/n157 (net)                            2                   0.00       0.60 r
+  add_102/U32/DIN2 (nor2s1)                               0.21      0.00       0.60 r
+  add_102/U32/Q (nor2s1)                                  0.25      0.10       0.71 f
+  add_102/n156 (net)                            1                   0.00       0.71 f
+  add_102/U225/DIN2 (nnd2s2)                              0.25      0.00       0.71 f
+  add_102/U225/Q (nnd2s2)                                 0.16      0.09       0.80 r
+  add_102/n153 (net)                            1                   0.00       0.80 r
+  add_102/U76/DIN1 (nor2s1)                               0.16      0.00       0.80 r
+  add_102/U76/Q (nor2s1)                                  0.48      0.25       1.05 f
+  add_102/n142 (net)                            3                   0.00       1.05 f
+  add_102/U233/DIN1 (nnd2s2)                              0.48      0.00       1.05 f
+  add_102/U233/Q (nnd2s2)                                 0.29      0.16       1.21 r
+  add_102/n113 (net)                            4                   0.00       1.21 r
+  add_102/U30/DIN2 (nor2s1)                               0.29      0.00       1.21 r
+  add_102/U30/Q (nor2s1)                                  0.31      0.16       1.38 f
+  add_102/n2 (net)                              3                   0.00       1.38 f
+  add_102/U231/DIN1 (nnd2s2)                              0.31      0.00       1.38 f
+  add_102/U231/Q (nnd2s2)                                 0.27      0.12       1.50 r
+  add_102/n77 (net)                             3                   0.00       1.50 r
+  add_102/U26/DIN1 (nor2s1)                               0.27      0.00       1.50 r
+  add_102/U26/Q (nor2s1)                                  0.30      0.18       1.68 f
+  add_102/n74 (net)                             2                   0.00       1.68 f
+  add_102/U230/DIN1 (nnd2s2)                              0.30      0.00       1.68 f
+  add_102/U230/Q (nnd2s2)                                 0.20      0.10       1.78 r
+  add_102/n68 (net)                             2                   0.00       1.78 r
+  add_102/U3/DIN (ib1s1)                                  0.20      0.00       1.78 r
+  add_102/U3/Q (ib1s1)                                    0.12      0.06       1.84 f
+  add_102/n67 (net)                             2                   0.00       1.84 f
+  add_102/U100/DIN4 (and4s1)                              0.12      0.00       1.84 f
+  add_102/U100/Q (and4s1)                                 0.18      0.26       2.10 f
+  add_102/n9 (net)                              2                   0.00       2.10 f
+  add_102/U229/DIN1 (nnd2s2)                              0.18      0.00       2.10 f
+  add_102/U229/Q (nnd2s2)                                 0.19      0.08       2.19 r
+  add_102/n59 (net)                             2                   0.00       2.19 r
+  add_102/U4/DIN (ib1s1)                                  0.19      0.00       2.19 r
+  add_102/U4/Q (ib1s1)                                    0.12      0.06       2.25 f
+  add_102/n58 (net)                             2                   0.00       2.25 f
+  add_102/U101/DIN4 (and4s1)                              0.12      0.00       2.25 f
+  add_102/U101/Q (and4s1)                                 0.18      0.26       2.51 f
+  add_102/n10 (net)                             2                   0.00       2.51 f
+  add_102/U228/DIN1 (nnd2s2)                              0.18      0.00       2.51 f
+  add_102/U228/Q (nnd2s2)                                 0.19      0.08       2.59 r
+  add_102/n48 (net)                             2                   0.00       2.59 r
+  add_102/U25/DIN (ib1s1)                                 0.19      0.00       2.60 r
+  add_102/U25/Q (ib1s1)                                   0.11      0.05       2.65 f
+  add_102/n47 (net)                             2                   0.00       2.65 f
+  add_102/U5/DIN3 (and3s1)                                0.11      0.00       2.65 f
+  add_102/U5/Q (and3s1)                                   0.16      0.23       2.88 f
+  add_102/n1 (net)                              2                   0.00       2.88 f
+  add_102/U33/DIN1 (and2s1)                               0.16      0.00       2.89 f
+  add_102/U33/Q (and2s1)                                  0.16      0.20       3.08 f
+  add_102/n4 (net)                              2                   0.00       3.08 f
+  add_102/U34/DIN1 (and2s1)                               0.16      0.00       3.08 f
+  add_102/U34/Q (and2s1)                                  0.21      0.22       3.30 f
+  add_102/n5 (net)                              2                   0.00       3.30 f
+  add_102/U212/DIN1 (nnd2s2)                              0.21      0.00       3.31 f
+  add_102/U212/Q (nnd2s2)                                 0.14      0.06       3.37 r
+  add_102/n39 (net)                             1                   0.00       3.37 r
+  add_102/U73/DIN1 (xnr2s1)                               0.14      0.00       3.37 r
+  add_102/U73/Q (xnr2s1)                                  0.15      0.16       3.54 r
+  add_102/SUM[63] (net)                         1                   0.00       3.54 r
+  add_102/SUM[63] (icache_controller_DW01_add_1)                    0.00       3.54 r
+  N198 (net)                                                        0.00       3.54 r
+  U3380/DIN1 (aoi22s2)                                    0.15      0.00       3.54 r
+  U3380/Q (aoi22s2)                                       0.82      0.07       3.61 f
+  n3105 (net)                                   1                   0.00       3.61 f
+  U3381/DIN3 (oai21s2)                                    0.82      0.00       3.61 f
+  U3381/Q (oai21s2)                                       1.52      0.69       4.31 r
+  ctr2mem_req_addr[63] (net)                    2                   0.00       4.31 r
+  ctr2mem_req_addr[63] (out)                              1.52      0.02       4.33 r
+  data arrival time                                                            4.33
+
+  max_delay                                                        13.00      13.00
+  clock uncertainty                                                -0.10      12.90
+  output external delay                                            -0.10      12.80
+  data required time                                                          12.80
+  ------------------------------------------------------------------------------------
+  data required time                                                          12.80
+  data arrival time                                                           -4.33
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  8.47
+
+
+1
+ 
+****************************************
+Report : constraint
+        -verbose
+        -max_delay
+Design : icache_controller
+Version: G-2012.06
+Date   : Mon Apr 22 23:50:30 2013
+****************************************
+
+
+  Startpoint: requesting_addr_reg[5]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: requesting_addr_reg[62]
+            (rising edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  icache_controller  tsmcwire              lec25dscc25_TT
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  requesting_addr_reg[5]/CLK (dffss1)                     0.00 #     0.00 r
+  requesting_addr_reg[5]/QN (dffss1)                      0.17       0.17 r
+  requesting_addr_reg[5]/Q (dffss1)                       0.07       0.23 f
+  add_102/U81/Q (ib1s1)                                   0.08       0.31 r
+  add_102/U79/Q (or4s1)                                   0.29       0.60 r
+  add_102/U32/Q (nor2s1)                                  0.11       0.71 f
+  add_102/U225/Q (nnd2s2)                                 0.09       0.80 r
+  add_102/U76/Q (nor2s1)                                  0.25       1.05 f
+  add_102/U233/Q (nnd2s2)                                 0.16       1.21 r
+  add_102/U30/Q (nor2s1)                                  0.16       1.38 f
+  add_102/U231/Q (nnd2s2)                                 0.12       1.50 r
+  add_102/U26/Q (nor2s1)                                  0.18       1.68 f
+  add_102/U230/Q (nnd2s2)                                 0.10       1.78 r
+  add_102/U3/Q (ib1s1)                                    0.06       1.84 f
+  add_102/U100/Q (and4s1)                                 0.26       2.10 f
+  add_102/U229/Q (nnd2s2)                                 0.09       2.19 r
+  add_102/U4/Q (ib1s1)                                    0.06       2.25 f
+  add_102/U101/Q (and4s1)                                 0.26       2.51 f
+  add_102/U228/Q (nnd2s2)                                 0.09       2.59 r
+  add_102/U25/Q (ib1s1)                                   0.06       2.65 f
+  add_102/U5/Q (and3s1)                                   0.23       2.88 f
+  add_102/U33/Q (and2s1)                                  0.20       3.08 f
+  add_102/U34/Q (and2s1)                                  0.22       3.30 f
+  add_102/U12/Q (ib1s1)                                   0.07       3.37 r
+  add_102/U72/Q (xor2s1)                                  0.23       3.60 r
+  U3385/Q (aoi22s2)                                       0.08       3.68 f
+  U3386/Q (oai21s2)                                       0.70       4.38 r
+  U2922/Q (ib1s1)                                         0.47       4.85 f
+  requesting_addr_reg[62]/SETB (dffss1)                   0.00       4.85 f
+  data arrival time                                                  4.85
+
+  clock clock (rise edge)                                13.00      13.00
+  clock network delay (ideal)                             0.00      13.00
+  clock uncertainty                                      -0.10      12.90
+  requesting_addr_reg[62]/CLK (dffss1)                    0.00      12.90 r
+  library setup time                                     -0.41      12.49
+  data required time                                                12.49
+  --------------------------------------------------------------------------
+  data required time                                                12.49
+  data arrival time                                                 -4.85
+  --------------------------------------------------------------------------
+  slack (MET)                                                        7.63
+
+
+  Startpoint: proc2ctr_rd_addr[47]
+              (input port clocked by clock)
+  Endpoint: requesting_addr_reg[1]
+            (rising edge-triggered flip-flop clocked by clock)
+  Path Group: input_grp
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  icache_controller  tsmcwire              lec25dscc25_TT
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.10       0.10 r
+  proc2ctr_rd_addr[47] (in)                               0.10       0.20 r
+  U2696/Q (hi1s1)                                         0.13       0.33 f
+  U2697/Q (hi1s1)                                         0.79       1.12 r
+  r96/U23/Q (xnr2s1)                                      0.37       1.49 f
+  r96/U19/Q (nnd4s1)                                      0.12       1.61 r
+  r96/U8/Q (or4s1)                                        0.26       1.88 r
+  r96/U7/Q (or5s1)                                        0.15       2.02 r
+  r96/U6/Q (or5s1)                                        0.17       2.19 r
+  U3378/Q (nnd2s2)                                        0.15       2.35 f
+  U2319/Q (and2s1)                                        0.30       2.65 f
+  U2910/Q (ib1s1)                                         0.40       3.05 r
+  U3504/Q (oai21s2)                                       0.54       3.59 f
+  U2987/Q (ib1s1)                                         0.47       4.06 r
+  requesting_addr_reg[1]/SETB (dffss1)                    0.00       4.06 r
+  data arrival time                                                  4.06
+
+  clock clock (rise edge)                                13.00      13.00
+  clock network delay (ideal)                             0.00      13.00
+  clock uncertainty                                      -0.10      12.90
+  requesting_addr_reg[1]/CLK (dffss1)                     0.00      12.90 r
+  library setup time                                     -0.51      12.39
+  data required time                                                12.39
+  --------------------------------------------------------------------------
+  data required time                                                12.39
+  data arrival time                                                 -4.06
+  --------------------------------------------------------------------------
+  slack (MET)                                                        8.33
+
+
+  Startpoint: requesting_addr_reg[5]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: ctr2mem_req_addr[62]
+            (output port clocked by clock)
+  Path Group: output_grp
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  icache_controller  tsmcwire              lec25dscc25_TT
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  requesting_addr_reg[5]/CLK (dffss1)      0.00 #     0.00 r
+  requesting_addr_reg[5]/QN (dffss1)       0.17       0.17 r
+  requesting_addr_reg[5]/Q (dffss1)        0.07       0.23 f
+  add_102/U81/Q (ib1s1)                    0.08       0.31 r
+  add_102/U79/Q (or4s1)                    0.29       0.60 r
+  add_102/U32/Q (nor2s1)                   0.11       0.71 f
+  add_102/U225/Q (nnd2s2)                  0.09       0.80 r
+  add_102/U76/Q (nor2s1)                   0.25       1.05 f
+  add_102/U233/Q (nnd2s2)                  0.16       1.21 r
+  add_102/U30/Q (nor2s1)                   0.16       1.38 f
+  add_102/U231/Q (nnd2s2)                  0.12       1.50 r
+  add_102/U26/Q (nor2s1)                   0.18       1.68 f
+  add_102/U230/Q (nnd2s2)                  0.10       1.78 r
+  add_102/U3/Q (ib1s1)                     0.06       1.84 f
+  add_102/U100/Q (and4s1)                  0.26       2.10 f
+  add_102/U229/Q (nnd2s2)                  0.09       2.19 r
+  add_102/U4/Q (ib1s1)                     0.06       2.25 f
+  add_102/U101/Q (and4s1)                  0.26       2.51 f
+  add_102/U228/Q (nnd2s2)                  0.09       2.59 r
+  add_102/U25/Q (ib1s1)                    0.06       2.65 f
+  add_102/U5/Q (and3s1)                    0.23       2.88 f
+  add_102/U33/Q (and2s1)                   0.20       3.08 f
+  add_102/U34/Q (and2s1)                   0.22       3.30 f
+  add_102/U12/Q (ib1s1)                    0.07       3.37 r
+  add_102/U72/Q (xor2s1)                   0.23       3.60 r
+  U3385/Q (aoi22s2)                        0.08       3.68 f
+  U3386/Q (oai21s2)                        0.70       4.38 r
+  ctr2mem_req_addr[62] (out)               0.02       4.40 r
+  data arrival time                                   4.40
+
+  max_delay                               13.00      13.00
+  clock uncertainty                       -0.10      12.90
+  output external delay                   -0.10      12.80
+  data required time                                 12.80
+  -----------------------------------------------------------
+  data required time                                 12.80
+  data arrival time                                  -4.40
+  -----------------------------------------------------------
+  slack (MET)                                         8.40
+
+
+1
+Information: Updating graph... (UID-83)
+Warning: Design 'icache_controller' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : reference
+Design : icache_controller
+Version: G-2012.06
+Date   : Mon Apr 22 23:50:32 2013
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+and2s1             lec25dscc25_TT    49.766399      36  1791.590378
+and3s1             lec25dscc25_TT    66.355202       1    66.355202
+aoi21s2            lec25dscc25_TT    49.766399      15   746.495991
+aoi22s1            lec25dscc25_TT    58.060799       5   290.303993
+aoi22s2            lec25dscc25_TT    58.060799      59  3425.587120
+aoi211s1           lec25dscc25_TT    58.060799      16   928.972778
+dffles1            lec25dscc25_TT   199.065994     128 25480.447266 n
+dffs1              lec25dscc25_TT   157.593994     977 153969.332275 n
+dffss1             lec25dscc25_TT   199.065994      66 13138.355621 n
+hi1s1              lec25dscc25_TT    33.177601     374 12408.422722
+i1s1               lec25dscc25_TT    33.177601       5   165.888004
+ib1s1              lec25dscc25_TT    33.177601     268  8891.597031
+icache_controller_DW01_add_1  12076.646481       1  12076.646481  h
+icache_controller_DW01_cmp6_0  6842.880005       1   6842.880005  h
+icache_controller_DW01_sub_1  13047.091286       1  13047.091286  h
+mxi41s1            lec25dscc25_TT   116.122002     325 37739.650536
+nb1s1              lec25dscc25_TT    41.472000      35  1451.520004
+nb1s2              lec25dscc25_TT    49.766399       2    99.532799
+nnd2s2             lec25dscc25_TT    41.472000     980 40642.560120
+nnd3s2             lec25dscc25_TT    49.766399       2    99.532799
+nor2s1             lec25dscc25_TT    41.472000       6   248.832001
+oai21s2            lec25dscc25_TT    49.766399    1024 50960.792969
+xnr2s1             lec25dscc25_TT    82.944000       2   165.888000
+-----------------------------------------------------------------------------
+Total 23 references                                 384678.275379
+1

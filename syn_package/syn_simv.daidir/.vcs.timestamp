@@ -1,0 +1,108 @@
+0 
+28
++v2k
++vc
++vcs+loopreport
+-Mamsrun=
+-Masflags=
+-Mcc=gcc
+-Mcfl= -pipe -O -I/usr/caen/vcs-2011.03/include
+-Mcmodrun=
+-Mcplusplus=g++
+-Mcrt0=
+-Mcrtn=
+-Mcsrc=
+-Mldflags=
+-Mobjects= /usr/caen/vcs-2011.03/amd64/lib/libvirsim.so /usr/caen/vcs-2011.03/amd64/lib/liberrorinf.so /usr/caen/vcs-2011.03/amd64/lib/libsnpsmalloc.so
+-Mout=syn_simv
+-Msaverestoreobj=/usr/caen/vcs-2011.03/amd64/lib/vcs_save_restore_new.o
+-Msyslibs=-ldl
+-Mupdate
+-Mvcsaceobjs=
+-cm_xmldb
+-full64
+-gen_obj
+-line
+-o syn_simv
+/usr/caen/generic/mentor_lib-D.1/public/eecs470/verilog/lec25dscc25.v
+/usr/caen/vcs-2011.03/amd64/bin/vcs1
+synth/branch_recovery_controller.vg
+sys_defs.vh
+66
+_LMFILES_=/usr/caen/misc/modules/vcs/2011.03
+XMODIFIERS=@im=none
+XDG_SESSION_COOKIE=1ca1f6034a23564c793dd41900000026-1366664362.871467-1839793238
+XAUTHORITY=/var/run/gdm/auth-for-chengfu-w83dDg/database
+WINDOWPATH=1
+VMR_MODE_FLAG=64
+VENDOR=unknown
+VCS_MODE_FLAG=64
+VCS_HOME=/usr/caen/vcs-2011.03
+VCS_DEPTH=0
+VCS_ARG_ADDED_FOR_TMP=1
+VCS_ARCH=amd64
+USERNAME=chengfu
+UNAME=/bin/uname
+TOOL_HOME=/usr/caen/vcs-2011.03/amd64
+SW_VCS=2011.03
+SSH_AUTH_SOCK=/tmp/keyring-u0AY81/socket.ssh
+SSH_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass
+SSH_AGENT_PID=3141
+SNPSLMD_LICENSE_FILE=/usr/caen/vcs-2011.03/license.dat:/usr/caen/vcs-2011.03/flexlm//license.dat
+SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/3159,unix/unix:/tmp/.ICE-unix/3159
+SCRNAME=vcs
+SCRIPT_NAME=vcs
+RESET_NET_NAME=reset
+QT_IM_MODULE=xim
+QTLIB=/usr/lib64/qt-3.3/lib
+QTINC=/usr/lib64/qt-3.3/include
+QTDIR=/usr/lib64/qt-3.3
+PIPELINE_NAME=branch_recovery_controller
+PIPEFILES=verilog/t/branch_recovery_controller.v
+OVA_UUM=0
+OSTYPE=linux
+ORBIT_SOCKETDIR=/tmp/orbit-chengfu
+MODULESHOME=/usr/share/Modules
+MODULEPATH=/usr/share/Modules/modulefiles:/etc/modulefiles:/usr/caen/misc/modules:/afs/umich.edu/class/coe/modules
+MFLAGS=
+MANPAGER=/usr/bin/less -is
+MAKELEVEL=1
+MAKEFLAGS=
+MAILSERVER=mail.umich.edu
+LOADEDMODULES=vcs/2011.03
+LESSOPEN=|/usr/bin/lesspipe.sh %s
+KRB5CCNAME=FILE:/tmp/krb5cc_99397523_KCcDsR
+KDE_IS_PRELINKED=1
+KDEDIRS=/usr
+IMSETTINGS_MODULE=none
+IMSETTINGS_INTEGRATE_DESKTOP=yes
+HOSTTYPE=x86_64-linux
+HOSTNAME=dc3eap09.dc.umich.edu
+HOST=dc3eap09.dc.umich.edu
+HEADERS=sys_defs.vh
+G_BROKEN_FILENAMES=1
+GTK_RC_FILES=/etc/gtk/gtkrc:/afs/umich.edu/user/c/h/chengfu/.gtkrc-1.2-gnome2
+GROUP=users
+GNOME_KEYRING_SOCKET=/tmp/keyring-u0AY81/socket
+GNOME_KEYRING_PID=3087
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+GDM_LANG=en_US.UTF-8
+GDM_KEYBOARD_LAYOUT=us
+GDMSESSION=gnome
+DESKTOP_SESSION=gnome
+DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-iyKYOF3dEP,guid=cd74edc16484735db36c43d500000072
+COLORTERM=gnome-terminal
+CLOCK_PERIOD=13	
+CLOCK_NET_NAME=clock
+CACHEFILES=
+0
+3
+1062689876 /usr/caen/generic/mentor_lib-D.1/public/eecs470/verilog/lec25dscc25.v
+1366689122 synth/branch_recovery_controller.vg
+1366067075 sys_defs.vh
+4
+0 
+1298523545 /usr/caen/vcs-2011.03/amd64/lib/libvirsim.so
+1298523345 /usr/caen/vcs-2011.03/amd64/lib/liberrorinf.so
+1298523150 /usr/caen/vcs-2011.03/amd64/lib/libsnpsmalloc.so
+1366689128 syn_simv.daidir

@@ -1,0 +1,24 @@
+ 
+****************************************
+check_design summary:
+Version:     G-2012.06
+Date:        Mon Apr 22 20:59:17 2013
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                      6
+    Unconnected ports (LINT-28)                                     6
+
+Cells                                                               1
+    Cells do not drive (LINT-1)                                     1
+--------------------------------------------------------------------------------
+
+Warning: In design 'cache', cell 'B_12' does not drive any nets. (LINT-1)
+Warning: In design 'cache', port 'wr_pc_reg[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'cache', port 'wr_pc_reg[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'cache', port 'wr_pc_reg[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'cache', port 'rd_pc_reg[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'cache', port 'rd_pc_reg[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'cache', port 'rd_pc_reg[0]' is not connected to any nets. (LINT-28)
+1

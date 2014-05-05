@@ -1,0 +1,1022 @@
+
+                      Design Compiler Graphical
+                            DC Ultra (TM)
+                             DFTMAX (TM)
+                         Power Compiler (TM)
+                           DesignWare (R)
+                           DC Expert (TM)
+                         Design Vision (TM)
+                          HDL Compiler (TM)
+                         VHDL Compiler (TM)
+                            DFT Compiler
+                        Library Compiler (TM)
+                         Design Compiler(R)
+
+            Version G-2012.06 for RHEL64 -- May 30, 2012
+               Copyright (c) 1988-2012 Synopsys, Inc.
+
+This software and the associated documentation are confidential and 
+proprietary to Synopsys, Inc. Your use or disclosure of this software 
+is subject to the terms and conditions of a written license agreement 
+between you, or your company, and Synopsys, Inc.
+
+Initializing...
+################################################################################
+## DO NOT EDIT THESE FILES BY HAND
+##
+## CONFIGURATION HAS BEEN MOVED TO THE MAKEFILE
+################################################################################
+set search_path [ list "./" "/usr/caen/generic/mentor_lib-D.1/public/eecs470/synopsys/" ]
+./ /usr/caen/generic/mentor_lib-D.1/public/eecs470/synopsys/
+set target_library "lec25dscc25_TT.db"
+lec25dscc25_TT.db
+set link_library [concat  "*" $target_library]
+* lec25dscc25_TT.db
+#/***********************************************************/
+#/* Set some flags to suppress warnings we don't care about */
+set suppress_errors [concat $suppress_errors "UID-401"]
+UID-401
+suppress_message {"VER-130"}
+#/***********************************************************/
+#/* The following lines are set from environment variables
+#/* automatically by the Makefile
+#/***********************************************************/
+lappend search_path ../
+./ /usr/caen/generic/mentor_lib-D.1/public/eecs470/synopsys/ ../
+set cache_module [getenv CACHE_NAME]
+Error: can't read "::env(CACHE_NAME)": no such variable
+	Use error_info for more info. (CMD-013)
+read_file -f ddc [list ${cache_module}.ddc]
+Error: can't read "cache_module": no such variable
+	Use error_info for more info. (CMD-013)
+set_dont_touch ${cache_module}
+Error: can't read "cache_module": no such variable
+	Use error_info for more info. (CMD-013)
+set headers [getenv HEADERS]
+sys_defs.vh
+set sources [getenv PIPEFILES]
+verilog/t/archMap.v verilog/t/D_stage.v verilog/t/freeList.v verilog/t/id.v verilog/t/mapTable.v verilog/t/rob.v verilog/t/rs.v
+read_file -f verilog [list ${headers} ${sources}]
+Loading db file '/usr/caen/generic/mentor_lib-D.1/public/eecs470/synopsys/lec25dscc25_TT.db'
+Loading db file '/usr/caen/synopsys-synth-2012.06/libraries/syn/gtech.db'
+Loading db file '/usr/caen/synopsys-synth-2012.06/libraries/syn/standard.sldb'
+  Loading link library 'lec25dscc25_TT'
+  Loading link library 'gtech'
+Loading verilog files: '/afs/umich.edu/user/c/h/chengfu/Desktop/syn2/sys_defs.vh' '/afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/archMap.v' '/afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/D_stage.v' '/afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/freeList.v' '/afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/id.v' '/afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/mapTable.v' '/afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/rob.v' '/afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/rs.v' 
+Detecting input file type automatically (-rtl or -netlist).
+Running DC verilog reader
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /afs/umich.edu/user/c/h/chengfu/Desktop/syn2/sys_defs.vh
+Compiling source file /afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/archMap.v
+Compiling source file /afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/D_stage.v
+Compiling source file /afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/freeList.v
+Compiling source file /afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/id.v
+Warning:  /afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/id.v:294: the undeclared symbol 'id_ldl_mem_out' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/id.v:295: the undeclared symbol 'id_stc_mem_out' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/id.v:299: the undeclared symbol 'id_cpuid_out' assumed to have the default net type, which is 'wire'. (VER-936)
+Compiling source file /afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/mapTable.v
+Warning:  /afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/id.v:294: The delay specification for net declaration is ignored. (VER-976)
+Warning:  /afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/id.v:295: The delay specification for net declaration is ignored. (VER-976)
+Warning:  /afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/id.v:299: The delay specification for net declaration is ignored. (VER-976)
+Compiling source file /afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/rob.v
+Compiling source file /afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/rs.v
+
+Inferred memory devices in process
+	in routine archMap line 235 in file
+		'/afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/archMap.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     reg_tag_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     reg_tag_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     reg_tag_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     reg_tag_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     reg_tag_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     reg_tag_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     reg_tag_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     reg_tag_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     reg_tag_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     reg_tag_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     reg_tag_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     reg_tag_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     reg_tag_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     reg_tag_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     reg_tag_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     reg_tag_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     reg_tag_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     reg_tag_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     reg_tag_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     reg_tag_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     reg_tag_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     reg_tag_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     reg_tag_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     reg_tag_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     reg_tag_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     reg_tag_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     reg_tag_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     reg_tag_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     reg_tag_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     reg_tag_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     reg_tag_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine freeList line 88 in file
+		'/afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/freeList.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      br_h_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      br_h_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      br_h_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      br_h_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     freeReg_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     freeReg_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     freeReg_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     freeReg_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     freeReg_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     freeReg_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     freeReg_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     freeReg_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     freeReg_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     freeReg_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     freeReg_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     freeReg_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     freeReg_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     freeReg_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     freeReg_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     freeReg_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     freeReg_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     freeReg_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     freeReg_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     freeReg_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     freeReg_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     freeReg_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     freeReg_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     freeReg_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     freeReg_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     freeReg_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     freeReg_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     freeReg_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     freeReg_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     freeReg_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     freeReg_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     freeReg_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      head_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tail_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+===========================================================
+| block name/line  | Inputs | Outputs | # sel inputs | MB |
+===========================================================
+|   freeList/66    |   32   |    6    |      5       | N  |
+|   freeList/67    |   32   |    6    |      5       | N  |
+|   freeList/127   |   4    |    6    |      2       | N  |
+===========================================================
+
+Statistics for case statements in always block at line 60 in file
+	'/afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/id.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            83            |    auto/auto     |
+|            85            |    auto/auto     |
+|           103            |    auto/auto     |
+|           105            |    auto/auto     |
+|           116            |    auto/auto     |
+|           126            |    auto/auto     |
+|           133            |    auto/auto     |
+|           145            |     no/auto      |
+|           165            |    auto/auto     |
+|           198            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 305 in file
+	'/afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/id.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           307            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 315 in file
+	'/afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/id.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           318            |     no/auto      |
+===============================================
+
+Statistics for case statements in always block at line 327 in file
+	'/afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/id.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           329            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine mapTable line 880 in file
+		'/afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/mapTable.v'.
+==================================================================================
+|     Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+==================================================================================
+|   tmp_fl_wr_en_2_reg   | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|   tmp_fl_wr_en_1_reg   | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|  tmp_fl_reg_idx_2_reg  | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|  tmp_fl_reg_idx_1_reg  | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+| tmp_dest_reg_idx_2_reg | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+| tmp_dest_reg_idx_1_reg | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+|   reg_tag_ready_reg    | Flip-flop |  32   |  N  | N  | N  | N  | N  | N  | N  |
+|   br_tag_ready2_reg    | Flip-flop |  31   |  N  | N  | N  | N  | N  | N  | N  |
+|      br_tag3_reg       | Flip-flop |  38   |  Y  | N  | N  | N  | N  | N  | N  |
+|      br_tag3_reg       | Flip-flop |  49   |  Y  | N  | N  | N  | N  | N  | N  |
+|      br_tag3_reg       | Flip-flop |  49   |  Y  | N  | N  | N  | N  | N  | N  |
+|      br_tag3_reg       | Flip-flop |  49   |  Y  | N  | N  | N  | N  | N  | N  |
+|      br_tag3_reg       | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|   br_tag_ready1_reg    | Flip-flop |  31   |  N  | N  | N  | N  | N  | N  | N  |
+|      br_tag2_reg       | Flip-flop |  38   |  Y  | N  | N  | N  | N  | N  | N  |
+|      br_tag2_reg       | Flip-flop |  49   |  Y  | N  | N  | N  | N  | N  | N  |
+|      br_tag2_reg       | Flip-flop |  49   |  Y  | N  | N  | N  | N  | N  | N  |
+|      br_tag2_reg       | Flip-flop |  49   |  Y  | N  | N  | N  | N  | N  | N  |
+|      br_tag2_reg       | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|   br_tag_ready0_reg    | Flip-flop |  31   |  N  | N  | N  | N  | N  | N  | N  |
+|      br_tag1_reg       | Flip-flop |  38   |  Y  | N  | N  | N  | N  | N  | N  |
+|      br_tag1_reg       | Flip-flop |  49   |  Y  | N  | N  | N  | N  | N  | N  |
+|      br_tag1_reg       | Flip-flop |  49   |  Y  | N  | N  | N  | N  | N  | N  |
+|      br_tag1_reg       | Flip-flop |  49   |  Y  | N  | N  | N  | N  | N  | N  |
+|      br_tag1_reg       | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|   br_tag_ready3_reg    | Flip-flop |  31   |  N  | N  | N  | N  | N  | N  | N  |
+|      br_tag0_reg       | Flip-flop |  38   |  Y  | N  | N  | N  | N  | N  | N  |
+|      br_tag0_reg       | Flip-flop |  49   |  Y  | N  | N  | N  | N  | N  | N  |
+|      br_tag0_reg       | Flip-flop |  49   |  Y  | N  | N  | N  | N  | N  | N  |
+|      br_tag0_reg       | Flip-flop |  49   |  Y  | N  | N  | N  | N  | N  | N  |
+|      br_tag0_reg       | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|      reg_tag_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      reg_tag_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      reg_tag_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      reg_tag_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      reg_tag_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      reg_tag_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      reg_tag_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      reg_tag_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      reg_tag_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      reg_tag_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      reg_tag_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      reg_tag_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      reg_tag_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      reg_tag_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      reg_tag_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      reg_tag_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      reg_tag_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      reg_tag_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      reg_tag_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      reg_tag_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      reg_tag_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      reg_tag_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      reg_tag_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      reg_tag_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      reg_tag_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      reg_tag_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      reg_tag_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      reg_tag_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      reg_tag_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      reg_tag_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      reg_tag_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      reg_tag_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+==================================================================================
+Statistics for MUX_OPs
+===========================================================
+| block name/line  | Inputs | Outputs | # sel inputs | MB |
+===========================================================
+|   mapTable/108   |   32   |    6    |      5       | N  |
+|   mapTable/108   |   32   |    6    |      5       | N  |
+|   mapTable/112   |   32   |    6    |      5       | N  |
+|   mapTable/115   |   32   |    1    |      5       | N  |
+|   mapTable/121   |   32   |    6    |      5       | N  |
+|   mapTable/125   |   32   |    1    |      5       | N  |
+|   mapTable/133   |   32   |    6    |      5       | N  |
+|   mapTable/136   |   32   |    1    |      5       | N  |
+|   mapTable/143   |   32   |    6    |      5       | N  |
+|   mapTable/147   |   32   |    1    |      5       | N  |
+|   mapTable/155   |   32   |    6    |      5       | N  |
+|   mapTable/161   |   32   |    6    |      5       | N  |
+===========================================================
+
+Inferred memory devices in process
+	in routine rob line 1458 in file
+		'/afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/rob.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    T_valid_1_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|   Told_out_2_reg    | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|   Told_out_1_reg    | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     T_out_2_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     T_out_1_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     wb_data_reg     | Flip-flop | 2048  |  Y  | N  | N  | N  | N  | N  | N  |
+|       NPC_reg       | Flip-flop |  99   |  Y  | N  | N  | N  | N  | N  | N  |
+|       NPC_reg       | Flip-flop |  99   |  Y  | N  | N  | N  | N  | N  | N  |
+|       NPC_reg       | Flip-flop |  99   |  Y  | N  | N  | N  | N  | N  | N  |
+|       NPC_reg       | Flip-flop |  99   |  Y  | N  | N  | N  | N  | N  | N  |
+|       NPC_reg       | Flip-flop |  99   |  Y  | N  | N  | N  | N  | N  | N  |
+|       NPC_reg       | Flip-flop |  99   |  Y  | N  | N  | N  | N  | N  | N  |
+|       NPC_reg       | Flip-flop |  99   |  Y  | N  | N  | N  | N  | N  | N  |
+|       NPC_reg       | Flip-flop |  99   |  Y  | N  | N  | N  | N  | N  | N  |
+|       NPC_reg       | Flip-flop |  99   |  Y  | N  | N  | N  | N  | N  | N  |
+|       NPC_reg       | Flip-flop |  99   |  Y  | N  | N  | N  | N  | N  | N  |
+|       NPC_reg       | Flip-flop |  99   |  Y  | N  | N  | N  | N  | N  | N  |
+|       NPC_reg       | Flip-flop |  99   |  Y  | N  | N  | N  | N  | N  | N  |
+|       NPC_reg       | Flip-flop |  99   |  Y  | N  | N  | N  | N  | N  | N  |
+|       NPC_reg       | Flip-flop |  99   |  Y  | N  | N  | N  | N  | N  | N  |
+|       NPC_reg       | Flip-flop |  99   |  Y  | N  | N  | N  | N  | N  | N  |
+|       NPC_reg       | Flip-flop |  99   |  Y  | N  | N  | N  | N  | N  | N  |
+|       NPC_reg       | Flip-flop |  99   |  Y  | N  | N  | N  | N  | N  | N  |
+|       NPC_reg       | Flip-flop |  99   |  Y  | N  | N  | N  | N  | N  | N  |
+|       NPC_reg       | Flip-flop |  99   |  Y  | N  | N  | N  | N  | N  | N  |
+|       NPC_reg       | Flip-flop |  99   |  Y  | N  | N  | N  | N  | N  | N  |
+|       NPC_reg       | Flip-flop |  68   |  Y  | N  | N  | N  | N  | N  | N  |
+|      noop_reg       | Flip-flop |  31   |  Y  | N  | N  | N  | N  | N  | N  |
+|      noop_reg       | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|      halt_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|  br_target_PC_reg   | Flip-flop | 2048  |  Y  | N  | N  | N  | N  | N  | N  |
+|    br_taken_reg     | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|  wb_data_out_2_reg  | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+|  wb_data_out_1_reg  | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+|    NPC_out_2_reg    | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+|    NPC_out_1_reg    | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+|    T_valid_2_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|       br_reg        | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|    br_marker_reg    | Flip-flop |  34   |  Y  | N  | N  | N  | N  | N  | N  |
+|    br_marker_reg    | Flip-flop |  62   |  Y  | N  | N  | N  | N  | N  | N  |
+|        C_reg        | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|     wr_mem_reg      | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|        t_reg        | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      br_t_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      br_t_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      br_t_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      br_t_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|        h_reg        | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|        T_reg        | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+|        T_reg        | Flip-flop |  99   |  Y  | N  | N  | N  | N  | N  | N  |
+|        T_reg        | Flip-flop |  88   |  Y  | N  | N  | N  | N  | N  | N  |
+|      Told_reg       | Flip-flop |  11   |  Y  | N  | N  | N  | N  | N  | N  |
+|      Told_reg       | Flip-flop |  99   |  Y  | N  | N  | N  | N  | N  | N  |
+|      Told_reg       | Flip-flop |  82   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+===========================================================
+| block name/line  | Inputs | Outputs | # sel inputs | MB |
+===========================================================
+|     rob/219      |   32   |    6    |      5       | N  |
+|     rob/220      |   32   |    5    |      5       | N  |
+|     rob/253      |   32   |   192   |      5       | N  |
+|     rob/253      |   32   |   192   |      5       | N  |
+|     rob/255      |   32   |    3    |      5       | N  |
+|     rob/256      |   32   |    3    |      5       | N  |
+|     rob/1428     |   32   |   12    |      5       | N  |
+|     rob/1429     |   32   |   12    |      5       | N  |
+|     rob/2318     |   4    |    6    |      2       | N  |
+===========================================================
+
+Inferred memory devices in process
+	in routine rs_slot line 225 in file
+		'/afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/rs.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    lsq_tail_reg     | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+|       op_reg        | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+|        T_reg        | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|       T1_reg        | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     T1plus_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|       T2_reg        | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     T2plus_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|   opa_select_reg    | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+|   opb_select_reg    | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+|       IR_reg        | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       NPC_reg       | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+|     wr_mem_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     rd_mem_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|   cond_branch_reg   | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|  uncond_branch_reg  | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|    br_marker_reg    | Flip-flop |   3   |  Y  | N  | N  | N  | N  | N  | N  |
+|      brpTN_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|   brp_TAR_PC_reg    | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Warning:  /afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/rs.v:780: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  /afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/rs.v:803: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+
+Statistics for case statements in always block at line 778 in file
+	'/afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/rs.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           780            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 801 in file
+	'/afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/rs.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           803            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine rs line 532 in file
+		'/afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/rs.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    bmask_14_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|    bmask_15_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|     bmask_0_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|     bmask_1_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|     bmask_2_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|     bmask_3_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|     bmask_4_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|     bmask_5_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|     bmask_6_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|     bmask_7_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|     bmask_8_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|     bmask_9_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|    bmask_10_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|    bmask_11_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|    bmask_12_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|    bmask_13_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine rs line 594 in file
+		'/afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/rs.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    busy_bits_reg    | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+===========================================================
+| block name/line  | Inputs | Outputs | # sel inputs | MB |
+===========================================================
+|      rs/381      |   16   |   16    |      4       | N  |
+|      rs/381      |   16   |   16    |      4       | N  |
+|      rs/863      |   16   |    7    |      4       | N  |
+|      rs/867      |   32   |    2    |      5       | N  |
+|      rs/869      |  512   |    1    |      9       | N  |
+|      rs/869      |  512   |    1    |      9       | N  |
+|      rs/869      |  512   |    1    |      9       | N  |
+|      rs/869      |  512   |    1    |      9       | N  |
+|      rs/869      |  512   |    1    |      9       | N  |
+|      rs/869      |  512   |    1    |      9       | N  |
+|      rs/869      |  512   |    1    |      9       | N  |
+|      rs/869      |  512   |    1    |      9       | N  |
+|      rs/869      |  512   |    1    |      9       | N  |
+|      rs/869      |  512   |    1    |      9       | N  |
+|      rs/869      |  512   |    1    |      9       | N  |
+|      rs/869      |  512   |    1    |      9       | N  |
+|      rs/869      |  512   |    1    |      9       | N  |
+|      rs/869      |  512   |    1    |      9       | N  |
+|      rs/869      |  512   |    1    |      9       | N  |
+|      rs/869      |  512   |    1    |      9       | N  |
+|      rs/869      |  512   |    1    |      9       | N  |
+|      rs/869      |  512   |    1    |      9       | N  |
+|      rs/869      |  512   |    1    |      9       | N  |
+|      rs/869      |  512   |    1    |      9       | N  |
+|      rs/869      |  512   |    1    |      9       | N  |
+|      rs/869      |  512   |    1    |      9       | N  |
+|      rs/869      |  512   |    1    |      9       | N  |
+|      rs/869      |  512   |    1    |      9       | N  |
+|      rs/869      |  512   |    1    |      9       | N  |
+|      rs/869      |  512   |    1    |      9       | N  |
+|      rs/869      |  512   |    1    |      9       | N  |
+|      rs/869      |  512   |    1    |      9       | N  |
+|      rs/869      |  512   |    1    |      9       | N  |
+|      rs/869      |  512   |    1    |      9       | N  |
+|      rs/869      |  512   |    1    |      9       | N  |
+|      rs/869      |  512   |    1    |      9       | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/939      |   16   |    7    |      4       | N  |
+|      rs/943      |   32   |    2    |      5       | N  |
+|      rs/945      |  512   |    1    |      9       | N  |
+|      rs/945      |  512   |    1    |      9       | N  |
+|      rs/945      |  512   |    1    |      9       | N  |
+|      rs/945      |  512   |    1    |      9       | N  |
+|      rs/945      |  512   |    1    |      9       | N  |
+|      rs/945      |  512   |    1    |      9       | N  |
+|      rs/945      |  512   |    1    |      9       | N  |
+|      rs/945      |  512   |    1    |      9       | N  |
+|      rs/945      |  512   |    1    |      9       | N  |
+|      rs/945      |  512   |    1    |      9       | N  |
+|      rs/945      |  512   |    1    |      9       | N  |
+|      rs/945      |  512   |    1    |      9       | N  |
+|      rs/945      |  512   |    1    |      9       | N  |
+|      rs/945      |  512   |    1    |      9       | N  |
+|      rs/945      |  512   |    1    |      9       | N  |
+|      rs/945      |  512   |    1    |      9       | N  |
+|      rs/945      |  512   |    1    |      9       | N  |
+|      rs/945      |  512   |    1    |      9       | N  |
+|      rs/945      |  512   |    1    |      9       | N  |
+|      rs/945      |  512   |    1    |      9       | N  |
+|      rs/945      |  512   |    1    |      9       | N  |
+|      rs/945      |  512   |    1    |      9       | N  |
+|      rs/945      |  512   |    1    |      9       | N  |
+|      rs/945      |  512   |    1    |      9       | N  |
+|      rs/945      |  512   |    1    |      9       | N  |
+|      rs/945      |  512   |    1    |      9       | N  |
+|      rs/945      |  512   |    1    |      9       | N  |
+|      rs/945      |  512   |    1    |      9       | N  |
+|      rs/945      |  512   |    1    |      9       | N  |
+|      rs/945      |  512   |    1    |      9       | N  |
+|      rs/945      |  512   |    1    |      9       | N  |
+|      rs/945      |  512   |    1    |      9       | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+===========================================================
+Presto compilation completed successfully.
+Current design is now '/afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/archMap.db:archMap'
+Loaded 9 designs.
+Current design is 'archMap'.
+archMap D_stage freeList decoder id mapTable rob rs_slot rs
+set design_name [getenv PIPELINE_NAME]
+I_stage
+set clock_name [getenv CLOCK_NET_NAME]
+clock
+set reset_name [getenv RESET_NET_NAME]
+reset
+set CLK_PERIOD [getenv CLOCK_PERIOD]
+13	
+#/***********************************************************/
+#/* The rest of this file may be left alone for most small  */
+#/* to moderate sized designs.  You may need to alter it    */
+#/* when synthesizing your final project.                   */
+#/***********************************************************/
+set SYN_DIR ./
+./
+#/***********************************************************/
+#/* Set some flags for optimisation */
+set compile_top_all_paths "true"
+true
+set auto_wire_load_selection "false"
+false
+set compile_seqmap_synchronous_extraction "true"
+true
+# uncomment this and change number appropriately if on multi-core machine
+#set_host_options -max_cores 2
+#/***********************************************************/
+#/*  Clk Periods/uncertainty/transition                     */
+set CLK_TRANSITION 0.1
+0.1
+set CLK_UNCERTAINTY 0.1
+0.1
+set CLK_LATENCY 0.1
+0.1
+#/* Input/output Delay values */
+set AVG_INPUT_DELAY 0.1
+0.1
+set AVG_OUTPUT_DELAY 0.1
+0.1
+#/* Critical Range (ns) */
+set CRIT_RANGE 1.0
+1.0
+#/***********************************************************/
+#/* Design Constrains: Not all used                         */
+set MAX_TRANSITION 1.0
+1.0
+set FAST_TRANSITION 0.1
+0.1
+set MAX_FANOUT 32
+32
+set MID_FANOUT 8
+8
+set LOW_FANOUT 1
+1
+set HIGH_DRIVE 0
+0
+set HIGH_LOAD 1.0
+1.0
+set AVG_LOAD 0.1
+0.1
+set AVG_FANOUT_LOAD 10
+10
+#/***********************************************************/
+#/*BASIC_INPUT = cb18os120_tsmc_max/nd02d1/A1
+#BASIC_OUTPUT = cb18os120_tsmc_max/nd02d1/ZN*/
+set DRIVING_CELL dffacs1
+dffacs1
+#/* DONT_USE_LIST = {   } */
+#/*************operation cons**************/
+#/*OP_WCASE = WCCOM;
+#OP_BCASE = BCCOM;*/
+set WIRE_LOAD "tsmcwire"
+tsmcwire
+set LOGICLIB lec25dscc25_TT
+lec25dscc25_TT
+#/*****************************/
+#/* Sourcing the file that sets the Search path and the libraries(target,link) */
+set sys_clk $clock_name
+clock
+set netlist_file [format "%s%s"  [format "%s%s"  $SYN_DIR $design_name] ".vg"]
+./I_stage.vg
+set ddc_file [format "%s%s"  [format "%s%s"  $SYN_DIR $design_name] ".ddc"]
+./I_stage.ddc
+set rep_file [format "%s%s"  [format "%s%s"  $SYN_DIR $design_name] ".rep"]
+./I_stage.rep
+set dc_shell_status [ set chk_file [format "%s%s"  [format "%s%s"  $SYN_DIR $design_name] ".chk"] ]
+./I_stage.chk
+#/* if we didnt find errors at this point, run */
+if {  $dc_shell_status != [list] } {
+   current_design $design_name
+  link
+  set_wire_load_model -name $WIRE_LOAD -lib $LOGICLIB $design_name
+  set_wire_load_mode top
+  set_fix_multiple_port_nets -outputs -buffer_constants
+  create_clock -period $CLK_PERIOD -name $sys_clk [find port $sys_clk]
+  set_clock_uncertainty $CLK_UNCERTAINTY $sys_clk
+  set_fix_hold $sys_clk
+  group_path -from [all_inputs] -name input_grp
+  group_path -to [all_outputs] -name output_grp
+  set_driving_cell  -lib_cell $DRIVING_CELL [all_inputs]
+  remove_driving_cell [find port $sys_clk]
+  set_fanout_load $AVG_FANOUT_LOAD [all_outputs]
+  set_load $AVG_LOAD [all_outputs]
+  set_input_delay $AVG_INPUT_DELAY -clock $sys_clk [all_inputs]
+  remove_input_delay -clock $sys_clk [find port $sys_clk]
+  set_output_delay $AVG_OUTPUT_DELAY -clock $sys_clk [all_outputs]
+  set_dont_touch $reset_name
+  set_resistance 0 $reset_name
+  set_drive 0 $reset_name
+  set_critical_range $CRIT_RANGE [current_design]
+  set_max_delay $CLK_PERIOD [all_outputs]
+  set MAX_FANOUT $MAX_FANOUT
+  set MAX_TRANSITION $MAX_TRANSITION
+  uniquify
+  ungroup -all -flatten
+  redirect $chk_file { check_design }
+  compile -map_effort medium
+  write -hier -format verilog -output $netlist_file $design_name
+  write -hier -format ddc -output $ddc_file $design_name
+  redirect $rep_file { report_design -nosplit }
+  redirect -append $rep_file { report_area }
+  redirect -append $rep_file { report_timing -max_paths 2 -input_pins -nets -transition_time -nosplit }
+  redirect -append $rep_file { report_constraint -max_delay -verbose -nosplit }
+  remove_design -all
+  read_file -format verilog $netlist_file
+  current_design $design_name
+  redirect -append $rep_file { report_reference -nosplit }
+  quit
+} else {
+   quit
+}
+Error: Can't find design 'I_stage'. (UID-109)
+Current design is 'archMap'.
+
+  Linking design 'archMap'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (9 designs)               /afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/archMap.db, etc
+  lec25dscc25_TT (library)    /usr/caen/generic/mentor_lib-D.1/public/eecs470/synopsys/lec25dscc25_TT.db
+
+Warning: Can't find object 'I_stage' in design 'archMap'. (UID-95)
+Error: Value for list 'object_list' must have 1 elements. (CMD-036)
+Current design is 'archMap'.
+Warning: Design has no hierarchy.  No cells can be ungrouped. (UID-228)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | G-2012.06-DWBB_201206.0 |     *     |
+| Licensed DW Building Blocks        |                         |           |
+============================================================================
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'archMap'
+Information: The register 'reg_tag_reg[31][5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'reg_tag_reg[31][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'reg_tag_reg[31][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'reg_tag_reg[31][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'reg_tag_reg[31][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'reg_tag_reg[31][0]' is a constant and will be removed. (OPT-1206)
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'archMap_DW01_cmp6_0'
+  Processing 'archMap_DW01_cmp6_1'
+  Processing 'archMap_DW01_cmp6_2'
+  Processing 'archMap_DW01_cmp6_3'
+  Processing 'archMap_DW01_cmp6_4'
+  Processing 'archMap_DW01_cmp6_5'
+  Processing 'archMap_DW01_cmp6_6'
+  Processing 'archMap_DW01_cmp6_7'
+  Processing 'archMap_DW01_cmp6_8'
+  Processing 'archMap_DW01_cmp6_9'
+  Processing 'archMap_DW01_cmp6_10'
+  Processing 'archMap_DW01_cmp6_11'
+  Processing 'archMap_DW01_cmp6_12'
+  Processing 'archMap_DW01_cmp6_13'
+  Processing 'archMap_DW01_cmp6_14'
+  Processing 'archMap_DW01_cmp6_15'
+  Processing 'archMap_DW01_cmp6_16'
+  Processing 'archMap_DW01_cmp6_17'
+  Processing 'archMap_DW01_cmp6_18'
+  Processing 'archMap_DW01_cmp6_19'
+  Processing 'archMap_DW01_cmp6_20'
+  Processing 'archMap_DW01_cmp6_21'
+  Processing 'archMap_DW01_cmp6_22'
+  Processing 'archMap_DW01_cmp6_23'
+  Processing 'archMap_DW01_cmp6_24'
+  Processing 'archMap_DW01_cmp6_25'
+  Processing 'archMap_DW01_cmp6_26'
+  Processing 'archMap_DW01_cmp6_27'
+  Processing 'archMap_DW01_cmp6_28'
+  Processing 'archMap_DW01_cmp6_29'
+  Processing 'archMap_DW01_cmp6_30'
+  Processing 'archMap_DW01_cmp6_31'
+  Processing 'archMap_DW01_cmp6_32'
+  Processing 'archMap_DW01_cmp6_33'
+  Processing 'archMap_DW01_cmp6_34'
+  Processing 'archMap_DW01_cmp6_35'
+  Processing 'archMap_DW01_cmp6_36'
+  Processing 'archMap_DW01_cmp6_37'
+  Processing 'archMap_DW01_cmp6_38'
+  Processing 'archMap_DW01_cmp6_39'
+  Processing 'archMap_DW01_cmp6_40'
+  Processing 'archMap_DW01_cmp6_41'
+  Processing 'archMap_DW01_cmp6_42'
+  Processing 'archMap_DW01_cmp6_43'
+  Processing 'archMap_DW01_cmp6_44'
+  Processing 'archMap_DW01_cmp6_45'
+  Processing 'archMap_DW01_cmp6_46'
+  Processing 'archMap_DW01_cmp6_47'
+  Processing 'archMap_DW01_cmp6_48'
+  Processing 'archMap_DW01_cmp6_49'
+  Processing 'archMap_DW01_cmp6_50'
+  Processing 'archMap_DW01_cmp6_51'
+  Processing 'archMap_DW01_cmp6_52'
+  Processing 'archMap_DW01_cmp6_53'
+  Processing 'archMap_DW01_cmp6_54'
+  Processing 'archMap_DW01_cmp6_55'
+  Processing 'archMap_DW01_cmp6_56'
+  Processing 'archMap_DW01_cmp6_57'
+  Processing 'archMap_DW01_cmp6_58'
+  Processing 'archMap_DW01_cmp6_59'
+  Processing 'archMap_DW01_cmp6_60'
+  Processing 'archMap_DW01_cmp6_61'
+  Processing 'archMap_DW01_cmp6_62'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                             MIN DELAY
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT            COST   
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:04  139345.9      0.00       0.0       3.8                                0.00
+    0:00:04  139345.9      0.00       0.0       3.8                                0.00
+    0:00:04  139345.9      0.00       0.0       3.8                                0.00
+    0:00:04  139345.9      0.00       0.0       3.8                                0.00
+    0:00:04  139345.9      0.00       0.0       3.8                                0.00
+    0:00:04  139345.9      0.00       0.0       3.8                                0.00
+    0:00:04  106757.3      0.00       0.0       3.4                                0.00
+    0:00:04  106533.3      0.00       0.0       3.4                                0.00
+    0:00:04  106533.3      0.00       0.0       0.8                                0.00
+    0:00:04  106533.3      0.00       0.0       0.8                                0.00
+    0:00:04  106533.3      0.00       0.0       0.8                                0.00
+    0:00:04  106533.3      0.00       0.0       0.8                                0.00
+    0:00:04  106533.3      0.00       0.0       0.8                                0.00
+    0:00:04  106583.1      0.00       0.0       0.7                                0.00
+    0:00:04  106583.1      0.00       0.0       0.7                                0.00
+    0:00:04  106583.1      0.00       0.0       0.7                                0.00
+    0:00:04  106583.1      0.00       0.0       0.7                                0.00
+    0:00:04  106583.1      0.00       0.0       0.7                                0.00
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                             MIN DELAY
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT            COST   
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:04  106583.1      0.00       0.0       0.7                                0.00
+    0:00:04  106583.1      0.00       0.0       0.7                                0.00
+    0:00:04  102270.0      0.00       0.0       0.7                                0.00
+
+
+  Beginning Design Rule Fixing  (max_transition)
+  ----------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                             MIN DELAY
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT            COST   
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:04  102270.0      0.00       0.0       0.7                                0.00
+    0:00:04  102668.2      0.00       0.0       0.0                                0.00
+
+
+  Beginning Critical Range Optimization
+  -------------------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                             MIN DELAY
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT            COST   
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:04  102668.2      0.00       0.0       0.0                                0.00
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                             MIN DELAY
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT            COST   
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:04  102668.2      0.00       0.0       0.0                                0.00
+    0:00:04  102668.2      0.00       0.0       0.0                                0.00
+    0:00:04  102668.2      0.00       0.0       0.0                                0.00
+    0:00:05  101971.4      0.00       0.0       0.0                                0.00
+    0:00:05  101813.8      0.00       0.0       0.0                                0.00
+    0:00:05  101681.1      0.00       0.0       0.0                                0.00
+    0:00:05  101614.8      0.00       0.0       0.0                                0.00
+    0:00:05  101573.3      0.00       0.0       0.0                                0.00
+    0:00:05  101573.3      0.00       0.0       0.0                                0.00
+    0:00:05  101573.3      0.00       0.0       0.0                                0.00
+    0:00:05  101573.3      0.00       0.0       0.0                                0.00
+    0:00:05  101573.3      0.00       0.0       0.0                                0.00
+    0:00:05  101573.3      0.00       0.0       0.0                                0.00
+    0:00:05  101573.3      0.00       0.0       0.0                                0.00
+    0:00:05  101573.3      0.00       0.0       0.0                                0.00
+    0:00:05  101573.3      0.00       0.0       0.0                                0.00
+    0:00:05  101573.3      0.00       0.0       0.0                                0.00
+    0:00:05  101573.3      0.00       0.0       0.0                                0.00
+
+
+  Beginning Critical Range Optimization
+  -------------------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                             MIN DELAY
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT            COST   
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:05  101573.3      0.00       0.0       0.0                                0.00
+    0:00:05  101573.3      0.00       0.0       0.0                                0.00
+Loading db file '/usr/caen/generic/mentor_lib-D.1/public/eecs470/synopsys/lec25dscc25_TT.db'
+
+  Optimization Complete
+  ---------------------
+Warning: Can't find in memory specified design or design file 'I_stage'. (UID-26)
+Error: Write command failed. (UID-25)
+Error: Write command failed. (UID-25)
+Warning: Can't find in memory specified design or design file 'I_stage'. (UID-26)
+No designs to write
+Removing design 'archMap'
+Removing design 'D_stage'
+Removing design 'freeList'
+Removing design 'decoder'
+Removing design 'id'
+Removing design 'mapTable'
+Removing design 'rob'
+Removing design 'rs_slot'
+Removing design 'rs'
+Removing library 'lec25dscc25_TT'
+Removing library 'gtech'
+Removing library 'standard.sldb'
+Loading db file '/usr/caen/generic/mentor_lib-D.1/public/eecs470/synopsys/lec25dscc25_TT.db'
+Loading db file '/usr/caen/synopsys-synth-2012.06/libraries/syn/gtech.db'
+Loading db file '/usr/caen/synopsys-synth-2012.06/libraries/syn/standard.sldb'
+  Loading link library 'lec25dscc25_TT'
+  Loading link library 'gtech'
+Error: Cannot read file './I_stage.vg'. (UID-58)
+No designs were read
+Error: Can't find design 'I_stage'. (UID-109)
+Error: Current design is not defined. (UID-4)
+
+Thank you...

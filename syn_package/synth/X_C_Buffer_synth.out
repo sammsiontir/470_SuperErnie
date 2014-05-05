@@ -1,0 +1,420 @@
+
+                      Design Compiler Graphical
+                            DC Ultra (TM)
+                             DFTMAX (TM)
+                         Power Compiler (TM)
+                           DesignWare (R)
+                           DC Expert (TM)
+                         Design Vision (TM)
+                          HDL Compiler (TM)
+                         VHDL Compiler (TM)
+                            DFT Compiler
+                        Library Compiler (TM)
+                         Design Compiler(R)
+
+            Version G-2012.06 for RHEL64 -- May 30, 2012
+               Copyright (c) 1988-2012 Synopsys, Inc.
+
+This software and the associated documentation are confidential and 
+proprietary to Synopsys, Inc. Your use or disclosure of this software 
+is subject to the terms and conditions of a written license agreement 
+between you, or your company, and Synopsys, Inc.
+
+Initializing...
+################################################################################
+## DO NOT EDIT THESE FILES BY HAND
+##
+## CONFIGURATION HAS BEEN MOVED TO THE MAKEFILE
+################################################################################
+set search_path [ list "./" "/usr/caen/generic/mentor_lib-D.1/public/eecs470/synopsys/" ]
+./ /usr/caen/generic/mentor_lib-D.1/public/eecs470/synopsys/
+set target_library "lec25dscc25_TT.db"
+lec25dscc25_TT.db
+set link_library [concat  "*" $target_library]
+* lec25dscc25_TT.db
+#/***********************************************************/
+#/* Set some flags to suppress warnings we don't care about */
+set suppress_errors [concat $suppress_errors "UID-401"]
+UID-401
+suppress_message {"VER-130"}
+#/***********************************************************/
+#/* The following lines are set from environment variables
+#/* automatically by the Makefile
+#/***********************************************************/
+lappend search_path ../
+./ /usr/caen/generic/mentor_lib-D.1/public/eecs470/synopsys/ ../
+set cache_module [getenv CACHE_NAME]
+Error: can't read "::env(CACHE_NAME)": no such variable
+	Use error_info for more info. (CMD-013)
+read_file -f ddc [list ${cache_module}.ddc]
+Error: can't read "cache_module": no such variable
+	Use error_info for more info. (CMD-013)
+set_dont_touch ${cache_module}
+Error: can't read "cache_module": no such variable
+	Use error_info for more info. (CMD-013)
+set headers [getenv HEADERS]
+sys_defs.vh
+set sources [getenv PIPEFILES]
+verilog/t/X_C_Buffer.v
+read_file -f verilog [list ${headers} ${sources}]
+Loading db file '/usr/caen/generic/mentor_lib-D.1/public/eecs470/synopsys/lec25dscc25_TT.db'
+Loading db file '/usr/caen/synopsys-synth-2012.06/libraries/syn/gtech.db'
+Loading db file '/usr/caen/synopsys-synth-2012.06/libraries/syn/standard.sldb'
+  Loading link library 'lec25dscc25_TT'
+  Loading link library 'gtech'
+Loading verilog files: '/afs/umich.edu/user/c/h/chengfu/Desktop/syn2/sys_defs.vh' '/afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/X_C_Buffer.v' 
+Detecting input file type automatically (-rtl or -netlist).
+Running DC verilog reader
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /afs/umich.edu/user/c/h/chengfu/Desktop/syn2/sys_defs.vh
+Compiling source file /afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/X_C_Buffer.v
+
+Statistics for case statements in always block at line 105 in file
+	'/afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/X_C_Buffer.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           140            |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine X_C_Buffer line 285 in file
+		'/afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/X_C_Buffer.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        t_reg        | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+|      valid_reg      | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|   alu_result_reg    | Flip-flop |  512  |  Y  | N  | N  | N  | N  | N  | N  |
+|    dest_idx_reg     | Flip-flop |  48   |  Y  | N  | N  | N  | N  | N  | N  |
+|        h_reg        | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+===========================================================
+| block name/line  | Inputs | Outputs | # sel inputs | MB |
+===========================================================
+|  X_C_Buffer/97   |   8    |   64    |      3       | N  |
+|  X_C_Buffer/98   |   8    |   64    |      3       | N  |
+|  X_C_Buffer/99   |   8    |    6    |      3       | N  |
+|  X_C_Buffer/100  |   8    |    6    |      3       | N  |
+|  X_C_Buffer/101  |   8    |    4    |      3       | N  |
+===========================================================
+Presto compilation completed successfully.
+Current design is now '/afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/X_C_Buffer.db:X_C_Buffer'
+Loaded 1 design.
+Current design is 'X_C_Buffer'.
+X_C_Buffer
+set design_name [getenv PIPELINE_NAME]
+X_C_Buffer
+set clock_name [getenv CLOCK_NET_NAME]
+clock
+set reset_name [getenv RESET_NET_NAME]
+reset
+set CLK_PERIOD [getenv CLOCK_PERIOD]
+13	
+#/***********************************************************/
+#/* The rest of this file may be left alone for most small  */
+#/* to moderate sized designs.  You may need to alter it    */
+#/* when synthesizing your final project.                   */
+#/***********************************************************/
+set SYN_DIR ./
+./
+#/***********************************************************/
+#/* Set some flags for optimisation */
+set compile_top_all_paths "true"
+true
+set auto_wire_load_selection "false"
+false
+set compile_seqmap_synchronous_extraction "true"
+true
+# uncomment this and change number appropriately if on multi-core machine
+#set_host_options -max_cores 2
+#/***********************************************************/
+#/*  Clk Periods/uncertainty/transition                     */
+set CLK_TRANSITION 0.1
+0.1
+set CLK_UNCERTAINTY 0.1
+0.1
+set CLK_LATENCY 0.1
+0.1
+#/* Input/output Delay values */
+set AVG_INPUT_DELAY 0.1
+0.1
+set AVG_OUTPUT_DELAY 0.1
+0.1
+#/* Critical Range (ns) */
+set CRIT_RANGE 1.0
+1.0
+#/***********************************************************/
+#/* Design Constrains: Not all used                         */
+set MAX_TRANSITION 1.0
+1.0
+set FAST_TRANSITION 0.1
+0.1
+set MAX_FANOUT 32
+32
+set MID_FANOUT 8
+8
+set LOW_FANOUT 1
+1
+set HIGH_DRIVE 0
+0
+set HIGH_LOAD 1.0
+1.0
+set AVG_LOAD 0.1
+0.1
+set AVG_FANOUT_LOAD 10
+10
+#/***********************************************************/
+#/*BASIC_INPUT = cb18os120_tsmc_max/nd02d1/A1
+#BASIC_OUTPUT = cb18os120_tsmc_max/nd02d1/ZN*/
+set DRIVING_CELL dffacs1
+dffacs1
+#/* DONT_USE_LIST = {   } */
+#/*************operation cons**************/
+#/*OP_WCASE = WCCOM;
+#OP_BCASE = BCCOM;*/
+set WIRE_LOAD "tsmcwire"
+tsmcwire
+set LOGICLIB lec25dscc25_TT
+lec25dscc25_TT
+#/*****************************/
+#/* Sourcing the file that sets the Search path and the libraries(target,link) */
+set sys_clk $clock_name
+clock
+set netlist_file [format "%s%s"  [format "%s%s"  $SYN_DIR $design_name] ".vg"]
+./X_C_Buffer.vg
+set ddc_file [format "%s%s"  [format "%s%s"  $SYN_DIR $design_name] ".ddc"]
+./X_C_Buffer.ddc
+set rep_file [format "%s%s"  [format "%s%s"  $SYN_DIR $design_name] ".rep"]
+./X_C_Buffer.rep
+set dc_shell_status [ set chk_file [format "%s%s"  [format "%s%s"  $SYN_DIR $design_name] ".chk"] ]
+./X_C_Buffer.chk
+#/* if we didnt find errors at this point, run */
+if {  $dc_shell_status != [list] } {
+   current_design $design_name
+  link
+  set_wire_load_model -name $WIRE_LOAD -lib $LOGICLIB $design_name
+  set_wire_load_mode top
+  set_fix_multiple_port_nets -outputs -buffer_constants
+  create_clock -period $CLK_PERIOD -name $sys_clk [find port $sys_clk]
+  set_clock_uncertainty $CLK_UNCERTAINTY $sys_clk
+  set_fix_hold $sys_clk
+  group_path -from [all_inputs] -name input_grp
+  group_path -to [all_outputs] -name output_grp
+  set_driving_cell  -lib_cell $DRIVING_CELL [all_inputs]
+  remove_driving_cell [find port $sys_clk]
+  set_fanout_load $AVG_FANOUT_LOAD [all_outputs]
+  set_load $AVG_LOAD [all_outputs]
+  set_input_delay $AVG_INPUT_DELAY -clock $sys_clk [all_inputs]
+  remove_input_delay -clock $sys_clk [find port $sys_clk]
+  set_output_delay $AVG_OUTPUT_DELAY -clock $sys_clk [all_outputs]
+  set_dont_touch $reset_name
+  set_resistance 0 $reset_name
+  set_drive 0 $reset_name
+  set_critical_range $CRIT_RANGE [current_design]
+  set_max_delay $CLK_PERIOD [all_outputs]
+  set MAX_FANOUT $MAX_FANOUT
+  set MAX_TRANSITION $MAX_TRANSITION
+  uniquify
+  ungroup -all -flatten
+  redirect $chk_file { check_design }
+  compile -map_effort medium
+  write -hier -format verilog -output $netlist_file $design_name
+  write -hier -format ddc -output $ddc_file $design_name
+  redirect $rep_file { report_design -nosplit }
+  redirect -append $rep_file { report_area }
+  redirect -append $rep_file { report_timing -max_paths 2 -input_pins -nets -transition_time -nosplit }
+  redirect -append $rep_file { report_constraint -max_delay -verbose -nosplit }
+  remove_design -all
+  read_file -format verilog $netlist_file
+  current_design $design_name
+  redirect -append $rep_file { report_reference -nosplit }
+  quit
+} else {
+   quit
+}
+Current design is 'X_C_Buffer'.
+
+  Linking design 'X_C_Buffer'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  X_C_Buffer                  /afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/X_C_Buffer.db
+  lec25dscc25_TT (library)    /usr/caen/generic/mentor_lib-D.1/public/eecs470/synopsys/lec25dscc25_TT.db
+
+Current design is 'X_C_Buffer'.
+Warning: Design has no hierarchy.  No cells can be ungrouped. (UID-228)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | G-2012.06-DWBB_201206.0 |     *     |
+| Licensed DW Building Blocks        |                         |           |
+============================================================================
+
+
+Information: There are 1 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'X_C_Buffer'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'DW01_add_width3'
+  Processing 'DW01_add_width2'
+  Processing 'DW01_add_width2'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Mapping Optimization (Phase 1)
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                             MIN DELAY
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT            COST   
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:21 1137713.1      0.00       0.0      92.0                                0.00
+    0:00:21 1137713.1      0.00       0.0      92.0                                0.00
+    0:00:21 1137713.1      0.00       0.0      92.0                                0.00
+    0:00:21 1137713.1      0.00       0.0      92.0                                0.00
+    0:00:21 1137713.1      0.00       0.0      92.0                                0.00
+    0:00:21 1137713.1      0.00       0.0      92.0                                0.00
+    0:00:25  594523.3      0.00       0.0      15.8                                0.00
+    0:00:25  590359.5      0.00       0.0      15.8                                0.00
+    0:00:26  590359.5      0.00       0.0      15.7                                0.00
+    0:00:26  590359.5      0.00       0.0      15.7                                0.00
+    0:00:26  590359.5      0.00       0.0      15.7                                0.00
+    0:00:27  590359.5      0.00       0.0      15.7                                0.00
+    0:00:27  590359.5      0.00       0.0      15.7                                0.00
+    0:00:27  590359.5      0.00       0.0      15.7                                0.00
+    0:00:27  590359.5      0.00       0.0      15.7                                0.00
+    0:00:27  590359.5      0.00       0.0      15.7                                0.00
+    0:00:27  590359.5      0.00       0.0      15.7                                0.00
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                             MIN DELAY
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT            COST   
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:27  590359.5      0.00       0.0      15.7                                0.00
+    0:00:27  590359.5      0.00       0.0      15.7                                0.00
+    0:00:28  580288.3      0.00       0.0      16.7                                0.00
+
+
+  Beginning Design Rule Fixing  (min_path)  (max_transition)
+  ----------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                             MIN DELAY
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT            COST   
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:28  580288.3      0.00       0.0      16.7                              -99.90
+    0:00:29  581307.4      0.00       0.0      13.0 X_alu_result_in_alu3[55]     -99.90
+    0:00:29  582376.8      0.00       0.0       9.6 X_alu_result_in_alu3[39]     -99.90
+    0:00:29  583446.2      0.00       0.0       6.1 X_alu_result_in_alu3[23]     -99.90
+    0:00:29  584515.5      0.00       0.0       2.6 X_alu_result_in_alu3[7]      -99.90
+    0:00:30  585133.6      0.00       0.0       0.1 dest_idx[1][0]               -99.90
+    0:00:30  585133.6      0.00       0.0       0.0 dest_idx[2][1]               -99.90
+    0:00:32  588340.1      0.00       0.0       0.0 alu_result_reg[6][43]/DIN    -89.85
+    0:00:33  591605.0      0.00       0.0       0.0 alu_result_reg[1][27]/DIN    -79.65
+    0:00:34  594928.1      0.00       0.0       0.0 t_reg[0]/DIN                 -69.36
+    0:00:35  598234.7      0.00       0.0       0.0 alu_result_reg[0][14]/DIN    -59.18
+    0:00:36  601499.5      0.00       0.0       0.0 alu_result_reg[2][32]/DIN    -48.98
+    0:00:38  604822.6      0.00       0.0       0.0 alu_result_reg[4][49]/DIN    -38.68
+    0:00:39  608029.1      0.00       0.0       0.0 alu_result_reg[5][57]/DIN    -28.64
+    0:00:40  611294.0      0.00       0.0       0.0 alu_result_reg[5][1]/DIN     -18.43
+    0:00:42  614558.8      0.00       0.0       0.0 alu_result_reg[3][2]/DIN      -8.23
+    0:00:42  615724.8      0.00       0.0       0.0                               -4.61
+
+
+  Beginning Critical Range Optimization
+  -------------------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                             MIN DELAY
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT            COST   
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:42  615724.8      0.00       0.0       0.0                               -4.61
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                             MIN DELAY
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT            COST   
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:42  615724.8      0.00       0.0       0.0                               -4.61
+    0:00:42  615724.8      0.00       0.0       0.0                               -4.61
+    0:00:42  615724.8      0.00       0.0       0.0                               -4.61
+    0:00:43  609045.0      0.00       0.0       0.0                               -4.61
+    0:00:44  604986.9      0.00       0.0       0.0                               -4.61
+    0:00:44  600632.8      0.00       0.0       0.0                               -4.61
+    0:00:45  597706.9      0.00       0.0       0.0                               -4.61
+    0:00:45  594864.4      0.00       0.0       0.0                               -4.61
+    0:00:46  594245.6      0.00       0.0       0.0                               -4.61
+    0:00:46  594045.1      0.00       0.0       0.0                               -4.61
+    0:00:46  593844.4      0.00       0.0       0.0                               -4.61
+    0:00:46  593643.7      0.00       0.0       0.0                               -4.61
+    0:00:47  593476.6      0.00       0.0       0.0                               -4.61
+    0:00:47  593342.9      0.00       0.0       0.0                               -4.61
+    0:00:47  593209.1      0.00       0.0       0.0                               -4.61
+    0:00:47  593075.3      0.00       0.0       0.0                               -4.61
+    0:00:47  592941.5      0.00       0.0       0.0                               -4.61
+    0:00:47  592807.7      0.00       0.0       0.0                               -4.61
+    0:00:47  592674.0      0.00       0.0       0.0                               -4.61
+    0:00:47  592674.0      0.00       0.0       0.0                               -4.61
+    0:00:47  592674.0      0.00       0.0       0.0                               -4.61
+    0:00:47  592674.0      0.00       0.0       0.0                               -4.61
+    0:00:47  592674.0      0.00       0.0       0.0                               -4.61
+    0:00:48  592640.8      0.00       0.0       0.0                               -4.61
+    0:00:48  592640.8      0.00       0.0       0.0                               -4.61
+    0:00:48  592640.8      0.00       0.0       0.0                               -4.61
+    0:00:48  592640.8      0.00       0.0       0.0                               -4.61
+    0:00:48  592640.8      0.00       0.0       0.0                               -4.61
+    0:00:48  592640.8      0.00       0.0       0.0                               -4.61
+    0:00:48  592640.8      0.00       0.0       0.0                               -4.61
+
+
+  Beginning Critical Range Optimization
+  -------------------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                             MIN DELAY
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT            COST   
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:48  592640.8      0.00       0.0       0.0                               -4.61
+    0:00:48  592640.8      0.00       0.0       0.0                               -4.61
+Loading db file '/usr/caen/generic/mentor_lib-D.1/public/eecs470/synopsys/lec25dscc25_TT.db'
+
+  Optimization Complete
+  ---------------------
+Writing verilog file '/afs/umich.edu/user/c/h/chengfu/Desktop/syn2/synth/X_C_Buffer.vg'.
+Writing ddc file './X_C_Buffer.ddc'.
+Removing design 'X_C_Buffer'
+Removing library 'lec25dscc25_TT'
+Removing library 'gtech'
+Removing library 'standard.sldb'
+Loading db file '/usr/caen/generic/mentor_lib-D.1/public/eecs470/synopsys/lec25dscc25_TT.db'
+Loading db file '/usr/caen/synopsys-synth-2012.06/libraries/syn/gtech.db'
+Loading db file '/usr/caen/synopsys-synth-2012.06/libraries/syn/standard.sldb'
+  Loading link library 'lec25dscc25_TT'
+  Loading link library 'gtech'
+Loading verilog file '/afs/umich.edu/user/c/h/chengfu/Desktop/syn2/synth/X_C_Buffer.vg'
+Detecting input file type automatically (-rtl or -netlist).
+Running DC verilog reader
+Performing 'read' command.
+Compiling source file /afs/umich.edu/user/c/h/chengfu/Desktop/syn2/synth/X_C_Buffer.vg
+Reading with netlist reader (equivalent to -netlist option).
+Verilog netlist reader completed successfully.
+Current design is now '/afs/umich.edu/user/c/h/chengfu/Desktop/syn2/synth/X_C_Buffer.db:X_C_Buffer'
+Loaded 1 design.
+Current design is 'X_C_Buffer'.
+Current design is 'X_C_Buffer'.
+
+Thank you...

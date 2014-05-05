@@ -1,0 +1,364 @@
+
+                      Design Compiler Graphical
+                            DC Ultra (TM)
+                             DFTMAX (TM)
+                         Power Compiler (TM)
+                           DesignWare (R)
+                           DC Expert (TM)
+                         Design Vision (TM)
+                          HDL Compiler (TM)
+                         VHDL Compiler (TM)
+                            DFT Compiler
+                        Library Compiler (TM)
+                         Design Compiler(R)
+
+            Version G-2012.06 for RHEL64 -- May 30, 2012
+               Copyright (c) 1988-2012 Synopsys, Inc.
+
+This software and the associated documentation are confidential and 
+proprietary to Synopsys, Inc. Your use or disclosure of this software 
+is subject to the terms and conditions of a written license agreement 
+between you, or your company, and Synopsys, Inc.
+
+Initializing...
+################################################################################
+## DO NOT EDIT THESE FILES BY HAND
+##
+## CONFIGURATION HAS BEEN MOVED TO THE MAKEFILE
+################################################################################
+set search_path [ list "./" "/usr/caen/generic/mentor_lib-D.1/public/eecs470/synopsys/" ]
+./ /usr/caen/generic/mentor_lib-D.1/public/eecs470/synopsys/
+set target_library "lec25dscc25_TT.db"
+lec25dscc25_TT.db
+set link_library [concat  "*" $target_library]
+* lec25dscc25_TT.db
+#/***********************************************************/
+#/* Set some flags to suppress warnings we don't care about */
+set suppress_errors [concat $suppress_errors "UID-401"]
+UID-401
+suppress_message {"VER-130"}
+#/***********************************************************/
+#/* The following lines are set from environment variables
+#/* automatically by the Makefile
+#/***********************************************************/
+lappend search_path ../
+./ /usr/caen/generic/mentor_lib-D.1/public/eecs470/synopsys/ ../
+set headers [getenv HEADERS]
+sys_defs.vh
+set sources [getenv ICACHEFILES]
+verilog/icache/icachemem.vg
+read_file -f verilog [list ${headers} ${sources}]
+Loading db file '/usr/caen/generic/mentor_lib-D.1/public/eecs470/synopsys/lec25dscc25_TT.db'
+Loading db file '/usr/caen/synopsys-synth-2012.06/libraries/syn/gtech.db'
+Loading db file '/usr/caen/synopsys-synth-2012.06/libraries/syn/standard.sldb'
+  Loading link library 'lec25dscc25_TT'
+  Loading link library 'gtech'
+Loading verilog files: '/afs/umich.edu/user/c/h/chengfu/Desktop/SuperErnie_Pipeline_v10/sys_defs.vh' '/afs/umich.edu/user/c/h/chengfu/Desktop/SuperErnie_Pipeline_v10/verilog/icache/icachemem.vg' 
+Detecting input file type automatically (-rtl or -netlist).
+Running DC verilog reader
+Performing 'read' command.
+Compiling source file /afs/umich.edu/user/c/h/chengfu/Desktop/SuperErnie_Pipeline_v10/sys_defs.vh
+Compiling source file /afs/umich.edu/user/c/h/chengfu/Desktop/SuperErnie_Pipeline_v10/verilog/icache/icachemem.vg
+Reading with netlist reader (equivalent to -netlist option).
+Verilog netlist reader completed successfully.
+Current design is now '/afs/umich.edu/user/c/h/chengfu/Desktop/SuperErnie_Pipeline_v10/verilog/icache/icachemem_DW01_cmp6_0.db:icachemem_DW01_cmp6_0'
+Loaded 3 designs.
+Current design is 'icachemem_DW01_cmp6_0'.
+icachemem_DW01_cmp6_0 icachemem_DW01_cmp6_1 icachemem
+set design_name [getenv ICACHE_NAME]
+icachemem
+set clock_name [getenv CLOCK_NET_NAME]
+clock
+set reset_name [getenv RESET_NET_NAME]
+reset
+set CLK_PERIOD [getenv CLOCK_PERIOD]
+20 
+#/***********************************************************/
+#/* The rest of this file may be left alone for most small  */
+#/* to moderate sized designs.  You may need to alter it    */
+#/* when synthesizing your final project.                   */
+#/***********************************************************/
+set SYN_DIR ./
+./
+#/***********************************************************/
+#/* Set some flags for optimisation */
+set compile_top_all_paths "true"
+true
+set auto_wire_load_selection "false"
+false
+set compile_seqmap_synchronous_extraction "true"
+true
+# uncomment this and change number appropriately if on multi-core machine
+#set_host_options -max_cores 2
+#/***********************************************************/
+#/*  Clk Periods/uncertainty/transition                     */
+set CLK_TRANSITION 0.1
+0.1
+set CLK_UNCERTAINTY 0.1
+0.1
+set CLK_LATENCY 0.1
+0.1
+#/* Input/output Delay values */
+set AVG_INPUT_DELAY 0.1
+0.1
+set AVG_OUTPUT_DELAY 0.1
+0.1
+#/* Critical Range (ns) */
+set CRIT_RANGE 1.0
+1.0
+#/***********************************************************/
+#/* Design Constrains: Not all used                         */
+set MAX_TRANSITION 1.0
+1.0
+set FAST_TRANSITION 0.1
+0.1
+set MAX_FANOUT 32
+32
+set MID_FANOUT 8
+8
+set LOW_FANOUT 1
+1
+set HIGH_DRIVE 0
+0
+set HIGH_LOAD 1.0
+1.0
+set AVG_LOAD 0.1
+0.1
+set AVG_FANOUT_LOAD 10
+10
+#/***********************************************************/
+#/*BASIC_INPUT = cb18os120_tsmc_max/nd02d1/A1
+#BASIC_OUTPUT = cb18os120_tsmc_max/nd02d1/ZN*/
+set DRIVING_CELL dffacs1
+dffacs1
+#/* DONT_USE_LIST = {   } */
+#/*************operation cons**************/
+#/*OP_WCASE = WCCOM;
+#OP_BCASE = BCCOM;*/
+set WIRE_LOAD "tsmcwire"
+tsmcwire
+set LOGICLIB lec25dscc25_TT
+lec25dscc25_TT
+#/*****************************/
+#/* Sourcing the file that sets the Search path and the libraries(target,link) */
+set sys_clk $clock_name
+clock
+set netlist_file [format "%s%s"  [format "%s%s"  $SYN_DIR $design_name] ".vg"]
+./icachemem.vg
+set ddc_file [format "%s%s"  [format "%s%s"  $SYN_DIR $design_name] ".ddc"]
+./icachemem.ddc
+set rep_file [format "%s%s"  [format "%s%s"  $SYN_DIR $design_name] ".rep"]
+./icachemem.rep
+set dc_shell_status [ set chk_file [format "%s%s"  [format "%s%s"  $SYN_DIR $design_name] ".chk"] ]
+./icachemem.chk
+#/* if we didnt find errors at this point, run */
+if {  $dc_shell_status != [list] } {
+   current_design $design_name
+  link
+  set_wire_load_model -name $WIRE_LOAD -lib $LOGICLIB $design_name
+  set_wire_load_mode top
+  set_fix_multiple_port_nets -outputs -buffer_constants
+  create_clock -period $CLK_PERIOD -name $sys_clk [find port $sys_clk]
+  set_clock_uncertainty $CLK_UNCERTAINTY $sys_clk
+  set_fix_hold $sys_clk
+  group_path -from [all_inputs] -name input_grp
+  group_path -to [all_outputs] -name output_grp
+  set_driving_cell  -lib_cell $DRIVING_CELL [all_inputs]
+  remove_driving_cell [find port $sys_clk]
+  set_fanout_load $AVG_FANOUT_LOAD [all_outputs]
+  set_load $AVG_LOAD [all_outputs]
+  set_input_delay $AVG_INPUT_DELAY -clock $sys_clk [all_inputs]
+  remove_input_delay -clock $sys_clk [find port $sys_clk]
+  set_output_delay $AVG_OUTPUT_DELAY -clock $sys_clk [all_outputs]
+  set_dont_touch $reset_name
+  set_resistance 0 $reset_name
+  set_drive 0 $reset_name
+  set_critical_range $CRIT_RANGE [current_design]
+  set_max_delay $CLK_PERIOD [all_outputs]
+  set MAX_FANOUT $MAX_FANOUT
+  set MAX_TRANSITION $MAX_TRANSITION
+  uniquify
+  ungroup -all -flatten
+  redirect $chk_file { check_design }
+  compile -map_effort medium
+  write -hier -format verilog -output $netlist_file $design_name
+  write -hier -format ddc -output $ddc_file $design_name
+  redirect $rep_file { report_design -nosplit }
+  redirect -append $rep_file { report_area }
+  redirect -append $rep_file { report_timing -max_paths 2 -input_pins -nets -transition_time -nosplit }
+  redirect -append $rep_file { report_constraint -max_delay -verbose -nosplit }
+  remove_design -all
+  read_file -format verilog $netlist_file
+  current_design $design_name
+  redirect -append $rep_file { report_reference -nosplit }
+  quit
+} else {
+   quit
+}
+Current design is 'icachemem'.
+
+  Linking design 'icachemem'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (3 designs)               /afs/umich.edu/user/c/h/chengfu/Desktop/SuperErnie_Pipeline_v10/verilog/icache/icachemem.db, etc
+  lec25dscc25_TT (library)    /usr/caen/generic/mentor_lib-D.1/public/eecs470/synopsys/lec25dscc25_TT.db
+
+Current design is 'icachemem'.
+Information: Updating graph... (UID-83)
+Warning: Design 'icachemem' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | G-2012.06-DWBB_201206.0 |     *     |
+| Licensed DW Building Blocks        |                         |           |
+============================================================================
+
+
+Information: There are 7 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'icachemem'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                             MIN DELAY
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT            COST   
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:01:06 5711359.0     56.25    7220.3   57958.4                                0.00
+    0:01:06 5711359.0     56.25    7220.3   57958.4                                0.00
+    0:01:16 5971349.1      0.00       0.0       0.6                                0.00
+    0:01:17 5971349.1      0.00       0.0       0.6                                0.00
+    0:01:17 5971349.1      0.00       0.0       0.6                                0.00
+    0:01:17 5971349.1      0.00       0.0       0.6                                0.00
+    0:01:17 5971349.1      0.00       0.0       0.6                                0.00
+    0:01:17 5971349.1      0.00       0.0       0.6                                0.00
+    0:01:31 3936331.9      0.00       0.0       0.0                                0.00
+    0:01:33 3920428.9      0.00       0.0       0.0                                0.00
+    0:01:36 3920428.9      0.00       0.0       0.0                                0.00
+    0:01:36 3920428.9      0.00       0.0       0.0                                0.00
+    0:01:36 3920428.9      0.00       0.0       0.0                                0.00
+    0:01:37 3920428.9      0.00       0.0       0.0                                0.00
+    0:01:37 3920428.9      0.00       0.0       0.0                                0.00
+    0:01:37 3920428.9      0.00       0.0       0.0                                0.00
+    0:01:37 3920428.9      0.00       0.0       0.0                                0.00
+    0:01:37 3920428.9      0.00       0.0       0.0                                0.00
+    0:01:37 3920428.9      0.00       0.0       0.0                                0.00
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                             MIN DELAY
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT            COST   
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:01:37 3920428.9      0.00       0.0       0.0                                0.00
+    0:01:37 3920428.9      0.00       0.0       0.0                                0.00
+    0:01:40 3915089.0      0.00       0.0      24.5                                0.00
+
+
+  Beginning Design Rule Fixing  (min_path)  (max_transition)
+  ----------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                             MIN DELAY
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT            COST   
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:01:42 3915089.0      0.00       0.0      24.5                               -0.16
+    0:01:42 3915839.8      0.00       0.0       0.0                                0.00
+
+
+  Beginning Critical Range Optimization
+  -------------------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                             MIN DELAY
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT            COST   
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:01:42 3915839.8      0.00       0.0       0.0                                0.00
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                             MIN DELAY
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT            COST   
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:01:42 3915839.8      0.00       0.0       0.0                                0.00
+    0:01:42 3915839.8      0.00       0.0       0.0                                0.00
+    0:01:42 3915839.8      0.00       0.0       0.0                                0.00
+    0:01:44 3906536.9      0.00       0.0       0.0                                0.00
+    0:01:46 3896916.6      0.00       0.0       0.0                                0.00
+    0:01:47 3887950.1      0.00       0.0       0.0                                0.00
+    0:01:49 3878538.7      0.00       0.0       0.0                                0.00
+    0:01:52 3875070.2      0.00       0.0       0.0                                0.00
+    0:01:53 3872361.7      0.00       0.0       0.0                                0.00
+    0:01:54 3869653.4      0.00       0.0       0.0                                0.00
+    0:01:55 3868984.9      0.00       0.0       0.0                                0.00
+    0:01:56 3868416.4      0.00       0.0       0.0                                0.00
+    0:01:56 3867848.0      0.00       0.0       0.0                                0.00
+    0:01:57 3867279.6      0.00       0.0       0.0                                0.00
+    0:01:57 3866711.3      0.00       0.0       0.0                                0.00
+    0:01:58 3866143.1      0.00       0.0       0.0                                0.00
+    0:01:59 3865541.4      0.00       0.0       0.0                                0.00
+    0:02:00 3864973.1      0.00       0.0       0.0                                0.00
+    0:02:00 3864404.9      0.00       0.0       0.0                                0.00
+    0:02:00 3864404.9      0.00       0.0       0.0                                0.00
+    0:02:00 3864404.9      0.00       0.0       0.0                                0.00
+    0:02:00 3864404.9      0.00       0.0       0.0                                0.00
+    0:02:01 3864404.9      0.00       0.0       0.0                                0.00
+    0:02:01 3863766.2      0.00       0.0       0.0                                0.00
+    0:02:01 3863766.2      0.00       0.0       0.0                                0.00
+    0:02:01 3863766.2      0.00       0.0       0.0                                0.00
+    0:02:01 3863766.2      0.00       0.0       0.0                                0.00
+    0:02:02 3863766.2      0.00       0.0       0.0                                0.00
+    0:02:02 3863766.2      0.00       0.0       0.0                                0.00
+    0:02:02 3863766.2      0.00       0.0       0.0                                0.00
+
+
+  Beginning Critical Range Optimization
+  -------------------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                             MIN DELAY
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT            COST   
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:02:02 3863766.2      0.00       0.0       0.0                                0.00
+    0:02:02 3863766.2      0.00       0.0       0.0                                0.00
+Loading db file '/usr/caen/generic/mentor_lib-D.1/public/eecs470/synopsys/lec25dscc25_TT.db'
+
+  Optimization Complete
+  ---------------------
+Warning: Design 'icachemem' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+     Net 'clock': 15424 load(s), 1 driver(s)
+Writing verilog file '/afs/umich.edu/user/c/h/chengfu/Desktop/SuperErnie_Pipeline_v10/synth/icachemem.vg'.
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+Writing ddc file './icachemem.ddc'.
+Removing design 'icachemem'
+Removing library 'lec25dscc25_TT'
+Removing library 'gtech'
+Removing library 'standard.sldb'
+Loading db file '/usr/caen/generic/mentor_lib-D.1/public/eecs470/synopsys/lec25dscc25_TT.db'
+Loading db file '/usr/caen/synopsys-synth-2012.06/libraries/syn/gtech.db'
+Loading db file '/usr/caen/synopsys-synth-2012.06/libraries/syn/standard.sldb'
+  Loading link library 'lec25dscc25_TT'
+  Loading link library 'gtech'
+Loading verilog file '/afs/umich.edu/user/c/h/chengfu/Desktop/SuperErnie_Pipeline_v10/synth/icachemem.vg'
+Detecting input file type automatically (-rtl or -netlist).
+Running DC verilog reader
+Performing 'read' command.
+Compiling source file /afs/umich.edu/user/c/h/chengfu/Desktop/SuperErnie_Pipeline_v10/synth/icachemem.vg
+Reading with netlist reader (equivalent to -netlist option).
+Verilog netlist reader completed successfully.
+Current design is now '/afs/umich.edu/user/c/h/chengfu/Desktop/SuperErnie_Pipeline_v10/synth/icachemem.db:icachemem'
+Loaded 1 design.
+Current design is 'icachemem'.
+Current design is 'icachemem'.
+
+Thank you...

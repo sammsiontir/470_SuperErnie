@@ -1,0 +1,2160 @@
+
+                      Design Compiler Graphical
+                            DC Ultra (TM)
+                             DFTMAX (TM)
+                         Power Compiler (TM)
+                           DesignWare (R)
+                           DC Expert (TM)
+                         Design Vision (TM)
+                          HDL Compiler (TM)
+                         VHDL Compiler (TM)
+                            DFT Compiler
+                        Library Compiler (TM)
+                         Design Compiler(R)
+
+            Version G-2012.06 for RHEL64 -- May 30, 2012
+               Copyright (c) 1988-2012 Synopsys, Inc.
+
+This software and the associated documentation are confidential and 
+proprietary to Synopsys, Inc. Your use or disclosure of this software 
+is subject to the terms and conditions of a written license agreement 
+between you, or your company, and Synopsys, Inc.
+
+Initializing...
+################################################################################
+## DO NOT EDIT THESE FILES BY HAND
+##
+## CONFIGURATION HAS BEEN MOVED TO THE MAKEFILE
+################################################################################
+set search_path [ list "./" "/usr/caen/generic/mentor_lib-D.1/public/eecs470/synopsys/" ]
+./ /usr/caen/generic/mentor_lib-D.1/public/eecs470/synopsys/
+set target_library "lec25dscc25_TT.db"
+lec25dscc25_TT.db
+set link_library [concat  "*" $target_library]
+* lec25dscc25_TT.db
+#/***********************************************************/
+#/* Set some flags to suppress warnings we don't care about */
+set suppress_errors [concat $suppress_errors "UID-401"]
+UID-401
+suppress_message {"VER-130"}
+#/***********************************************************/
+#/* The following lines are set from environment variables
+#/* automatically by the Makefile
+#/***********************************************************/
+lappend search_path ../
+./ /usr/caen/generic/mentor_lib-D.1/public/eecs470/synopsys/ ../
+set cache_module [getenv CACHE_NAME]
+Error: can't read "::env(CACHE_NAME)": no such variable
+	Use error_info for more info. (CMD-013)
+read_file -f ddc [list ${cache_module}.ddc]
+Error: can't read "cache_module": no such variable
+	Use error_info for more info. (CMD-013)
+set_dont_touch ${cache_module}
+Error: can't read "cache_module": no such variable
+	Use error_info for more info. (CMD-013)
+set headers [getenv HEADERS]
+sys_defs.vh
+set sources [getenv PIPEFILES]
+verilog/t/archMap.v verilog/t/D_stage.v verilog/t/freeList.v verilog/t/id.v verilog/t/mapTable.v verilog/t/rob.v verilog/t/rs.v
+read_file -f verilog [list ${headers} ${sources}]
+Loading db file '/usr/caen/generic/mentor_lib-D.1/public/eecs470/synopsys/lec25dscc25_TT.db'
+Loading db file '/usr/caen/synopsys-synth-2012.06/libraries/syn/gtech.db'
+Loading db file '/usr/caen/synopsys-synth-2012.06/libraries/syn/standard.sldb'
+  Loading link library 'lec25dscc25_TT'
+  Loading link library 'gtech'
+Loading verilog files: '/afs/umich.edu/user/c/h/chengfu/Desktop/syn2/sys_defs.vh' '/afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/archMap.v' '/afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/D_stage.v' '/afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/freeList.v' '/afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/id.v' '/afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/mapTable.v' '/afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/rob.v' '/afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/rs.v' 
+Detecting input file type automatically (-rtl or -netlist).
+Running DC verilog reader
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /afs/umich.edu/user/c/h/chengfu/Desktop/syn2/sys_defs.vh
+Compiling source file /afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/archMap.v
+Compiling source file /afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/D_stage.v
+Compiling source file /afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/freeList.v
+Compiling source file /afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/id.v
+Warning:  /afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/id.v:294: the undeclared symbol 'id_ldl_mem_out' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/id.v:295: the undeclared symbol 'id_stc_mem_out' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/id.v:299: the undeclared symbol 'id_cpuid_out' assumed to have the default net type, which is 'wire'. (VER-936)
+Compiling source file /afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/mapTable.v
+Warning:  /afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/id.v:294: The delay specification for net declaration is ignored. (VER-976)
+Warning:  /afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/id.v:295: The delay specification for net declaration is ignored. (VER-976)
+Warning:  /afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/id.v:299: The delay specification for net declaration is ignored. (VER-976)
+Compiling source file /afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/rob.v
+Compiling source file /afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/rs.v
+
+Inferred memory devices in process
+	in routine archMap line 235 in file
+		'/afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/archMap.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     reg_tag_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     reg_tag_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     reg_tag_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     reg_tag_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     reg_tag_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     reg_tag_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     reg_tag_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     reg_tag_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     reg_tag_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     reg_tag_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     reg_tag_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     reg_tag_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     reg_tag_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     reg_tag_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     reg_tag_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     reg_tag_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     reg_tag_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     reg_tag_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     reg_tag_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     reg_tag_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     reg_tag_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     reg_tag_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     reg_tag_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     reg_tag_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     reg_tag_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     reg_tag_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     reg_tag_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     reg_tag_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     reg_tag_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     reg_tag_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     reg_tag_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine freeList line 88 in file
+		'/afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/freeList.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      br_h_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      br_h_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      br_h_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      br_h_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     freeReg_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     freeReg_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     freeReg_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     freeReg_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     freeReg_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     freeReg_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     freeReg_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     freeReg_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     freeReg_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     freeReg_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     freeReg_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     freeReg_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     freeReg_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     freeReg_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     freeReg_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     freeReg_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     freeReg_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     freeReg_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     freeReg_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     freeReg_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     freeReg_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     freeReg_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     freeReg_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     freeReg_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     freeReg_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     freeReg_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     freeReg_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     freeReg_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     freeReg_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     freeReg_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     freeReg_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     freeReg_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      head_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      tail_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+===========================================================
+| block name/line  | Inputs | Outputs | # sel inputs | MB |
+===========================================================
+|   freeList/66    |   32   |    6    |      5       | N  |
+|   freeList/67    |   32   |    6    |      5       | N  |
+|   freeList/127   |   4    |    6    |      2       | N  |
+===========================================================
+
+Statistics for case statements in always block at line 60 in file
+	'/afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/id.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            83            |    auto/auto     |
+|            85            |    auto/auto     |
+|           103            |    auto/auto     |
+|           105            |    auto/auto     |
+|           116            |    auto/auto     |
+|           126            |    auto/auto     |
+|           133            |    auto/auto     |
+|           145            |     no/auto      |
+|           165            |    auto/auto     |
+|           198            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 305 in file
+	'/afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/id.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           307            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 315 in file
+	'/afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/id.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           318            |     no/auto      |
+===============================================
+
+Statistics for case statements in always block at line 327 in file
+	'/afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/id.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           329            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine mapTable line 880 in file
+		'/afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/mapTable.v'.
+==================================================================================
+|     Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+==================================================================================
+|   tmp_fl_wr_en_2_reg   | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|   tmp_fl_wr_en_1_reg   | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|  tmp_fl_reg_idx_2_reg  | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|  tmp_fl_reg_idx_1_reg  | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+| tmp_dest_reg_idx_2_reg | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+| tmp_dest_reg_idx_1_reg | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+|   reg_tag_ready_reg    | Flip-flop |  32   |  N  | N  | N  | N  | N  | N  | N  |
+|   br_tag_ready2_reg    | Flip-flop |  31   |  N  | N  | N  | N  | N  | N  | N  |
+|      br_tag3_reg       | Flip-flop |  38   |  Y  | N  | N  | N  | N  | N  | N  |
+|      br_tag3_reg       | Flip-flop |  49   |  Y  | N  | N  | N  | N  | N  | N  |
+|      br_tag3_reg       | Flip-flop |  49   |  Y  | N  | N  | N  | N  | N  | N  |
+|      br_tag3_reg       | Flip-flop |  49   |  Y  | N  | N  | N  | N  | N  | N  |
+|      br_tag3_reg       | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|   br_tag_ready1_reg    | Flip-flop |  31   |  N  | N  | N  | N  | N  | N  | N  |
+|      br_tag2_reg       | Flip-flop |  38   |  Y  | N  | N  | N  | N  | N  | N  |
+|      br_tag2_reg       | Flip-flop |  49   |  Y  | N  | N  | N  | N  | N  | N  |
+|      br_tag2_reg       | Flip-flop |  49   |  Y  | N  | N  | N  | N  | N  | N  |
+|      br_tag2_reg       | Flip-flop |  49   |  Y  | N  | N  | N  | N  | N  | N  |
+|      br_tag2_reg       | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|   br_tag_ready0_reg    | Flip-flop |  31   |  N  | N  | N  | N  | N  | N  | N  |
+|      br_tag1_reg       | Flip-flop |  38   |  Y  | N  | N  | N  | N  | N  | N  |
+|      br_tag1_reg       | Flip-flop |  49   |  Y  | N  | N  | N  | N  | N  | N  |
+|      br_tag1_reg       | Flip-flop |  49   |  Y  | N  | N  | N  | N  | N  | N  |
+|      br_tag1_reg       | Flip-flop |  49   |  Y  | N  | N  | N  | N  | N  | N  |
+|      br_tag1_reg       | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|   br_tag_ready3_reg    | Flip-flop |  31   |  N  | N  | N  | N  | N  | N  | N  |
+|      br_tag0_reg       | Flip-flop |  38   |  Y  | N  | N  | N  | N  | N  | N  |
+|      br_tag0_reg       | Flip-flop |  49   |  Y  | N  | N  | N  | N  | N  | N  |
+|      br_tag0_reg       | Flip-flop |  49   |  Y  | N  | N  | N  | N  | N  | N  |
+|      br_tag0_reg       | Flip-flop |  49   |  Y  | N  | N  | N  | N  | N  | N  |
+|      br_tag0_reg       | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|      reg_tag_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      reg_tag_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      reg_tag_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      reg_tag_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      reg_tag_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      reg_tag_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      reg_tag_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      reg_tag_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      reg_tag_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      reg_tag_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      reg_tag_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      reg_tag_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      reg_tag_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      reg_tag_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      reg_tag_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      reg_tag_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      reg_tag_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      reg_tag_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      reg_tag_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      reg_tag_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      reg_tag_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      reg_tag_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      reg_tag_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      reg_tag_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      reg_tag_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      reg_tag_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      reg_tag_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      reg_tag_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      reg_tag_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      reg_tag_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      reg_tag_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      reg_tag_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+==================================================================================
+Statistics for MUX_OPs
+===========================================================
+| block name/line  | Inputs | Outputs | # sel inputs | MB |
+===========================================================
+|   mapTable/108   |   32   |    6    |      5       | N  |
+|   mapTable/108   |   32   |    6    |      5       | N  |
+|   mapTable/112   |   32   |    6    |      5       | N  |
+|   mapTable/115   |   32   |    1    |      5       | N  |
+|   mapTable/121   |   32   |    6    |      5       | N  |
+|   mapTable/125   |   32   |    1    |      5       | N  |
+|   mapTable/133   |   32   |    6    |      5       | N  |
+|   mapTable/136   |   32   |    1    |      5       | N  |
+|   mapTable/143   |   32   |    6    |      5       | N  |
+|   mapTable/147   |   32   |    1    |      5       | N  |
+|   mapTable/155   |   32   |    6    |      5       | N  |
+|   mapTable/161   |   32   |    6    |      5       | N  |
+===========================================================
+
+Inferred memory devices in process
+	in routine rob line 1458 in file
+		'/afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/rob.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    T_valid_1_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|   Told_out_2_reg    | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|   Told_out_1_reg    | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     T_out_2_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     T_out_1_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     wb_data_reg     | Flip-flop | 2048  |  Y  | N  | N  | N  | N  | N  | N  |
+|       NPC_reg       | Flip-flop |  99   |  Y  | N  | N  | N  | N  | N  | N  |
+|       NPC_reg       | Flip-flop |  99   |  Y  | N  | N  | N  | N  | N  | N  |
+|       NPC_reg       | Flip-flop |  99   |  Y  | N  | N  | N  | N  | N  | N  |
+|       NPC_reg       | Flip-flop |  99   |  Y  | N  | N  | N  | N  | N  | N  |
+|       NPC_reg       | Flip-flop |  99   |  Y  | N  | N  | N  | N  | N  | N  |
+|       NPC_reg       | Flip-flop |  99   |  Y  | N  | N  | N  | N  | N  | N  |
+|       NPC_reg       | Flip-flop |  99   |  Y  | N  | N  | N  | N  | N  | N  |
+|       NPC_reg       | Flip-flop |  99   |  Y  | N  | N  | N  | N  | N  | N  |
+|       NPC_reg       | Flip-flop |  99   |  Y  | N  | N  | N  | N  | N  | N  |
+|       NPC_reg       | Flip-flop |  99   |  Y  | N  | N  | N  | N  | N  | N  |
+|       NPC_reg       | Flip-flop |  99   |  Y  | N  | N  | N  | N  | N  | N  |
+|       NPC_reg       | Flip-flop |  99   |  Y  | N  | N  | N  | N  | N  | N  |
+|       NPC_reg       | Flip-flop |  99   |  Y  | N  | N  | N  | N  | N  | N  |
+|       NPC_reg       | Flip-flop |  99   |  Y  | N  | N  | N  | N  | N  | N  |
+|       NPC_reg       | Flip-flop |  99   |  Y  | N  | N  | N  | N  | N  | N  |
+|       NPC_reg       | Flip-flop |  99   |  Y  | N  | N  | N  | N  | N  | N  |
+|       NPC_reg       | Flip-flop |  99   |  Y  | N  | N  | N  | N  | N  | N  |
+|       NPC_reg       | Flip-flop |  99   |  Y  | N  | N  | N  | N  | N  | N  |
+|       NPC_reg       | Flip-flop |  99   |  Y  | N  | N  | N  | N  | N  | N  |
+|       NPC_reg       | Flip-flop |  99   |  Y  | N  | N  | N  | N  | N  | N  |
+|       NPC_reg       | Flip-flop |  68   |  Y  | N  | N  | N  | N  | N  | N  |
+|      noop_reg       | Flip-flop |  31   |  Y  | N  | N  | N  | N  | N  | N  |
+|      noop_reg       | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|      halt_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|  br_target_PC_reg   | Flip-flop | 2048  |  Y  | N  | N  | N  | N  | N  | N  |
+|    br_taken_reg     | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|  wb_data_out_2_reg  | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+|  wb_data_out_1_reg  | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+|    NPC_out_2_reg    | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+|    NPC_out_1_reg    | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+|    T_valid_2_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|       br_reg        | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|    br_marker_reg    | Flip-flop |  34   |  Y  | N  | N  | N  | N  | N  | N  |
+|    br_marker_reg    | Flip-flop |  62   |  Y  | N  | N  | N  | N  | N  | N  |
+|        C_reg        | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|     wr_mem_reg      | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|        t_reg        | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      br_t_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      br_t_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      br_t_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      br_t_reg       | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|        h_reg        | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|        T_reg        | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+|        T_reg        | Flip-flop |  99   |  Y  | N  | N  | N  | N  | N  | N  |
+|        T_reg        | Flip-flop |  88   |  Y  | N  | N  | N  | N  | N  | N  |
+|      Told_reg       | Flip-flop |  11   |  Y  | N  | N  | N  | N  | N  | N  |
+|      Told_reg       | Flip-flop |  99   |  Y  | N  | N  | N  | N  | N  | N  |
+|      Told_reg       | Flip-flop |  82   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+===========================================================
+| block name/line  | Inputs | Outputs | # sel inputs | MB |
+===========================================================
+|     rob/219      |   32   |    6    |      5       | N  |
+|     rob/220      |   32   |    5    |      5       | N  |
+|     rob/253      |   32   |   192   |      5       | N  |
+|     rob/253      |   32   |   192   |      5       | N  |
+|     rob/255      |   32   |    3    |      5       | N  |
+|     rob/256      |   32   |    3    |      5       | N  |
+|     rob/1428     |   32   |   12    |      5       | N  |
+|     rob/1429     |   32   |   12    |      5       | N  |
+|     rob/2318     |   4    |    6    |      2       | N  |
+===========================================================
+
+Inferred memory devices in process
+	in routine rs_slot line 225 in file
+		'/afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/rs.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    lsq_tail_reg     | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+|       op_reg        | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+|        T_reg        | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|       T1_reg        | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     T1plus_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|       T2_reg        | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|     T2plus_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|   opa_select_reg    | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+|   opb_select_reg    | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+|       IR_reg        | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       NPC_reg       | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+|     wr_mem_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     rd_mem_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|   cond_branch_reg   | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|  uncond_branch_reg  | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|    br_marker_reg    | Flip-flop |   3   |  Y  | N  | N  | N  | N  | N  | N  |
+|      brpTN_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|   brp_TAR_PC_reg    | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Warning:  /afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/rs.v:780: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  /afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/rs.v:803: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+
+Statistics for case statements in always block at line 778 in file
+	'/afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/rs.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           780            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 801 in file
+	'/afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/rs.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           803            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine rs line 532 in file
+		'/afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/rs.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    bmask_14_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|    bmask_15_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|     bmask_0_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|     bmask_1_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|     bmask_2_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|     bmask_3_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|     bmask_4_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|     bmask_5_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|     bmask_6_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|     bmask_7_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|     bmask_8_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|     bmask_9_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|    bmask_10_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|    bmask_11_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|    bmask_12_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|    bmask_13_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine rs line 594 in file
+		'/afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/rs.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    busy_bits_reg    | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+===========================================================
+| block name/line  | Inputs | Outputs | # sel inputs | MB |
+===========================================================
+|      rs/381      |   16   |   16    |      4       | N  |
+|      rs/381      |   16   |   16    |      4       | N  |
+|      rs/863      |   16   |    7    |      4       | N  |
+|      rs/867      |   32   |    2    |      5       | N  |
+|      rs/869      |  512   |    1    |      9       | N  |
+|      rs/869      |  512   |    1    |      9       | N  |
+|      rs/869      |  512   |    1    |      9       | N  |
+|      rs/869      |  512   |    1    |      9       | N  |
+|      rs/869      |  512   |    1    |      9       | N  |
+|      rs/869      |  512   |    1    |      9       | N  |
+|      rs/869      |  512   |    1    |      9       | N  |
+|      rs/869      |  512   |    1    |      9       | N  |
+|      rs/869      |  512   |    1    |      9       | N  |
+|      rs/869      |  512   |    1    |      9       | N  |
+|      rs/869      |  512   |    1    |      9       | N  |
+|      rs/869      |  512   |    1    |      9       | N  |
+|      rs/869      |  512   |    1    |      9       | N  |
+|      rs/869      |  512   |    1    |      9       | N  |
+|      rs/869      |  512   |    1    |      9       | N  |
+|      rs/869      |  512   |    1    |      9       | N  |
+|      rs/869      |  512   |    1    |      9       | N  |
+|      rs/869      |  512   |    1    |      9       | N  |
+|      rs/869      |  512   |    1    |      9       | N  |
+|      rs/869      |  512   |    1    |      9       | N  |
+|      rs/869      |  512   |    1    |      9       | N  |
+|      rs/869      |  512   |    1    |      9       | N  |
+|      rs/869      |  512   |    1    |      9       | N  |
+|      rs/869      |  512   |    1    |      9       | N  |
+|      rs/869      |  512   |    1    |      9       | N  |
+|      rs/869      |  512   |    1    |      9       | N  |
+|      rs/869      |  512   |    1    |      9       | N  |
+|      rs/869      |  512   |    1    |      9       | N  |
+|      rs/869      |  512   |    1    |      9       | N  |
+|      rs/869      |  512   |    1    |      9       | N  |
+|      rs/869      |  512   |    1    |      9       | N  |
+|      rs/869      |  512   |    1    |      9       | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/880      |  1024  |    2    |      10      | N  |
+|      rs/939      |   16   |    7    |      4       | N  |
+|      rs/943      |   32   |    2    |      5       | N  |
+|      rs/945      |  512   |    1    |      9       | N  |
+|      rs/945      |  512   |    1    |      9       | N  |
+|      rs/945      |  512   |    1    |      9       | N  |
+|      rs/945      |  512   |    1    |      9       | N  |
+|      rs/945      |  512   |    1    |      9       | N  |
+|      rs/945      |  512   |    1    |      9       | N  |
+|      rs/945      |  512   |    1    |      9       | N  |
+|      rs/945      |  512   |    1    |      9       | N  |
+|      rs/945      |  512   |    1    |      9       | N  |
+|      rs/945      |  512   |    1    |      9       | N  |
+|      rs/945      |  512   |    1    |      9       | N  |
+|      rs/945      |  512   |    1    |      9       | N  |
+|      rs/945      |  512   |    1    |      9       | N  |
+|      rs/945      |  512   |    1    |      9       | N  |
+|      rs/945      |  512   |    1    |      9       | N  |
+|      rs/945      |  512   |    1    |      9       | N  |
+|      rs/945      |  512   |    1    |      9       | N  |
+|      rs/945      |  512   |    1    |      9       | N  |
+|      rs/945      |  512   |    1    |      9       | N  |
+|      rs/945      |  512   |    1    |      9       | N  |
+|      rs/945      |  512   |    1    |      9       | N  |
+|      rs/945      |  512   |    1    |      9       | N  |
+|      rs/945      |  512   |    1    |      9       | N  |
+|      rs/945      |  512   |    1    |      9       | N  |
+|      rs/945      |  512   |    1    |      9       | N  |
+|      rs/945      |  512   |    1    |      9       | N  |
+|      rs/945      |  512   |    1    |      9       | N  |
+|      rs/945      |  512   |    1    |      9       | N  |
+|      rs/945      |  512   |    1    |      9       | N  |
+|      rs/945      |  512   |    1    |      9       | N  |
+|      rs/945      |  512   |    1    |      9       | N  |
+|      rs/945      |  512   |    1    |      9       | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+|      rs/956      |  1024  |    2    |      10      | N  |
+===========================================================
+Presto compilation completed successfully.
+Current design is now '/afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/archMap.db:archMap'
+Loaded 9 designs.
+Current design is 'archMap'.
+archMap D_stage freeList decoder id mapTable rob rs_slot rs
+set design_name [getenv PIPELINE_NAME]
+D_stage
+set clock_name [getenv CLOCK_NET_NAME]
+clock
+set reset_name [getenv RESET_NET_NAME]
+reset
+set CLK_PERIOD [getenv CLOCK_PERIOD]
+13	
+#/***********************************************************/
+#/* The rest of this file may be left alone for most small  */
+#/* to moderate sized designs.  You may need to alter it    */
+#/* when synthesizing your final project.                   */
+#/***********************************************************/
+set SYN_DIR ./
+./
+#/***********************************************************/
+#/* Set some flags for optimisation */
+set compile_top_all_paths "true"
+true
+set auto_wire_load_selection "false"
+false
+set compile_seqmap_synchronous_extraction "true"
+true
+# uncomment this and change number appropriately if on multi-core machine
+#set_host_options -max_cores 2
+#/***********************************************************/
+#/*  Clk Periods/uncertainty/transition                     */
+set CLK_TRANSITION 0.1
+0.1
+set CLK_UNCERTAINTY 0.1
+0.1
+set CLK_LATENCY 0.1
+0.1
+#/* Input/output Delay values */
+set AVG_INPUT_DELAY 0.1
+0.1
+set AVG_OUTPUT_DELAY 0.1
+0.1
+#/* Critical Range (ns) */
+set CRIT_RANGE 1.0
+1.0
+#/***********************************************************/
+#/* Design Constrains: Not all used                         */
+set MAX_TRANSITION 1.0
+1.0
+set FAST_TRANSITION 0.1
+0.1
+set MAX_FANOUT 32
+32
+set MID_FANOUT 8
+8
+set LOW_FANOUT 1
+1
+set HIGH_DRIVE 0
+0
+set HIGH_LOAD 1.0
+1.0
+set AVG_LOAD 0.1
+0.1
+set AVG_FANOUT_LOAD 10
+10
+#/***********************************************************/
+#/*BASIC_INPUT = cb18os120_tsmc_max/nd02d1/A1
+#BASIC_OUTPUT = cb18os120_tsmc_max/nd02d1/ZN*/
+set DRIVING_CELL dffacs1
+dffacs1
+#/* DONT_USE_LIST = {   } */
+#/*************operation cons**************/
+#/*OP_WCASE = WCCOM;
+#OP_BCASE = BCCOM;*/
+set WIRE_LOAD "tsmcwire"
+tsmcwire
+set LOGICLIB lec25dscc25_TT
+lec25dscc25_TT
+#/*****************************/
+#/* Sourcing the file that sets the Search path and the libraries(target,link) */
+set sys_clk $clock_name
+clock
+set netlist_file [format "%s%s"  [format "%s%s"  $SYN_DIR $design_name] ".vg"]
+./D_stage.vg
+set ddc_file [format "%s%s"  [format "%s%s"  $SYN_DIR $design_name] ".ddc"]
+./D_stage.ddc
+set rep_file [format "%s%s"  [format "%s%s"  $SYN_DIR $design_name] ".rep"]
+./D_stage.rep
+set dc_shell_status [ set chk_file [format "%s%s"  [format "%s%s"  $SYN_DIR $design_name] ".chk"] ]
+./D_stage.chk
+#/* if we didnt find errors at this point, run */
+if {  $dc_shell_status != [list] } {
+   current_design $design_name
+  link
+  set_wire_load_model -name $WIRE_LOAD -lib $LOGICLIB $design_name
+  set_wire_load_mode top
+  set_fix_multiple_port_nets -outputs -buffer_constants
+  create_clock -period $CLK_PERIOD -name $sys_clk [find port $sys_clk]
+  set_clock_uncertainty $CLK_UNCERTAINTY $sys_clk
+  set_fix_hold $sys_clk
+  group_path -from [all_inputs] -name input_grp
+  group_path -to [all_outputs] -name output_grp
+  set_driving_cell  -lib_cell $DRIVING_CELL [all_inputs]
+  remove_driving_cell [find port $sys_clk]
+  set_fanout_load $AVG_FANOUT_LOAD [all_outputs]
+  set_load $AVG_LOAD [all_outputs]
+  set_input_delay $AVG_INPUT_DELAY -clock $sys_clk [all_inputs]
+  remove_input_delay -clock $sys_clk [find port $sys_clk]
+  set_output_delay $AVG_OUTPUT_DELAY -clock $sys_clk [all_outputs]
+  set_dont_touch $reset_name
+  set_resistance 0 $reset_name
+  set_drive 0 $reset_name
+  set_critical_range $CRIT_RANGE [current_design]
+  set_max_delay $CLK_PERIOD [all_outputs]
+  set MAX_FANOUT $MAX_FANOUT
+  set MAX_TRANSITION $MAX_TRANSITION
+  uniquify
+  ungroup -all -flatten
+  redirect $chk_file { check_design }
+  compile -map_effort medium
+  write -hier -format verilog -output $netlist_file $design_name
+  write -hier -format ddc -output $ddc_file $design_name
+  redirect $rep_file { report_design -nosplit }
+  redirect -append $rep_file { report_area }
+  redirect -append $rep_file { report_timing -max_paths 2 -input_pins -nets -transition_time -nosplit }
+  redirect -append $rep_file { report_constraint -max_delay -verbose -nosplit }
+  remove_design -all
+  read_file -format verilog $netlist_file
+  current_design $design_name
+  redirect -append $rep_file { report_reference -nosplit }
+  quit
+} else {
+   quit
+}
+Current design is 'D_stage'.
+
+  Linking design 'D_stage'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (9 designs)               /afs/umich.edu/user/c/h/chengfu/Desktop/syn2/verilog/t/D_stage.db, etc
+  lec25dscc25_TT (library)    /usr/caen/generic/mentor_lib-D.1/public/eecs470/synopsys/lec25dscc25_TT.db
+
+Current design is 'D_stage'.
+Information: Uniquified 2 instances of design 'id'. (OPT-1056)
+Information: Uniquified 2 instances of design 'decoder'. (OPT-1056)
+Information: Uniquified 16 instances of design 'rs_slot'. (OPT-1056)
+Information: Updating graph... (UID-83)
+Warning: Design 'D_stage' contains 23 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | G-2012.06-DWBB_201206.0 |     *     |
+| Licensed DW Building Blocks        |                         |           |
+============================================================================
+
+
+Information: There are 447 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'D_stage'
+Information: The register 'rs/bmask_15_reg[15]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_15_reg[14]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_15_reg[13]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_15_reg[12]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_15_reg[11]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_15_reg[10]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_15_reg[9]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_15_reg[8]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_15_reg[7]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_15_reg[6]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_15_reg[5]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_15_reg[4]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_14_reg[15]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_14_reg[14]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_14_reg[13]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_14_reg[12]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_14_reg[11]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_14_reg[10]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_14_reg[9]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_14_reg[8]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_14_reg[7]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_14_reg[6]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_14_reg[5]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_14_reg[4]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_13_reg[15]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_13_reg[14]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_13_reg[13]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_13_reg[12]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_13_reg[11]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_13_reg[10]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_13_reg[9]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_13_reg[8]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_13_reg[7]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_13_reg[6]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_13_reg[5]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_13_reg[4]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_12_reg[15]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_12_reg[14]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_12_reg[13]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_12_reg[12]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_12_reg[11]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_12_reg[10]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_12_reg[9]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_12_reg[8]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_12_reg[7]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_12_reg[6]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_12_reg[5]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_12_reg[4]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_11_reg[15]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_11_reg[14]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_11_reg[13]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_11_reg[12]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_11_reg[11]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_11_reg[10]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_11_reg[9]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_11_reg[8]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_11_reg[7]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_11_reg[6]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_11_reg[5]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_11_reg[4]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_10_reg[15]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_10_reg[14]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_10_reg[13]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_10_reg[12]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_10_reg[11]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_10_reg[10]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_10_reg[9]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_10_reg[8]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_10_reg[7]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_10_reg[6]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_10_reg[5]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_10_reg[4]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_9_reg[15]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_9_reg[14]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_9_reg[13]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_9_reg[12]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_9_reg[11]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_9_reg[10]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_9_reg[9]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_9_reg[8]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_9_reg[7]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_9_reg[6]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_9_reg[5]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_9_reg[4]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_8_reg[15]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_8_reg[14]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_8_reg[13]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_8_reg[12]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_8_reg[11]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_8_reg[10]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_8_reg[9]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_8_reg[8]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_8_reg[7]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_8_reg[6]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_8_reg[5]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_8_reg[4]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_7_reg[15]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_7_reg[14]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_7_reg[13]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_7_reg[12]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_7_reg[11]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_7_reg[10]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_7_reg[9]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_7_reg[8]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_7_reg[7]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_7_reg[6]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_7_reg[5]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_7_reg[4]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_6_reg[15]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_6_reg[14]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_6_reg[13]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_6_reg[12]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_6_reg[11]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_6_reg[10]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_6_reg[9]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_6_reg[8]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_6_reg[7]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_6_reg[6]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_6_reg[5]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_6_reg[4]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_5_reg[15]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_5_reg[14]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_5_reg[13]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_5_reg[12]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_5_reg[11]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_5_reg[10]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_5_reg[9]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_5_reg[8]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_5_reg[7]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_5_reg[6]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_5_reg[5]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_5_reg[4]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_4_reg[15]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_4_reg[14]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_4_reg[13]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_4_reg[12]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_4_reg[11]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_4_reg[10]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_4_reg[9]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_4_reg[8]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_4_reg[7]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_4_reg[6]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_4_reg[5]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_4_reg[4]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_3_reg[15]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_3_reg[14]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_3_reg[13]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_3_reg[12]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_3_reg[11]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_3_reg[10]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_3_reg[9]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_3_reg[8]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_3_reg[7]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_3_reg[6]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_3_reg[5]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_3_reg[4]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_2_reg[15]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_2_reg[14]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_2_reg[13]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_2_reg[12]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_2_reg[11]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_2_reg[10]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_2_reg[9]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_2_reg[8]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_2_reg[7]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_2_reg[6]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_2_reg[5]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_2_reg[4]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_1_reg[15]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_1_reg[14]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_1_reg[13]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_1_reg[12]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_1_reg[11]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_1_reg[10]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_1_reg[9]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_1_reg[8]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_1_reg[7]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_1_reg[6]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_1_reg[5]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_1_reg[4]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_0_reg[15]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_0_reg[14]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_0_reg[13]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_0_reg[12]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_0_reg[11]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_0_reg[10]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_0_reg[9]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_0_reg[8]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_0_reg[7]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_0_reg[6]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_0_reg[5]' will be removed. (OPT-1207)
+Information: The register 'rs/bmask_0_reg[4]' will be removed. (OPT-1207)
+Information: The register 'archMap/reg_tag_reg[31][0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'archMap/reg_tag_reg[31][1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'archMap/reg_tag_reg[31][2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'archMap/reg_tag_reg[31][3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'archMap/reg_tag_reg[31][4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'archMap/reg_tag_reg[31][5]' is a constant and will be removed. (OPT-1206)
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'D_stage_DW01_cmp6_0'
+  Processing 'D_stage_DW01_inc_0'
+  Processing 'D_stage_DW01_cmp6_1'
+  Processing 'D_stage_DW01_cmp6_2'
+  Processing 'D_stage_DW01_cmp6_3'
+  Processing 'D_stage_DW01_cmp6_4'
+  Processing 'D_stage_DW01_cmp6_5'
+  Processing 'D_stage_DW01_cmp6_6'
+  Processing 'D_stage_DW01_cmp6_7'
+  Processing 'D_stage_DW01_cmp6_8'
+  Processing 'D_stage_DW01_cmp6_9'
+  Processing 'D_stage_DW01_cmp6_10'
+  Processing 'D_stage_DW01_cmp6_11'
+  Processing 'D_stage_DW01_cmp6_12'
+  Processing 'D_stage_DW01_cmp6_13'
+  Processing 'D_stage_DW01_cmp6_14'
+  Processing 'D_stage_DW01_cmp6_15'
+  Processing 'D_stage_DW01_cmp6_16'
+  Processing 'D_stage_DW01_cmp6_17'
+  Processing 'D_stage_DW01_cmp6_18'
+  Processing 'D_stage_DW01_cmp6_19'
+  Processing 'D_stage_DW01_cmp6_20'
+  Processing 'D_stage_DW01_cmp6_21'
+  Processing 'D_stage_DW01_cmp6_22'
+  Processing 'D_stage_DW01_cmp6_23'
+  Processing 'D_stage_DW01_cmp6_24'
+  Processing 'D_stage_DW01_cmp6_25'
+  Processing 'D_stage_DW01_cmp6_26'
+  Processing 'D_stage_DW01_cmp6_27'
+  Processing 'D_stage_DW01_cmp6_28'
+  Processing 'D_stage_DW01_cmp6_29'
+  Processing 'D_stage_DW01_cmp6_30'
+  Processing 'D_stage_DW01_cmp6_31'
+  Processing 'D_stage_DW01_cmp6_32'
+  Processing 'D_stage_DW01_cmp6_33'
+  Processing 'D_stage_DW01_cmp6_34'
+  Processing 'D_stage_DW01_cmp6_35'
+  Processing 'D_stage_DW01_cmp6_36'
+  Processing 'D_stage_DW01_cmp6_37'
+  Processing 'D_stage_DW01_cmp6_38'
+  Processing 'D_stage_DW01_cmp6_39'
+  Processing 'D_stage_DW01_cmp6_40'
+  Processing 'D_stage_DW01_cmp6_41'
+  Processing 'D_stage_DW01_cmp6_42'
+  Processing 'D_stage_DW01_cmp6_43'
+  Processing 'D_stage_DW01_cmp6_44'
+  Processing 'D_stage_DW01_cmp6_45'
+  Processing 'D_stage_DW01_cmp6_46'
+  Processing 'D_stage_DW01_cmp6_47'
+  Processing 'D_stage_DW01_cmp6_48'
+  Processing 'D_stage_DW01_cmp6_49'
+  Processing 'D_stage_DW01_cmp6_50'
+  Processing 'D_stage_DW01_cmp6_51'
+  Processing 'D_stage_DW01_cmp6_52'
+  Processing 'D_stage_DW01_cmp6_53'
+  Processing 'D_stage_DW01_cmp6_54'
+  Processing 'D_stage_DW01_cmp6_55'
+  Processing 'D_stage_DW01_cmp6_56'
+  Processing 'D_stage_DW01_cmp6_57'
+  Processing 'D_stage_DW01_cmp6_58'
+  Processing 'D_stage_DW01_cmp6_59'
+  Processing 'D_stage_DW01_cmp6_60'
+  Processing 'D_stage_DW01_cmp6_61'
+  Processing 'D_stage_DW01_cmp6_62'
+  Processing 'D_stage_DW01_cmp6_63'
+  Processing 'D_stage_DW01_cmp6_64'
+  Processing 'D_stage_DW01_cmp6_65'
+  Processing 'D_stage_DW01_cmp6_66'
+  Processing 'D_stage_DW01_cmp6_67'
+  Processing 'D_stage_DW01_cmp6_68'
+  Processing 'D_stage_DW01_cmp6_69'
+  Processing 'D_stage_DW01_cmp6_70'
+  Processing 'D_stage_DW01_cmp6_71'
+  Processing 'D_stage_DW01_cmp6_72'
+  Processing 'D_stage_DW01_cmp6_73'
+  Processing 'D_stage_DW01_cmp6_74'
+  Processing 'D_stage_DW01_cmp6_75'
+  Processing 'D_stage_DW01_cmp6_76'
+  Processing 'D_stage_DW01_cmp6_77'
+  Processing 'D_stage_DW01_cmp6_78'
+  Processing 'D_stage_DW01_cmp6_79'
+  Processing 'D_stage_DW01_cmp6_80'
+  Processing 'D_stage_DW01_cmp6_81'
+  Processing 'D_stage_DW01_cmp6_82'
+  Processing 'D_stage_DW01_cmp6_83'
+  Processing 'D_stage_DW01_cmp6_84'
+  Processing 'D_stage_DW01_cmp6_85'
+  Processing 'D_stage_DW01_cmp6_86'
+  Processing 'D_stage_DW01_cmp6_87'
+  Processing 'D_stage_DW01_cmp6_88'
+  Processing 'D_stage_DW01_cmp6_89'
+  Processing 'D_stage_DW01_cmp6_90'
+  Processing 'D_stage_DW01_cmp6_91'
+  Processing 'D_stage_DW01_cmp6_92'
+  Processing 'D_stage_DW01_cmp6_93'
+  Processing 'D_stage_DW01_cmp6_94'
+  Processing 'D_stage_DW01_cmp6_95'
+  Processing 'D_stage_DW01_cmp6_96'
+  Processing 'D_stage_DW01_cmp6_97'
+  Processing 'D_stage_DW01_cmp6_98'
+  Processing 'D_stage_DW01_cmp6_99'
+  Processing 'D_stage_DW01_cmp6_100'
+  Processing 'D_stage_DW01_cmp6_101'
+  Processing 'D_stage_DW01_cmp6_102'
+  Processing 'D_stage_DW01_cmp6_103'
+  Processing 'D_stage_DW01_cmp6_104'
+  Processing 'D_stage_DW01_cmp6_105'
+  Processing 'D_stage_DW01_cmp6_106'
+  Processing 'D_stage_DW01_cmp6_107'
+  Processing 'D_stage_DW01_cmp6_108'
+  Processing 'D_stage_DW01_cmp6_109'
+  Processing 'D_stage_DW01_cmp6_110'
+  Processing 'D_stage_DW01_cmp6_111'
+  Processing 'D_stage_DW01_cmp6_112'
+  Processing 'D_stage_DW01_cmp6_113'
+  Processing 'D_stage_DW01_cmp6_114'
+  Processing 'D_stage_DW01_cmp6_115'
+  Processing 'D_stage_DW01_cmp6_116'
+  Processing 'D_stage_DW01_cmp6_117'
+  Processing 'D_stage_DW01_cmp6_118'
+  Processing 'D_stage_DW01_cmp6_119'
+  Processing 'D_stage_DW01_cmp6_120'
+  Processing 'D_stage_DW01_cmp6_121'
+  Processing 'D_stage_DW01_cmp6_122'
+  Processing 'D_stage_DW01_cmp6_123'
+  Processing 'D_stage_DW01_cmp6_124'
+  Processing 'D_stage_DW01_cmp6_125'
+  Processing 'D_stage_DW01_cmp6_126'
+  Processing 'D_stage_DW01_cmp6_127'
+  Processing 'D_stage_DW01_cmp6_128'
+  Processing 'D_stage_DW01_cmp6_129'
+  Processing 'D_stage_DW01_cmp6_130'
+  Processing 'D_stage_DW01_cmp6_131'
+  Processing 'D_stage_DW01_cmp6_132'
+  Processing 'D_stage_DW01_cmp6_133'
+  Processing 'D_stage_DW01_cmp6_134'
+  Processing 'D_stage_DW01_cmp6_135'
+  Processing 'D_stage_DW01_cmp6_136'
+  Processing 'D_stage_DW01_cmp6_137'
+  Processing 'D_stage_DW01_cmp6_138'
+  Processing 'D_stage_DW01_cmp6_139'
+  Processing 'D_stage_DW01_cmp6_140'
+  Processing 'D_stage_DW01_cmp6_141'
+  Processing 'D_stage_DW01_cmp6_142'
+  Processing 'D_stage_DW01_cmp6_143'
+  Processing 'D_stage_DW01_cmp6_144'
+  Processing 'D_stage_DW01_cmp6_145'
+  Processing 'D_stage_DW01_cmp6_146'
+  Processing 'D_stage_DW01_cmp6_147'
+  Processing 'D_stage_DW01_cmp6_148'
+  Processing 'D_stage_DW01_cmp6_149'
+  Processing 'D_stage_DW01_cmp6_150'
+  Processing 'D_stage_DW01_cmp6_151'
+  Processing 'D_stage_DW01_cmp6_152'
+  Processing 'D_stage_DW01_cmp6_153'
+  Processing 'D_stage_DW01_cmp6_154'
+  Processing 'D_stage_DW01_cmp6_155'
+  Processing 'D_stage_DW01_cmp6_156'
+  Processing 'D_stage_DW01_cmp6_157'
+  Processing 'D_stage_DW01_cmp6_158'
+  Processing 'D_stage_DW01_cmp6_159'
+  Processing 'D_stage_DW01_cmp6_160'
+  Processing 'D_stage_DW01_cmp6_161'
+  Processing 'D_stage_DW01_cmp6_162'
+  Processing 'D_stage_DW01_cmp6_163'
+  Processing 'D_stage_DW01_cmp6_164'
+  Processing 'D_stage_DW01_cmp6_165'
+  Processing 'D_stage_DW01_cmp6_166'
+  Processing 'D_stage_DW01_cmp6_167'
+  Processing 'D_stage_DW01_cmp6_168'
+  Processing 'D_stage_DW01_cmp6_169'
+  Processing 'D_stage_DW01_cmp6_170'
+  Processing 'D_stage_DW01_cmp6_171'
+  Processing 'D_stage_DW01_cmp6_172'
+  Processing 'D_stage_DW01_cmp6_173'
+  Processing 'D_stage_DW01_cmp6_174'
+  Processing 'D_stage_DW01_cmp6_175'
+  Processing 'D_stage_DW01_cmp6_176'
+  Processing 'D_stage_DW01_cmp6_177'
+  Processing 'D_stage_DW01_cmp6_178'
+  Processing 'D_stage_DW01_cmp6_179'
+  Processing 'D_stage_DW01_cmp6_180'
+  Processing 'D_stage_DW01_cmp6_181'
+  Processing 'D_stage_DW01_cmp6_182'
+  Processing 'D_stage_DW01_cmp6_183'
+  Processing 'D_stage_DW01_cmp6_184'
+  Processing 'D_stage_DW01_cmp6_185'
+  Processing 'D_stage_DW01_cmp6_186'
+  Processing 'D_stage_DW01_cmp6_187'
+  Processing 'D_stage_DW01_cmp6_188'
+  Processing 'D_stage_DW01_cmp6_189'
+  Processing 'D_stage_DW01_cmp6_190'
+  Processing 'D_stage_DW01_cmp6_191'
+  Processing 'D_stage_DW01_cmp6_192'
+  Processing 'D_stage_DW01_cmp6_193'
+  Processing 'D_stage_DW01_cmp6_194'
+  Processing 'D_stage_DW01_cmp6_195'
+  Processing 'D_stage_DW01_cmp6_196'
+  Processing 'D_stage_DW01_cmp6_197'
+  Processing 'D_stage_DW01_cmp6_198'
+  Processing 'D_stage_DW01_cmp6_199'
+  Processing 'D_stage_DW01_cmp6_200'
+  Processing 'D_stage_DW01_cmp6_201'
+  Processing 'D_stage_DW01_cmp6_202'
+  Processing 'D_stage_DW01_cmp6_203'
+  Processing 'D_stage_DW01_cmp6_204'
+  Processing 'D_stage_DW01_cmp6_205'
+  Processing 'D_stage_DW01_cmp6_206'
+  Processing 'D_stage_DW01_cmp6_207'
+  Processing 'D_stage_DW01_cmp6_208'
+  Processing 'D_stage_DW01_cmp6_209'
+  Processing 'D_stage_DW01_cmp6_210'
+  Processing 'D_stage_DW01_cmp6_211'
+  Processing 'D_stage_DW01_cmp6_212'
+  Processing 'D_stage_DW01_cmp6_213'
+  Processing 'D_stage_DW01_cmp6_214'
+  Processing 'D_stage_DW01_cmp6_215'
+  Processing 'D_stage_DW01_cmp6_216'
+  Processing 'D_stage_DW01_cmp6_217'
+  Processing 'D_stage_DW01_cmp6_218'
+  Processing 'D_stage_DW01_cmp6_219'
+  Processing 'D_stage_DW01_cmp6_220'
+  Processing 'D_stage_DW01_cmp6_221'
+  Processing 'D_stage_DW01_cmp6_222'
+  Processing 'D_stage_DW01_cmp6_223'
+  Processing 'D_stage_DW01_cmp6_224'
+  Processing 'D_stage_DW01_cmp6_225'
+  Processing 'D_stage_DW01_cmp6_226'
+  Processing 'D_stage_DW01_cmp6_227'
+  Processing 'D_stage_DW01_cmp6_228'
+  Processing 'D_stage_DW01_cmp6_229'
+  Processing 'D_stage_DW01_cmp6_230'
+  Processing 'D_stage_DW01_cmp6_231'
+  Processing 'D_stage_DW01_cmp6_232'
+  Processing 'D_stage_DW01_cmp6_233'
+  Processing 'D_stage_DW01_cmp6_234'
+  Processing 'D_stage_DW01_cmp6_235'
+  Processing 'D_stage_DW01_cmp6_236'
+  Processing 'D_stage_DW01_cmp6_237'
+  Processing 'D_stage_DW01_cmp6_238'
+  Processing 'D_stage_DW01_cmp6_239'
+  Processing 'D_stage_DW01_cmp6_240'
+  Processing 'D_stage_DW01_cmp6_241'
+  Processing 'D_stage_DW01_cmp6_242'
+  Processing 'D_stage_DW01_cmp6_243'
+  Processing 'D_stage_DW01_cmp6_244'
+  Processing 'D_stage_DW01_cmp6_245'
+  Processing 'D_stage_DW01_cmp6_246'
+  Processing 'D_stage_DW01_cmp6_247'
+  Processing 'D_stage_DW01_cmp6_248'
+  Processing 'D_stage_DW01_cmp6_249'
+  Processing 'D_stage_DW01_cmp6_250'
+  Processing 'D_stage_DW01_cmp6_251'
+  Processing 'D_stage_DW01_cmp6_252'
+  Processing 'D_stage_DW01_cmp6_253'
+  Processing 'D_stage_DW01_cmp6_254'
+  Processing 'D_stage_DW01_cmp6_255'
+  Processing 'D_stage_DW01_cmp6_256'
+  Processing 'D_stage_DW01_cmp6_257'
+  Processing 'D_stage_DW01_cmp6_258'
+  Processing 'D_stage_DW01_cmp6_259'
+  Processing 'D_stage_DW01_cmp6_260'
+  Processing 'D_stage_DW01_cmp6_261'
+  Processing 'D_stage_DW01_cmp6_262'
+  Processing 'D_stage_DW01_cmp6_263'
+  Processing 'D_stage_DW01_cmp6_264'
+  Processing 'D_stage_DW01_cmp6_265'
+  Processing 'D_stage_DW01_cmp6_266'
+  Processing 'D_stage_DW01_cmp6_267'
+  Processing 'D_stage_DW01_cmp6_268'
+  Processing 'D_stage_DW01_cmp6_269'
+  Processing 'D_stage_DW01_cmp6_270'
+  Processing 'D_stage_DW01_cmp6_271'
+  Processing 'D_stage_DW01_cmp6_272'
+  Processing 'D_stage_DW01_cmp6_273'
+  Processing 'D_stage_DW01_cmp6_274'
+  Processing 'D_stage_DW01_cmp6_275'
+  Processing 'D_stage_DW01_cmp6_276'
+  Processing 'D_stage_DW01_cmp6_277'
+  Processing 'D_stage_DW01_cmp6_278'
+  Processing 'D_stage_DW01_cmp6_279'
+  Processing 'D_stage_DW01_cmp6_280'
+  Processing 'D_stage_DW01_cmp6_281'
+  Processing 'D_stage_DW01_cmp6_282'
+  Processing 'D_stage_DW01_cmp6_283'
+  Processing 'D_stage_DW01_cmp6_284'
+  Processing 'D_stage_DW01_cmp6_285'
+  Processing 'D_stage_DW01_cmp6_286'
+  Processing 'D_stage_DW01_cmp6_287'
+  Processing 'D_stage_DW01_cmp6_288'
+  Processing 'D_stage_DW01_cmp6_289'
+  Processing 'D_stage_DW01_cmp6_290'
+  Processing 'D_stage_DW01_cmp6_291'
+  Processing 'D_stage_DW01_cmp6_292'
+  Processing 'D_stage_DW01_cmp6_293'
+  Processing 'D_stage_DW01_cmp6_294'
+  Processing 'D_stage_DW01_cmp6_295'
+  Processing 'D_stage_DW01_cmp6_296'
+  Processing 'D_stage_DW01_cmp6_297'
+  Processing 'D_stage_DW01_cmp6_298'
+  Processing 'D_stage_DW01_cmp6_299'
+  Processing 'D_stage_DW01_cmp6_300'
+  Processing 'D_stage_DW01_cmp6_301'
+  Processing 'D_stage_DW01_cmp6_302'
+  Processing 'D_stage_DW01_cmp6_303'
+  Processing 'D_stage_DW01_cmp6_304'
+  Processing 'D_stage_DW01_cmp6_305'
+  Processing 'D_stage_DW01_cmp6_306'
+  Processing 'D_stage_DW01_cmp6_307'
+  Processing 'D_stage_DW01_cmp6_308'
+  Processing 'D_stage_DW01_cmp6_309'
+  Processing 'D_stage_DW01_cmp6_310'
+  Processing 'D_stage_DW01_cmp6_311'
+  Processing 'D_stage_DW01_cmp6_312'
+  Processing 'D_stage_DW01_inc_1'
+  Processing 'D_stage_DW01_cmp6_313'
+  Processing 'D_stage_DW01_cmp6_314'
+  Processing 'D_stage_DW01_cmp6_315'
+  Processing 'D_stage_DW01_cmp6_316'
+  Processing 'D_stage_DW01_cmp6_317'
+  Processing 'D_stage_DW01_cmp6_318'
+  Processing 'D_stage_DW01_cmp6_319'
+  Processing 'D_stage_DW01_cmp6_320'
+  Processing 'D_stage_DW01_cmp6_321'
+  Processing 'D_stage_DW01_cmp6_322'
+  Processing 'D_stage_DW01_cmp6_323'
+  Processing 'D_stage_DW01_cmp6_324'
+  Processing 'D_stage_DW01_cmp6_325'
+  Processing 'D_stage_DW01_cmp6_326'
+  Processing 'D_stage_DW01_cmp6_327'
+  Processing 'D_stage_DW01_cmp6_328'
+  Processing 'D_stage_DW01_cmp6_329'
+  Processing 'D_stage_DW01_cmp6_330'
+  Processing 'D_stage_DW01_cmp6_331'
+  Processing 'D_stage_DW01_cmp6_332'
+  Processing 'D_stage_DW01_cmp6_333'
+  Processing 'D_stage_DW01_cmp6_334'
+  Processing 'D_stage_DW01_cmp6_335'
+  Processing 'D_stage_DW01_cmp6_336'
+  Processing 'D_stage_DW01_cmp6_337'
+  Processing 'D_stage_DW01_cmp6_338'
+  Processing 'D_stage_DW01_cmp6_339'
+  Processing 'D_stage_DW01_cmp6_340'
+  Processing 'D_stage_DW01_cmp6_341'
+  Processing 'D_stage_DW01_cmp6_342'
+  Processing 'D_stage_DW01_cmp6_343'
+  Processing 'D_stage_DW01_cmp6_344'
+  Processing 'D_stage_DW01_cmp6_345'
+  Processing 'D_stage_DW01_cmp6_346'
+  Processing 'D_stage_DW01_cmp6_347'
+  Processing 'D_stage_DW01_cmp6_348'
+  Processing 'D_stage_DW01_cmp6_349'
+  Processing 'D_stage_DW01_cmp6_350'
+  Processing 'D_stage_DW01_cmp6_351'
+  Processing 'D_stage_DW01_cmp6_352'
+  Processing 'D_stage_DW01_cmp6_353'
+  Processing 'D_stage_DW01_cmp6_354'
+  Processing 'D_stage_DW01_cmp6_355'
+  Processing 'D_stage_DW01_cmp6_356'
+  Processing 'D_stage_DW01_cmp6_357'
+  Processing 'D_stage_DW01_cmp6_358'
+  Processing 'D_stage_DW01_cmp6_359'
+  Processing 'D_stage_DW01_cmp6_360'
+  Processing 'D_stage_DW01_cmp6_361'
+  Processing 'D_stage_DW01_cmp6_362'
+  Processing 'D_stage_DW01_cmp6_363'
+  Processing 'D_stage_DW01_cmp6_364'
+  Processing 'D_stage_DW01_cmp6_365'
+  Processing 'D_stage_DW01_cmp6_366'
+  Processing 'D_stage_DW01_cmp6_367'
+  Processing 'D_stage_DW01_cmp6_368'
+  Processing 'D_stage_DW01_cmp6_369'
+  Processing 'D_stage_DW01_cmp6_370'
+  Processing 'D_stage_DW01_cmp6_371'
+  Processing 'D_stage_DW01_cmp6_372'
+  Processing 'D_stage_DW01_cmp6_373'
+  Processing 'D_stage_DW01_cmp6_374'
+  Processing 'D_stage_DW01_cmp6_375'
+  Processing 'D_stage_DW01_cmp6_376'
+  Processing 'D_stage_DW01_cmp6_377'
+  Processing 'D_stage_DW01_cmp6_378'
+  Processing 'D_stage_DW01_cmp6_379'
+  Processing 'D_stage_DW01_cmp6_380'
+  Processing 'D_stage_DW01_cmp6_381'
+  Processing 'D_stage_DW01_cmp6_382'
+  Processing 'D_stage_DW01_cmp6_383'
+  Processing 'D_stage_DW01_cmp6_384'
+  Processing 'D_stage_DW01_cmp6_385'
+  Processing 'D_stage_DW01_cmp6_386'
+  Processing 'D_stage_DW01_cmp6_387'
+  Processing 'D_stage_DW01_cmp6_388'
+  Processing 'D_stage_DW01_cmp6_389'
+  Processing 'D_stage_DW01_cmp6_390'
+  Processing 'D_stage_DW01_cmp6_391'
+  Processing 'D_stage_DW01_cmp6_392'
+  Processing 'D_stage_DW01_cmp6_393'
+  Processing 'D_stage_DW01_cmp6_394'
+  Processing 'D_stage_DW01_cmp6_395'
+  Processing 'D_stage_DW01_cmp6_396'
+  Processing 'D_stage_DW01_cmp6_397'
+  Processing 'D_stage_DW01_cmp6_398'
+  Processing 'D_stage_DW01_cmp6_399'
+  Processing 'D_stage_DW01_cmp6_400'
+  Processing 'D_stage_DW01_cmp6_401'
+  Processing 'D_stage_DW01_cmp6_402'
+  Processing 'D_stage_DW01_cmp6_403'
+  Processing 'D_stage_DW01_cmp6_404'
+  Processing 'D_stage_DW01_cmp6_405'
+  Processing 'D_stage_DW01_cmp6_406'
+  Processing 'D_stage_DW01_cmp6_407'
+  Processing 'D_stage_DW01_cmp6_408'
+  Processing 'D_stage_DW01_cmp6_409'
+  Processing 'D_stage_DW01_cmp6_410'
+  Processing 'D_stage_DW01_cmp6_411'
+  Processing 'D_stage_DW01_cmp6_412'
+  Processing 'D_stage_DW01_cmp6_413'
+  Processing 'D_stage_DW01_cmp6_414'
+  Processing 'D_stage_DW01_cmp6_415'
+  Processing 'D_stage_DW01_cmp6_416'
+  Processing 'D_stage_DW01_cmp6_417'
+  Processing 'D_stage_DW01_cmp6_418'
+  Processing 'D_stage_DW01_cmp6_419'
+  Processing 'D_stage_DW01_cmp6_420'
+  Processing 'D_stage_DW01_cmp6_421'
+  Processing 'D_stage_DW01_cmp6_422'
+  Processing 'D_stage_DW01_cmp6_423'
+  Processing 'D_stage_DW01_cmp6_424'
+  Processing 'D_stage_DW01_cmp6_425'
+  Processing 'D_stage_DW01_cmp6_426'
+  Processing 'D_stage_DW01_cmp6_427'
+  Processing 'D_stage_DW01_cmp6_428'
+  Processing 'D_stage_DW01_cmp6_429'
+  Processing 'D_stage_DW01_cmp6_430'
+  Processing 'D_stage_DW01_cmp6_431'
+  Processing 'D_stage_DW01_cmp6_432'
+  Processing 'D_stage_DW01_cmp6_433'
+  Processing 'D_stage_DW01_cmp6_434'
+  Processing 'D_stage_DW01_cmp6_435'
+  Processing 'D_stage_DW01_cmp6_436'
+  Processing 'D_stage_DW01_cmp6_437'
+  Processing 'D_stage_DW01_cmp6_438'
+  Processing 'D_stage_DW01_cmp6_439'
+  Processing 'D_stage_DW01_cmp6_440'
+  Processing 'D_stage_DW01_cmp6_441'
+  Processing 'D_stage_DW01_cmp6_442'
+  Processing 'D_stage_DW01_cmp6_443'
+  Processing 'D_stage_DW01_cmp6_444'
+  Processing 'D_stage_DW01_cmp6_445'
+  Processing 'D_stage_DW01_cmp6_446'
+  Processing 'D_stage_DW01_cmp6_447'
+  Processing 'D_stage_DW01_cmp6_448'
+  Processing 'D_stage_DW01_cmp6_449'
+  Processing 'D_stage_DW01_cmp6_450'
+  Processing 'D_stage_DW01_cmp6_451'
+  Processing 'D_stage_DW01_cmp6_452'
+  Processing 'D_stage_DW01_cmp6_453'
+  Processing 'D_stage_DW01_cmp6_454'
+  Processing 'D_stage_DW01_cmp6_455'
+  Processing 'D_stage_DW01_cmp6_456'
+  Processing 'D_stage_DW01_cmp6_457'
+  Processing 'D_stage_DW01_cmp6_458'
+  Processing 'D_stage_DW01_cmp6_459'
+  Processing 'D_stage_DW01_cmp6_460'
+  Processing 'D_stage_DW01_cmp6_461'
+  Processing 'D_stage_DW01_cmp6_462'
+  Processing 'D_stage_DW01_cmp6_463'
+  Processing 'D_stage_DW01_cmp6_464'
+  Processing 'D_stage_DW01_cmp6_465'
+  Processing 'D_stage_DW01_cmp6_466'
+  Processing 'D_stage_DW01_cmp6_467'
+  Processing 'D_stage_DW01_cmp6_468'
+  Processing 'D_stage_DW01_cmp6_469'
+  Processing 'D_stage_DW01_cmp6_470'
+  Processing 'D_stage_DW01_cmp6_471'
+  Processing 'D_stage_DW01_cmp6_472'
+  Processing 'D_stage_DW01_cmp6_473'
+  Processing 'D_stage_DW01_cmp6_474'
+  Processing 'D_stage_DW01_cmp6_475'
+  Processing 'D_stage_DW01_cmp6_476'
+  Processing 'D_stage_DW01_inc_2'
+  Processing 'D_stage_DW01_add_0'
+  Processing 'D_stage_DW01_inc_3'
+  Processing 'D_stage_DW01_inc_4'
+  Processing 'D_stage_DW01_cmp6_477'
+  Processing 'D_stage_DW01_cmp6_478'
+  Processing 'D_stage_DW01_cmp6_479'
+  Processing 'D_stage_DW01_cmp6_480'
+  Processing 'D_stage_DW01_cmp6_481'
+  Processing 'D_stage_DW01_cmp6_482'
+  Processing 'D_stage_DW01_cmp6_483'
+  Processing 'D_stage_DW01_cmp6_484'
+  Processing 'D_stage_DW01_cmp6_485'
+  Processing 'D_stage_DW01_cmp6_486'
+  Processing 'D_stage_DW01_cmp6_487'
+  Processing 'D_stage_DW01_cmp6_488'
+  Processing 'D_stage_DW01_cmp6_489'
+  Processing 'D_stage_DW01_cmp6_490'
+  Processing 'D_stage_DW01_cmp6_491'
+  Processing 'D_stage_DW01_cmp6_492'
+  Processing 'D_stage_DW01_cmp6_493'
+  Processing 'D_stage_DW01_cmp6_494'
+  Processing 'D_stage_DW01_cmp6_495'
+  Processing 'D_stage_DW01_cmp6_496'
+  Processing 'D_stage_DW01_cmp6_497'
+  Processing 'D_stage_DW01_cmp6_498'
+  Processing 'D_stage_DW01_cmp6_499'
+  Processing 'D_stage_DW01_cmp6_500'
+  Processing 'D_stage_DW01_cmp6_501'
+  Processing 'D_stage_DW01_cmp6_502'
+  Processing 'D_stage_DW01_cmp6_503'
+  Processing 'D_stage_DW01_cmp6_504'
+  Processing 'D_stage_DW01_cmp6_505'
+  Processing 'D_stage_DW01_cmp6_506'
+  Processing 'D_stage_DW01_cmp6_507'
+  Processing 'D_stage_DW01_cmp6_508'
+  Processing 'D_stage_DW01_cmp6_509'
+  Processing 'D_stage_DW01_cmp6_510'
+  Processing 'D_stage_DW01_cmp6_511'
+  Processing 'D_stage_DW01_cmp6_512'
+  Processing 'D_stage_DW01_cmp6_513'
+  Processing 'D_stage_DW01_cmp6_514'
+  Processing 'D_stage_DW01_cmp6_515'
+  Processing 'D_stage_DW01_cmp6_516'
+  Processing 'D_stage_DW01_cmp6_517'
+  Processing 'D_stage_DW01_cmp6_518'
+  Processing 'D_stage_DW01_cmp6_519'
+  Processing 'D_stage_DW01_cmp6_520'
+  Processing 'D_stage_DW01_cmp6_521'
+  Processing 'D_stage_DW01_cmp6_522'
+  Processing 'D_stage_DW01_cmp6_523'
+  Processing 'D_stage_DW01_cmp6_524'
+  Processing 'D_stage_DW01_cmp6_525'
+  Processing 'D_stage_DW01_cmp6_526'
+  Processing 'D_stage_DW01_cmp6_527'
+  Processing 'D_stage_DW01_cmp6_528'
+  Processing 'D_stage_DW01_cmp6_529'
+  Processing 'D_stage_DW01_cmp6_530'
+  Processing 'D_stage_DW01_cmp6_531'
+  Processing 'D_stage_DW01_cmp6_532'
+  Processing 'D_stage_DW01_cmp6_533'
+  Processing 'D_stage_DW01_cmp6_534'
+  Processing 'D_stage_DW01_cmp6_535'
+  Processing 'D_stage_DW01_cmp6_536'
+  Processing 'D_stage_DW01_cmp6_537'
+  Processing 'D_stage_DW01_cmp6_538'
+  Processing 'D_stage_DW01_cmp6_539'
+  Processing 'D_stage_DW01_cmp6_540'
+  Processing 'D_stage_DW01_inc_5'
+  Processing 'D_stage_DW01_add_1'
+  Processing 'D_stage_DW01_inc_6'
+  Processing 'D_stage_DW01_add_2'
+  Processing 'D_stage_DW01_add_3'
+  Processing 'D_stage_DW01_add_4'
+  Processing 'D_stage_DW01_add_5'
+  Processing 'D_stage_DW01_add_6'
+  Processing 'D_stage_DW01_add_7'
+  Processing 'D_stage_DW01_add_8'
+  Processing 'D_stage_DW01_add_9'
+  Processing 'D_stage_DW01_add_10'
+  Processing 'D_stage_DW01_add_11'
+  Processing 'D_stage_DW01_add_12'
+  Processing 'D_stage_DW01_add_13'
+  Processing 'D_stage_DW01_add_14'
+  Processing 'D_stage_DW01_add_15'
+  Processing 'D_stage_DW01_add_16'
+  Processing 'D_stage_DW01_add_17'
+  Processing 'D_stage_DW01_add_18'
+  Processing 'D_stage_DW01_add_19'
+  Processing 'D_stage_DW01_add_20'
+  Processing 'D_stage_DW01_add_21'
+  Processing 'D_stage_DW01_add_22'
+  Processing 'D_stage_DW01_add_23'
+  Processing 'D_stage_DW01_add_24'
+  Processing 'D_stage_DW01_add_25'
+  Processing 'D_stage_DW01_add_26'
+  Processing 'D_stage_DW01_add_27'
+  Processing 'D_stage_DW01_add_28'
+  Processing 'D_stage_DW01_add_29'
+  Processing 'D_stage_DW01_add_30'
+  Processing 'D_stage_DW01_add_31'
+  Processing 'D_stage_DW01_add_32'
+  Processing 'D_stage_DW01_add_33'
+  Processing 'D_stage_DW01_add_34'
+  Processing 'D_stage_DW01_add_35'
+  Processing 'D_stage_DW01_add_36'
+  Processing 'D_stage_DW01_add_37'
+  Processing 'D_stage_DW01_add_38'
+  Processing 'D_stage_DW01_add_39'
+  Processing 'D_stage_DW01_add_40'
+  Processing 'D_stage_DW01_add_41'
+  Processing 'D_stage_DW01_add_42'
+  Processing 'D_stage_DW01_add_43'
+  Processing 'D_stage_DW01_add_44'
+  Processing 'D_stage_DW01_add_45'
+  Processing 'D_stage_DW01_add_46'
+  Processing 'D_stage_DW01_add_47'
+  Processing 'D_stage_DW01_add_48'
+  Processing 'D_stage_DW01_add_49'
+  Processing 'D_stage_DW01_add_50'
+  Processing 'D_stage_DW01_add_51'
+  Processing 'D_stage_DW01_add_52'
+  Processing 'D_stage_DW01_add_53'
+  Processing 'D_stage_DW01_add_54'
+  Processing 'D_stage_DW01_add_55'
+  Processing 'D_stage_DW01_add_56'
+  Processing 'D_stage_DW01_add_57'
+  Processing 'D_stage_DW01_add_58'
+  Processing 'D_stage_DW01_add_59'
+  Processing 'D_stage_DW01_add_60'
+  Processing 'D_stage_DW01_add_61'
+  Processing 'D_stage_DW01_add_62'
+  Processing 'D_stage_DW01_add_63'
+  Processing 'D_stage_DW01_inc_7'
+  Processing 'D_stage_DW01_add_64'
+  Processing 'D_stage_DW01_add_65'
+  Processing 'D_stage_DW01_add_66'
+  Processing 'D_stage_DW01_add_67'
+  Processing 'D_stage_DW01_add_68'
+  Processing 'D_stage_DW01_add_69'
+  Processing 'D_stage_DW01_add_70'
+  Processing 'D_stage_DW01_add_71'
+  Processing 'D_stage_DW01_add_72'
+  Processing 'D_stage_DW01_add_73'
+  Processing 'D_stage_DW01_add_74'
+  Processing 'D_stage_DW01_add_75'
+  Processing 'D_stage_DW01_add_76'
+  Processing 'D_stage_DW01_add_77'
+  Processing 'D_stage_DW01_add_78'
+  Processing 'D_stage_DW01_add_79'
+  Processing 'D_stage_DW01_add_80'
+  Processing 'D_stage_DW01_add_81'
+  Processing 'D_stage_DW01_add_82'
+  Processing 'D_stage_DW01_add_83'
+  Processing 'D_stage_DW01_add_84'
+  Processing 'D_stage_DW01_add_85'
+  Processing 'D_stage_DW01_add_86'
+  Processing 'D_stage_DW01_add_87'
+  Processing 'D_stage_DW01_add_88'
+  Processing 'D_stage_DW01_add_89'
+  Processing 'D_stage_DW01_add_90'
+  Processing 'D_stage_DW01_add_91'
+  Processing 'D_stage_DW01_add_92'
+  Processing 'D_stage_DW01_add_93'
+  Processing 'D_stage_DW01_inc_8'
+  Processing 'D_stage_DW01_add_94'
+  Processing 'D_stage_DW01_inc_9'
+  Processing 'D_stage_DW01_add_95'
+  Processing 'D_stage_DW01_inc_10'
+  Processing 'D_stage_DW01_add_96'
+  Processing 'D_stage_DW01_add_97'
+  Processing 'D_stage_DW01_add_98'
+  Processing 'D_stage_DW01_add_99'
+  Processing 'D_stage_DW01_add_100'
+  Processing 'D_stage_DW01_add_101'
+  Processing 'D_stage_DW01_add_102'
+  Processing 'D_stage_DW01_add_103'
+  Processing 'D_stage_DW01_add_104'
+  Processing 'D_stage_DW01_add_105'
+  Processing 'D_stage_DW01_add_106'
+  Processing 'D_stage_DW01_add_107'
+  Processing 'D_stage_DW01_add_108'
+  Processing 'D_stage_DW01_add_109'
+  Processing 'D_stage_DW01_add_110'
+  Processing 'D_stage_DW01_add_111'
+  Processing 'D_stage_DW01_add_112'
+  Processing 'D_stage_DW01_add_113'
+  Processing 'D_stage_DW01_add_114'
+  Processing 'D_stage_DW01_add_115'
+  Processing 'D_stage_DW01_add_116'
+  Processing 'D_stage_DW01_add_117'
+  Processing 'D_stage_DW01_add_118'
+  Processing 'D_stage_DW01_add_119'
+  Processing 'D_stage_DW01_add_120'
+  Processing 'D_stage_DW01_add_121'
+  Processing 'D_stage_DW01_add_122'
+  Processing 'D_stage_DW01_add_123'
+  Processing 'D_stage_DW01_add_124'
+  Processing 'D_stage_DW01_add_125'
+  Processing 'D_stage_DW01_add_126'
+  Processing 'D_stage_DW01_add_127'
+  Processing 'D_stage_DW01_add_128'
+  Processing 'D_stage_DW01_add_129'
+  Processing 'D_stage_DW01_add_130'
+  Processing 'D_stage_DW01_add_131'
+  Processing 'D_stage_DW01_add_132'
+  Processing 'D_stage_DW01_add_133'
+  Processing 'D_stage_DW01_add_134'
+  Processing 'D_stage_DW01_add_135'
+  Processing 'D_stage_DW01_add_136'
+  Processing 'D_stage_DW01_add_137'
+  Processing 'D_stage_DW01_add_138'
+  Processing 'D_stage_DW01_add_139'
+  Processing 'D_stage_DW01_add_140'
+  Processing 'D_stage_DW01_add_141'
+  Processing 'D_stage_DW01_add_142'
+  Processing 'D_stage_DW01_add_143'
+  Processing 'D_stage_DW01_add_144'
+  Processing 'D_stage_DW01_add_145'
+  Processing 'D_stage_DW01_add_146'
+  Processing 'D_stage_DW01_add_147'
+  Processing 'D_stage_DW01_add_148'
+  Processing 'D_stage_DW01_add_149'
+  Processing 'D_stage_DW01_add_150'
+  Processing 'D_stage_DW01_add_151'
+  Processing 'D_stage_DW01_add_152'
+  Processing 'D_stage_DW01_add_153'
+  Processing 'D_stage_DW01_add_154'
+  Processing 'D_stage_DW01_add_155'
+  Processing 'D_stage_DW01_add_156'
+  Processing 'D_stage_DW01_add_157'
+  Processing 'D_stage_DW01_inc_11'
+  Processing 'D_stage_DW01_add_158'
+  Processing 'D_stage_DW01_add_159'
+  Processing 'D_stage_DW01_add_160'
+  Processing 'D_stage_DW01_add_161'
+  Processing 'D_stage_DW01_add_162'
+  Processing 'D_stage_DW01_add_163'
+  Processing 'D_stage_DW01_add_164'
+  Processing 'D_stage_DW01_add_165'
+  Processing 'D_stage_DW01_add_166'
+  Processing 'D_stage_DW01_add_167'
+  Processing 'D_stage_DW01_add_168'
+  Processing 'D_stage_DW01_add_169'
+  Processing 'D_stage_DW01_add_170'
+  Processing 'D_stage_DW01_add_171'
+  Processing 'D_stage_DW01_add_172'
+  Processing 'D_stage_DW01_add_173'
+  Processing 'D_stage_DW01_add_174'
+  Processing 'D_stage_DW01_add_175'
+  Processing 'D_stage_DW01_add_176'
+  Processing 'D_stage_DW01_add_177'
+  Processing 'D_stage_DW01_add_178'
+  Processing 'D_stage_DW01_add_179'
+  Processing 'D_stage_DW01_add_180'
+  Processing 'D_stage_DW01_add_181'
+  Processing 'D_stage_DW01_add_182'
+  Processing 'D_stage_DW01_add_183'
+  Processing 'D_stage_DW01_add_184'
+  Processing 'D_stage_DW01_add_185'
+  Processing 'D_stage_DW01_add_186'
+  Processing 'D_stage_DW01_add_187'
+  Processing 'D_stage_DW01_inc_12'
+  Processing 'D_stage_DW01_add_188'
+  Processing 'D_stage_DW01_cmp6_541'
+  Processing 'D_stage_DW01_inc_13'
+  Processing 'D_stage_DW01_add_189'
+  Processing 'D_stage_DW01_inc_14'
+  Processing 'D_stage_DW01_add_190'
+  Processing 'D_stage_DW01_cmp6_542'
+  Processing 'D_stage_DW01_cmp6_543'
+  Processing 'D_stage_DW01_cmp6_544'
+  Processing 'D_stage_DW01_cmp6_545'
+  Processing 'D_stage_DW01_cmp6_546'
+  Processing 'D_stage_DW01_cmp6_547'
+  Processing 'D_stage_DW01_cmp6_548'
+  Processing 'D_stage_DW01_cmp6_549'
+  Processing 'D_stage_DW01_cmp6_550'
+  Processing 'D_stage_DW01_cmp6_551'
+  Processing 'D_stage_DW01_cmp6_552'
+  Processing 'D_stage_DW01_cmp6_553'
+  Processing 'D_stage_DW01_cmp6_554'
+  Processing 'D_stage_DW01_cmp6_555'
+  Processing 'D_stage_DW01_cmp6_556'
+  Processing 'D_stage_DW01_cmp6_557'
+  Processing 'D_stage_DW01_cmp6_558'
+  Processing 'D_stage_DW01_cmp6_559'
+  Processing 'D_stage_DW01_cmp6_560'
+  Processing 'D_stage_DW01_cmp6_561'
+  Processing 'D_stage_DW01_cmp6_562'
+  Processing 'D_stage_DW01_cmp6_563'
+  Processing 'D_stage_DW01_cmp6_564'
+  Processing 'D_stage_DW01_cmp6_565'
+  Processing 'D_stage_DW01_cmp6_566'
+  Processing 'D_stage_DW01_cmp6_567'
+  Processing 'D_stage_DW01_cmp6_568'
+  Processing 'D_stage_DW01_cmp6_569'
+  Processing 'D_stage_DW01_cmp6_570'
+  Processing 'D_stage_DW01_cmp6_571'
+  Processing 'D_stage_DW01_cmp6_572'
+  Processing 'D_stage_DW01_cmp6_573'
+  Processing 'D_stage_DW01_cmp6_574'
+  Processing 'D_stage_DW01_cmp6_575'
+  Processing 'D_stage_DW01_cmp6_576'
+  Processing 'D_stage_DW01_cmp6_577'
+  Processing 'D_stage_DW01_cmp6_578'
+  Processing 'D_stage_DW01_cmp6_579'
+  Processing 'D_stage_DW01_cmp6_580'
+  Processing 'D_stage_DW01_cmp6_581'
+  Processing 'D_stage_DW01_cmp6_582'
+  Processing 'D_stage_DW01_cmp6_583'
+  Processing 'D_stage_DW01_cmp6_584'
+  Processing 'D_stage_DW01_cmp6_585'
+  Processing 'D_stage_DW01_cmp6_586'
+  Processing 'D_stage_DW01_cmp6_587'
+  Processing 'D_stage_DW01_cmp6_588'
+  Processing 'D_stage_DW01_cmp6_589'
+  Processing 'D_stage_DW01_cmp6_590'
+  Processing 'D_stage_DW01_cmp6_591'
+  Processing 'D_stage_DW01_cmp6_592'
+  Processing 'D_stage_DW01_cmp6_593'
+  Processing 'D_stage_DW01_cmp6_594'
+  Processing 'D_stage_DW01_cmp6_595'
+  Processing 'D_stage_DW01_cmp6_596'
+  Processing 'D_stage_DW01_cmp6_597'
+  Processing 'D_stage_DW01_cmp6_598'
+  Processing 'D_stage_DW01_cmp6_599'
+  Processing 'D_stage_DW01_cmp6_600'
+  Processing 'D_stage_DW01_cmp6_601'
+  Processing 'D_stage_DW01_cmp6_602'
+  Processing 'D_stage_DW01_cmp6_603'
+  Processing 'D_stage_DW01_cmp6_604'
+  Processing 'D_stage_DW01_cmp6_605'
+  Processing 'D_stage_DW01_cmp6_606'
+  Processing 'D_stage_DW01_cmp6_607'
+  Processing 'D_stage_DW01_cmp6_608'
+  Processing 'D_stage_DW01_cmp6_609'
+  Processing 'D_stage_DW01_cmp6_610'
+  Processing 'D_stage_DW01_cmp6_611'
+  Processing 'D_stage_DW01_cmp6_612'
+  Processing 'D_stage_DW01_cmp6_613'
+  Processing 'D_stage_DW01_cmp6_614'
+  Processing 'D_stage_DW01_cmp6_615'
+  Processing 'D_stage_DW01_cmp6_616'
+  Processing 'D_stage_DW01_cmp6_617'
+  Processing 'D_stage_DW01_cmp6_618'
+  Processing 'D_stage_DW01_cmp6_619'
+  Processing 'D_stage_DW01_cmp6_620'
+  Processing 'D_stage_DW01_cmp6_621'
+  Processing 'D_stage_DW01_cmp6_622'
+  Processing 'D_stage_DW01_cmp6_623'
+  Processing 'D_stage_DW01_cmp6_624'
+  Processing 'D_stage_DW01_cmp6_625'
+  Processing 'D_stage_DW01_cmp6_626'
+  Processing 'D_stage_DW01_cmp6_627'
+  Processing 'D_stage_DW01_cmp6_628'
+  Processing 'D_stage_DW01_cmp6_629'
+  Processing 'D_stage_DW01_cmp6_630'
+  Processing 'D_stage_DW01_cmp6_631'
+  Processing 'D_stage_DW01_cmp6_632'
+  Processing 'D_stage_DW01_cmp6_633'
+  Processing 'D_stage_DW01_cmp6_634'
+  Processing 'D_stage_DW01_cmp6_635'
+  Processing 'D_stage_DW01_cmp6_636'
+  Processing 'D_stage_DW01_cmp6_637'
+  Processing 'D_stage_DW01_cmp6_638'
+  Processing 'D_stage_DW01_cmp6_639'
+  Processing 'D_stage_DW01_cmp6_640'
+  Processing 'D_stage_DW01_cmp6_641'
+  Processing 'D_stage_DW01_cmp6_642'
+  Processing 'D_stage_DW01_cmp6_643'
+  Processing 'D_stage_DW01_cmp6_644'
+  Processing 'D_stage_DW01_cmp6_645'
+  Processing 'D_stage_DW01_cmp6_646'
+  Processing 'D_stage_DW01_cmp6_647'
+  Processing 'D_stage_DW01_cmp6_648'
+  Processing 'D_stage_DW01_cmp6_649'
+  Processing 'D_stage_DW01_cmp6_650'
+  Processing 'D_stage_DW01_cmp6_651'
+  Processing 'D_stage_DW01_cmp6_652'
+  Processing 'D_stage_DW01_cmp6_653'
+  Processing 'D_stage_DW01_cmp6_654'
+  Processing 'D_stage_DW01_cmp6_655'
+  Processing 'D_stage_DW01_cmp6_656'
+  Processing 'D_stage_DW01_cmp6_657'
+  Processing 'D_stage_DW01_cmp6_658'
+  Processing 'D_stage_DW01_cmp6_659'
+  Processing 'D_stage_DW01_cmp6_660'
+  Processing 'D_stage_DW01_cmp6_661'
+  Processing 'D_stage_DW01_cmp6_662'
+  Processing 'D_stage_DW01_cmp6_663'
+  Processing 'D_stage_DW01_cmp6_664'
+  Processing 'D_stage_DW01_cmp6_665'
+  Processing 'D_stage_DW01_cmp6_666'
+  Processing 'D_stage_DW01_inc_15'
+  Processing 'D_stage_DW01_add_191'
+  Processing 'D_stage_DW01_cmp6_667'
+  Processing 'D_stage_DW01_inc_16'
+  Processing 'D_stage_DW01_cmp6_668'
+  Processing 'D_stage_DW01_inc_17'
+  Processing 'D_stage_DW01_add_192'
+  Processing 'D_stage_DW01_add_193'
+  Processing 'D_stage_DW01_add_194'
+  Processing 'D_stage_DW01_add_195'
+  Processing 'D_stage_DW01_inc_18'
+  Processing 'D_stage_DW01_add_196'
+  Processing 'D_stage_DW01_add_197'
+  Processing 'D_stage_DW01_add_198'
+  Processing 'D_stage_DW01_inc_19'
+  Processing 'D_stage_DW01_add_199'
+  Processing 'D_stage_DW01_add_200'
+  Processing 'D_stage_DW01_add_201'
+  Processing 'D_stage_DW01_add_202'
+  Processing 'D_stage_DW01_inc_20'
+  Processing 'D_stage_DW01_add_203'
+  Processing 'D_stage_DW01_add_204'
+  Processing 'D_stage_DW01_add_205'
+  Processing 'D_stage_DW01_cmp6_669'
+  Processing 'D_stage_DW01_cmp6_670'
+  Processing 'D_stage_DW01_cmp6_671'
+  Allocating blocks in 'DW02_mult_A_width4_B_width2'
+  Building model 'DW01_add_width4' (cla)
+  Processing 'DW01_add_width4'
+  Allocating blocks in 'DW01_absval_width4'
+  Building model 'DW01_inc_width4' (cla)
+  Processing 'DW01_inc_width4'
+  Building model 'DW01_absval_width4' (cla)
+  Processing 'DW01_absval_width4'
+  Allocating blocks in 'DW01_absval_width2'
+  Building model 'DW01_inc_width2' (cla)
+  Processing 'DW01_inc_width2'
+  Building model 'DW01_absval_width2' (cla)
+  Processing 'DW01_absval_width2'
+  Building model 'DW01_inc_width6' (cla)
+  Processing 'DW01_inc_width6'
+  Building model 'DW01_inc_width6' (cla)
+  Processing 'DW01_inc_width6'
+  Building model 'DW02_mult_A_width4_B_width2' (csa)
+  Processing 'DW02_mult_A_width4_B_width2'
+  Allocating blocks in 'DW02_mult_A_width4_B_width3'
+  Building model 'DW01_add_width5' (cla)
+  Processing 'DW01_add_width5'
+  Building model 'DW02_mult_A_width4_B_width3' (csa)
+  Processing 'DW02_mult_A_width4_B_width3'
+  Allocating blocks in 'DW02_mult_A_width2_B_width4'
+  Building model 'DW02_mult_A_width2_B_width4' (csa)
+  Processing 'DW02_mult_A_width2_B_width4'
+  Allocating blocks in 'DW02_mult_A_width3_B_width4'
+  Building model 'DW01_add_width6' (cla)
+  Processing 'DW01_add_width6'
+  Allocating blocks in 'DW01_absval_width3'
+  Building model 'DW01_inc_width3' (cla)
+  Processing 'DW01_inc_width3'
+  Building model 'DW01_absval_width3' (cla)
+  Processing 'DW01_absval_width3'
+  Building model 'DW01_inc_width7' (cla)
+  Processing 'DW01_inc_width7'
+  Building model 'DW01_inc_width7' (cla)
+  Processing 'DW01_inc_width7'
+  Building model 'DW02_mult_A_width3_B_width4' (csa)
+  Processing 'DW02_mult_A_width3_B_width4'
+  Processing 'D_stage_DW02_mult_0'
+  Processing 'D_stage_DW01_add_206'
+  Processing 'D_stage_DW02_mult_1'
+  Processing 'D_stage_DW01_add_207'
+  Processing 'D_stage_DW02_mult_2'
+  Processing 'D_stage_DW02_mult_3'
+  Processing 'D_stage_DW01_add_208'
+  Processing 'D_stage_DW02_mult_4'
+  Processing 'D_stage_DW01_add_209'
+  Processing 'D_stage_DW02_mult_5'
+  Processing 'D_stage_DW01_add_210'
+  Processing 'D_stage_DW01_add_211'
+  Processing 'D_stage_DW01_add_212'
+  Processing 'DW01_add_width2'
+  Processing 'D_stage_DW01_add_213'
+  Processing 'D_stage_DW01_add_214'
+  Processing 'DW01_add_width3'
+  Processing 'D_stage_DW01_add_215'
+  Processing 'DW01_add_width4'
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                             MIN DELAY
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT            COST   
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:07:21 6560303.0 1414718.50 8805884928.0 106540976.0                                0.00
+    0:07:21 6560303.0 1414718.50 8805884928.0 106540976.0                                0.00
+    0:07:26 6519494.5 1414718.50 8805884928.0 106540976.0                                0.00
+    0:07:31 6485155.7 1414718.50 8805884928.0 106540976.0                                0.00
+    0:07:36 6444347.3 1414718.50 8805884928.0 106540976.0                                0.00
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Mapping Optimization (Phase 1)
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                             MIN DELAY
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT            COST   
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:08:10 7258036.4 1414718.50 8805884928.0 106524072.0                                0.00
+    0:08:10 7258036.4 1414718.50 8805884928.0 106524072.0                                0.00
+    0:08:14 8262604.0 1235380.00 6547030528.0 98977912.0                                0.00
+    0:08:19 9155247.6 975805.56 5124620800.0 97832480.0                                0.00
+    0:08:22 10552733.5      0.00     -26.1    2840.6                                0.00
+    0:08:38 9604085.2      0.00       0.0     386.0                                0.00
+    0:08:39 9604085.2      0.00       0.0     386.0                                0.00
+    0:08:39 9604085.2      0.00       0.0     386.0                                0.00
+    0:08:39 9604085.2      0.00       0.0     386.0                                0.00
+    0:08:39 9604085.2      0.00       0.0     386.0                                0.00
+    0:08:40 9604085.2      0.00       0.0     386.0                                0.00
+    0:09:07 5815653.8      0.00       0.0      26.6                                0.00
+    0:09:11 5787468.1      0.00       0.0      26.5                                0.00
+    0:09:17 5787468.1      0.00       0.0      26.2                                0.00
+    0:09:18 5787468.1      0.00       0.0      26.2                                0.00
+    0:09:18 5787468.1      0.00       0.0      26.2                                0.00
+    0:09:19 5787468.1      0.00       0.0      26.2                                0.00
+    0:09:19 5787468.1      0.00       0.0      26.2                                0.00
+    0:09:20 5787938.7      0.00       0.0      16.1                                0.00
+    0:09:21 5788409.4      0.00       0.0      13.4                                0.00
+    0:09:21 5788813.8      0.00       0.0      11.3                                0.00
+    0:09:22 5789218.2      0.00       0.0       9.3                                0.00
+    0:09:22 5789420.4      0.00       0.0       8.2                                0.00
+    0:09:23 5789622.6      0.00       0.0       7.2                                0.00
+    0:09:23 5789824.8      0.00       0.0       6.2                                0.00
+    0:09:24 5790027.0      0.00       0.0       5.2                                0.00
+    0:09:24 5790229.2      0.00       0.0       4.2                                0.00
+    0:09:24 5790229.2      0.00       0.0       4.2                                0.00
+    0:09:24 5790229.2      0.00       0.0       4.2                                0.00
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                             MIN DELAY
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT            COST   
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:09:24 5790229.2      0.00       0.0       4.2                                0.00
+    0:09:24 5790229.2      0.00       0.0       4.2                                0.00
+    0:09:30 5779316.5      0.00       0.0     121.5                                0.00
+
+
+  Beginning Design Rule Fixing  (min_path)  (max_transition)  (max_fanout)
+  ----------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                             MIN DELAY
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT            COST   
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:09:32 5779316.5      0.00       0.0     121.5                               -3.98
+    0:09:34 5780067.9      0.00       0.0      98.0 maptable/reg_tag[21][1]       -2.98
+    0:09:34 5781321.1      0.00       0.0      87.5 maptable/reg_tag[27][1]       -2.72
+    0:09:34 5782925.1      0.00       0.0      75.4 maptable/reg_tag[2][0]        -2.72
+    0:09:34 5784529.1      0.00       0.0      63.5 maptable/reg_tag[25][2]       -2.72
+    0:09:34 5785999.5      0.00       0.0      52.4 maptable/reg_tag[27][2]       -2.72
+    0:09:35 5787469.9      0.00       0.0      41.4 maptable/reg_tag[26][2]       -2.72
+    0:09:35 5788940.2      0.00       0.0      30.6 maptable/reg_tag[17][5]       -2.72
+    0:09:35 5790477.4      0.00       0.0      19.5 maptable/reg_tag[20][2]       -2.72
+    0:09:35 5792081.4      0.00       0.0       8.2 maptable/reg_tag[20][5]       -2.72
+    0:09:36 5792470.4      0.00       0.0       4.2 net1208293                    -0.83
+    0:09:37 5792857.5      0.00       0.0       2.2 maptable/reg_tag_ready[30]     -0.83
+    0:09:37 5794435.5      0.00       0.0       0.0 archMap/reg_tag_reg[25][0]/DIN     -0.75
+    0:09:37 5794941.7      0.00       0.0       0.0                                0.00
+
+
+  Beginning Critical Range Optimization
+  -------------------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                             MIN DELAY
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT            COST   
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:09:37 5794941.7      0.00       0.0       0.0                                0.00
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                             MIN DELAY
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT            COST   
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:09:38 5794941.7      0.00       0.0       0.0                                0.00
+    0:09:38 5794941.7      0.00       0.0       0.0                                0.00
+    0:09:38 5794941.7      0.00       0.0       0.0                                0.00
+    0:09:44 5733578.6      0.00       0.0       0.0                                0.00
+    0:09:48 5689427.2      0.00       0.0       0.0                                0.00
+    0:09:52 5673058.8      0.00       0.0       0.0                                0.00
+    0:09:56 5662630.8      0.00       0.0       0.0                                0.00
+    0:10:00 5656269.2      0.00       0.0       0.0                                0.00
+    0:10:03 5650484.4      0.00       0.0       0.0                                0.00
+    0:10:06 5645811.8      0.00       0.0       0.0                                0.00
+    0:10:08 5642175.2      0.00       0.0       0.0                                0.00
+    0:10:11 5638780.3      0.00       0.0       0.0                                0.00
+    0:10:13 5635955.2      0.00       0.0       0.0                                0.00
+    0:10:15 5633356.5      0.00       0.0       0.0                                0.00
+    0:10:17 5630858.2      0.00       0.0       0.0                                0.00
+    0:10:20 5628335.1      0.00       0.0       0.0                                0.00
+    0:10:22 5625995.6      0.00       0.0       0.0                                0.00
+    0:10:24 5624149.4      0.00       0.0       0.0                                0.00
+    0:10:26 5622428.1      0.00       0.0       0.0                                0.00
+    0:10:26 5622428.1      0.00       0.0       0.0                                0.00
+    0:10:26 5622428.1      0.00       0.0       0.0                                0.00
+    0:10:26 5622428.1      0.00       0.0       0.0                                0.00
+    0:10:27 5622428.1      0.00       0.0       0.0                                0.00
+    0:10:32 5504089.1      0.00       0.0       0.0                                0.00
+    0:10:32 5504089.1      0.00       0.0       0.0                                0.00
+    0:10:32 5504089.1      0.00       0.0       0.0                                0.00
+    0:10:32 5504089.1      0.00       0.0       0.0                                0.00
+    0:10:32 5504089.1      0.00       0.0       0.0                                0.00
+    0:10:32 5504089.1      0.00       0.0       0.0                                0.00
+    0:10:33 5504097.4      0.00       0.0       0.0                                0.00
+
+
+  Beginning Critical Range Optimization
+  -------------------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                             MIN DELAY
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT            COST   
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:10:33 5504097.4      0.00       0.0       0.0                                0.00
+    0:10:34 5504197.4      0.00       0.0       0.0                                0.00
+Loading db file '/usr/caen/generic/mentor_lib-D.1/public/eecs470/synopsys/lec25dscc25_TT.db'
+
+  Optimization Complete
+  ---------------------
+Warning: Design 'D_stage' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+     Net 'clock': 11970 load(s), 1 driver(s)
+Writing verilog file '/afs/umich.edu/user/c/h/chengfu/Desktop/syn2/synth/D_stage.vg'.
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+Writing ddc file './D_stage.ddc'.
+Removing design 'D_stage'
+Removing design 'D_stage_DW01_inc_18'
+Removing design 'D_stage_DW01_inc_20'
+Removing library 'lec25dscc25_TT'
+Removing library 'gtech'
+Removing library 'standard.sldb'
+Loading db file '/usr/caen/generic/mentor_lib-D.1/public/eecs470/synopsys/lec25dscc25_TT.db'
+Loading db file '/usr/caen/synopsys-synth-2012.06/libraries/syn/gtech.db'
+Loading db file '/usr/caen/synopsys-synth-2012.06/libraries/syn/standard.sldb'
+  Loading link library 'lec25dscc25_TT'
+  Loading link library 'gtech'
+Loading verilog file '/afs/umich.edu/user/c/h/chengfu/Desktop/syn2/synth/D_stage.vg'
+Detecting input file type automatically (-rtl or -netlist).
+Running DC verilog reader
+Performing 'read' command.
+Compiling source file /afs/umich.edu/user/c/h/chengfu/Desktop/syn2/synth/D_stage.vg
+Reading with netlist reader (equivalent to -netlist option).
+Verilog netlist reader completed successfully.
+Current design is now '/afs/umich.edu/user/c/h/chengfu/Desktop/syn2/synth/D_stage_DW01_inc_18.db:D_stage_DW01_inc_18'
+Loaded 3 designs.
+Current design is 'D_stage_DW01_inc_18'.
+Current design is 'D_stage'.
+
+Thank you...
